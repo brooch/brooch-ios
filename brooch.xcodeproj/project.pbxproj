@@ -1,0 +1,469 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		96484663178DA4680072737E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96484662178DA4680072737E /* UIKit.framework */; };
+		96484665178DA4680072737E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96484664178DA4680072737E /* Foundation.framework */; };
+		96484667178DA4680072737E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96484666178DA4680072737E /* CoreGraphics.framework */; };
+		9648466D178DA4680072737E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9648466B178DA4680072737E /* InfoPlist.strings */; };
+		9648466F178DA4680072737E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9648466E178DA4680072737E /* main.m */; };
+		96484673178DA4680072737E /* BRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 96484672178DA4680072737E /* BRAppDelegate.m */; };
+		96484675178DA4680072737E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 96484674178DA4680072737E /* Default.png */; };
+		96484677178DA4680072737E /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96484676178DA4680072737E /* Default@2x.png */; };
+		96484679178DA4680072737E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96484678178DA4680072737E /* Default-568h@2x.png */; };
+		9648467C178DA4680072737E /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9648467A178DA4680072737E /* MainStoryboard.storyboard */; };
+		9648467F178DA4680072737E /* BRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9648467E178DA4680072737E /* BRViewController.m */; };
+		96484687178DA4680072737E /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96484686178DA4680072737E /* SenTestingKit.framework */; };
+		96484688178DA4680072737E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96484662178DA4680072737E /* UIKit.framework */; };
+		96484689178DA4680072737E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96484664178DA4680072737E /* Foundation.framework */; };
+		96484691178DA4680072737E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9648468F178DA4680072737E /* InfoPlist.strings */; };
+		96484694178DA4680072737E /* broochTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 96484693178DA4680072737E /* broochTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9648468A178DA4680072737E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 96484657178DA4680072737E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9648465E178DA4680072737E;
+			remoteInfo = brooch;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9648465F178DA4680072737E /* brooch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = brooch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		96484662178DA4680072737E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		96484664178DA4680072737E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		96484666178DA4680072737E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		9648466A178DA4680072737E /* brooch-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "brooch-Info.plist"; sourceTree = "<group>"; };
+		9648466C178DA4680072737E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9648466E178DA4680072737E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		96484670178DA4680072737E /* brooch-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "brooch-Prefix.pch"; sourceTree = "<group>"; };
+		96484671178DA4680072737E /* BRAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BRAppDelegate.h; sourceTree = "<group>"; };
+		96484672178DA4680072737E /* BRAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BRAppDelegate.m; sourceTree = "<group>"; };
+		96484674178DA4680072737E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		96484676178DA4680072737E /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		96484678178DA4680072737E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		9648467B178DA4680072737E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		9648467D178DA4680072737E /* BRViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BRViewController.h; sourceTree = "<group>"; };
+		9648467E178DA4680072737E /* BRViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BRViewController.m; sourceTree = "<group>"; };
+		96484685178DA4680072737E /* broochTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = broochTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		96484686178DA4680072737E /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		9648468E178DA4680072737E /* broochTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "broochTests-Info.plist"; sourceTree = "<group>"; };
+		96484690178DA4680072737E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		96484692178DA4680072737E /* broochTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = broochTests.h; sourceTree = "<group>"; };
+		96484693178DA4680072737E /* broochTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = broochTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9648465C178DA4680072737E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96484663178DA4680072737E /* UIKit.framework in Frameworks */,
+				96484665178DA4680072737E /* Foundation.framework in Frameworks */,
+				96484667178DA4680072737E /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96484681178DA4680072737E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96484687178DA4680072737E /* SenTestingKit.framework in Frameworks */,
+				96484688178DA4680072737E /* UIKit.framework in Frameworks */,
+				96484689178DA4680072737E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		96484656178DA4680072737E = {
+			isa = PBXGroup;
+			children = (
+				96484668178DA4680072737E /* brooch */,
+				9648468C178DA4680072737E /* broochTests */,
+				96484661178DA4680072737E /* Frameworks */,
+				96484660178DA4680072737E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		96484660178DA4680072737E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9648465F178DA4680072737E /* brooch.app */,
+				96484685178DA4680072737E /* broochTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		96484661178DA4680072737E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				96484662178DA4680072737E /* UIKit.framework */,
+				96484664178DA4680072737E /* Foundation.framework */,
+				96484666178DA4680072737E /* CoreGraphics.framework */,
+				96484686178DA4680072737E /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		96484668178DA4680072737E /* brooch */ = {
+			isa = PBXGroup;
+			children = (
+				96484671178DA4680072737E /* BRAppDelegate.h */,
+				96484672178DA4680072737E /* BRAppDelegate.m */,
+				9648467A178DA4680072737E /* MainStoryboard.storyboard */,
+				9648467D178DA4680072737E /* BRViewController.h */,
+				9648467E178DA4680072737E /* BRViewController.m */,
+				96484669178DA4680072737E /* Supporting Files */,
+			);
+			path = brooch;
+			sourceTree = "<group>";
+		};
+		96484669178DA4680072737E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9648466A178DA4680072737E /* brooch-Info.plist */,
+				9648466B178DA4680072737E /* InfoPlist.strings */,
+				9648466E178DA4680072737E /* main.m */,
+				96484670178DA4680072737E /* brooch-Prefix.pch */,
+				96484674178DA4680072737E /* Default.png */,
+				96484676178DA4680072737E /* Default@2x.png */,
+				96484678178DA4680072737E /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9648468C178DA4680072737E /* broochTests */ = {
+			isa = PBXGroup;
+			children = (
+				96484692178DA4680072737E /* broochTests.h */,
+				96484693178DA4680072737E /* broochTests.m */,
+				9648468D178DA4680072737E /* Supporting Files */,
+			);
+			path = broochTests;
+			sourceTree = "<group>";
+		};
+		9648468D178DA4680072737E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9648468E178DA4680072737E /* broochTests-Info.plist */,
+				9648468F178DA4680072737E /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9648465E178DA4680072737E /* brooch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96484697178DA4680072737E /* Build configuration list for PBXNativeTarget "brooch" */;
+			buildPhases = (
+				9648465B178DA4680072737E /* Sources */,
+				9648465C178DA4680072737E /* Frameworks */,
+				9648465D178DA4680072737E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = brooch;
+			productName = brooch;
+			productReference = 9648465F178DA4680072737E /* brooch.app */;
+			productType = "com.apple.product-type.application";
+		};
+		96484684178DA4680072737E /* broochTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9648469A178DA4680072737E /* Build configuration list for PBXNativeTarget "broochTests" */;
+			buildPhases = (
+				96484680178DA4680072737E /* Sources */,
+				96484681178DA4680072737E /* Frameworks */,
+				96484682178DA4680072737E /* Resources */,
+				96484683178DA4680072737E /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9648468B178DA4680072737E /* PBXTargetDependency */,
+			);
+			name = broochTests;
+			productName = broochTests;
+			productReference = 96484685178DA4680072737E /* broochTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		96484657178DA4680072737E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = BR;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "栗林 健太郎";
+			};
+			buildConfigurationList = 9648465A178DA4680072737E /* Build configuration list for PBXProject "brooch" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 96484656178DA4680072737E;
+			productRefGroup = 96484660178DA4680072737E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9648465E178DA4680072737E /* brooch */,
+				96484684178DA4680072737E /* broochTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9648465D178DA4680072737E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9648466D178DA4680072737E /* InfoPlist.strings in Resources */,
+				96484675178DA4680072737E /* Default.png in Resources */,
+				96484677178DA4680072737E /* Default@2x.png in Resources */,
+				96484679178DA4680072737E /* Default-568h@2x.png in Resources */,
+				9648467C178DA4680072737E /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96484682178DA4680072737E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96484691178DA4680072737E /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		96484683178DA4680072737E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9648465B178DA4680072737E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9648466F178DA4680072737E /* main.m in Sources */,
+				96484673178DA4680072737E /* BRAppDelegate.m in Sources */,
+				9648467F178DA4680072737E /* BRViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96484680178DA4680072737E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96484694178DA4680072737E /* broochTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9648468B178DA4680072737E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9648465E178DA4680072737E /* brooch */;
+			targetProxy = 9648468A178DA4680072737E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9648466B178DA4680072737E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9648466C178DA4680072737E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		9648467A178DA4680072737E /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9648467B178DA4680072737E /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		9648468F178DA4680072737E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				96484690178DA4680072737E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		96484695178DA4680072737E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		96484696178DA4680072737E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		96484698178DA4680072737E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "brooch/brooch-Prefix.pch";
+				INFOPLIST_FILE = "brooch/brooch-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		96484699178DA4680072737E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "brooch/brooch-Prefix.pch";
+				INFOPLIST_FILE = "brooch/brooch-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		9648469B178DA4680072737E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/brooch.app/brooch";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "brooch/brooch-Prefix.pch";
+				INFOPLIST_FILE = "broochTests/broochTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		9648469C178DA4680072737E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/brooch.app/brooch";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "brooch/brooch-Prefix.pch";
+				INFOPLIST_FILE = "broochTests/broochTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9648465A178DA4680072737E /* Build configuration list for PBXProject "brooch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96484695178DA4680072737E /* Debug */,
+				96484696178DA4680072737E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		96484697178DA4680072737E /* Build configuration list for PBXNativeTarget "brooch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96484698178DA4680072737E /* Debug */,
+				96484699178DA4680072737E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9648469A178DA4680072737E /* Build configuration list for PBXNativeTarget "broochTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9648469B178DA4680072737E /* Debug */,
+				9648469C178DA4680072737E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 96484657178DA4680072737E /* Project object */;
+}
