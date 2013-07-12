@@ -27,7 +27,7 @@
 {
     [super viewDidLoad];
 
-    self.tutorialImages = @[@"init_page_1.png", @"init_page_2.png", @"init_page_3.png", @"init_page_4.png"];
+    self.tutorialImages = @[@"init_page_1", @"init_page_2", @"init_page_3", @"init_page_4"];
     
     for (int i = 0; i < [self.tutorialImages count]; i++) {
         UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:[self.tutorialImages objectAtIndex:i]]];
