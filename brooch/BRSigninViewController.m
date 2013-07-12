@@ -40,7 +40,7 @@
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:[NSBundle mainBundle]];
     UIViewController *initialViewController = [storyboard instantiateInitialViewController];
 
-    [self presentViewController:initialViewController animated:YES completion:nil];
+    [self presentViewController:initialViewController animated:NO completion:nil];
 }
 
 @end
