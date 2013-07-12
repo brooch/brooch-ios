@@ -117,11 +117,11 @@
 		96484668178DA4680072737E /* brooch */ = {
 			isa = PBXGroup;
 			children = (
+				968614F81790331000400ABD /* Models */,
+				968614F7179032FE00400ABD /* ViewControllers */,
 				96484671178DA4680072737E /* BRAppDelegate.h */,
 				96484672178DA4680072737E /* BRAppDelegate.m */,
 				9648467A178DA4680072737E /* MainStoryboard.storyboard */,
-				9648467D178DA4680072737E /* BRViewController.h */,
-				9648467E178DA4680072737E /* BRViewController.m */,
 				96484669178DA4680072737E /* Supporting Files */,
 			);
 			path = brooch;
@@ -158,6 +158,22 @@
 				9648468F178DA4680072737E /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		968614F7179032FE00400ABD /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9648467E178DA4680072737E /* BRViewController.m */,
+				9648467D178DA4680072737E /* BRViewController.h */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		968614F81790331000400ABD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -382,10 +398,14 @@
 		96484698178DA4680072737E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Kentaro Kuribayashi (GC4KJ4VCMW)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Kentaro Kuribayashi (GC4KJ4VCMW)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "brooch/brooch-Prefix.pch";
 				INFOPLIST_FILE = "brooch/brooch-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -393,10 +413,14 @@
 		96484699178DA4680072737E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Kentaro Kuribayashi (L9VYS3ARZV)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Kentaro Kuribayashi (L9VYS3ARZV)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "brooch/brooch-Prefix.pch";
 				INFOPLIST_FILE = "brooch/brooch-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -454,6 +478,7 @@
 				96484699178DA4680072737E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9648469A178DA4680072737E /* Build configuration list for PBXNativeTarget "broochTests" */ = {
 			isa = XCConfigurationList;
@@ -462,6 +487,7 @@
 				9648469C178DA4680072737E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
