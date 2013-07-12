@@ -23,30 +23,48 @@
     return self;
 }
 
-- (void)viewDidLoad
+- (void)viewDidLayoutSubviews
 {
-    [super viewDidLoad];
+    [super viewDidLayoutSubviews];
 
-    self.tutorialImages = @[@"init_page_1", @"init_page_2", @"init_page_3", @"init_page_4"];
+    self.tutorialImages = @[
+        [UIImage imageNamed:@"tutorial_1"],
+        [UIImage imageNamed:@"tutorial_2"],
+        [UIImage imageNamed:@"tutorial_3"],
+        [UIImage imageNamed:@"tutorial_4"]
+    ];
     
-    for (int i = 0; i < [self.tutorialImages count]; i++) {
-        UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:[self.tutorialImages objectAtIndex:i]]];
+    self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width * self.tutorialImages.count, self.scrollView.frame.size.height);
+    int scrollWidth = 0;
+
+    for (int i = 0; i < self.tutorialImages.count; i++) {
+        CGRect frame;
+        frame.size.height = self.scrollView.frame.size.height;
+        frame.size.width  = self.scrollView.frame.size.width;
+        frame.origin.x    = self.scrollView.frame.origin.x + scrollWidth;
+        frame.origin.y    = self.scrollView.frame.origin.y;
+
+        UIImageView *imageView = [[UIImageView alloc] initWithFrame:frame];
+        imageView.image = [self.tutorialImages objectAtIndex:i];
+        imageView.frame = frame;
 
         [self.scrollView addSubview:imageView];
+        [self.scrollView sendSubviewToBack:imageView];
+
+        scrollWidth += self.scrollView.frame.size.width;
     }
 
-    NSLog(@"%f", self.scrollView.frame.size.height);
-    
-    self.scrollView.contentSize = CGSizeMake(
-        self.scrollView.frame.size.width * [self.tutorialImages count],
-        self.scrollView.frame.size.height
-    );
+    self.pageControll.currentPage = 0;
+    self.pageControll.numberOfPages = self.tutorialImages.count;
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+    self.scrollView     = nil;
+    self.pageControll   = nil;
+    self.tutorialImages = nil;
 }
 
 #pragma mark - UIScrollView Delegate
