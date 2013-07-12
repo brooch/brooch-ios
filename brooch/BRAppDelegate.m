@@ -7,12 +7,21 @@
 //
 
 #import "BRAppDelegate.h"
+#import "BRUser.h"
 
 @implementation BRAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    BRUser *user = [[BRUser alloc] init];
+    
+    if (![user isLoggedIn]) {
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"InitStoryboard" bundle:[NSBundle mainBundle]];
+        UIViewController *initialViewController = [storyboard instantiateInitialViewController];
+
+        self.window.rootViewController = initialViewController;
+    }
+
     return YES;
 }
 							

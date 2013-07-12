@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="fZs-YS-ju7">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--Tutorial View Controller-->
+        <scene sceneID="ydh-eh-b2u">
+            <objects>
+                <viewController id="fZs-YS-ju7" customClass="BRTutorialViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="s1q-W0-bBa">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4hq-ZD-cYc">
+                                <connections>
+                                    <outlet property="delegate" destination="fZs-YS-ju7" id="sP4-tn-yQz"/>
+                                </connections>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lRK-yU-LEw">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="sign up">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rJV-R6-O7d">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="sign in">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="47N-1I-ben">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="38" id="kV3-FV-tNF"/>
+                                </constraints>
+                                <color key="pageIndicatorTintColor" red="1" green="0.45725880557795451" blue="0.59677049722072661" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="currentPageIndicatorTintColor" red="0.45679310330265588" green="1" blue="0.37521781838902724" alpha="1" colorSpace="calibratedRGB"/>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lRK-yU-LEw" firstAttribute="leading" secondItem="s1q-W0-bBa" secondAttribute="leading" constant="66" id="5GZ-If-vsU"/>
+                            <constraint firstItem="4hq-ZD-cYc" firstAttribute="leading" secondItem="s1q-W0-bBa" secondAttribute="leading" type="default" id="81c-Xw-yRx"/>
+                            <constraint firstAttribute="bottom" secondItem="lRK-yU-LEw" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="Emc-jk-vPe"/>
+                            <constraint firstItem="4hq-ZD-cYc" firstAttribute="top" secondItem="s1q-W0-bBa" secondAttribute="top" type="default" id="KhX-Gb-Ujn"/>
+                            <constraint firstItem="rJV-R6-O7d" firstAttribute="leading" secondItem="47N-1I-ben" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="Syj-bv-LVn"/>
+                            <constraint firstAttribute="bottom" secondItem="47N-1I-ben" secondAttribute="bottom" constant="62" id="URY-od-bQz"/>
+                            <constraint firstItem="47N-1I-ben" firstAttribute="leading" secondItem="s1q-W0-bBa" secondAttribute="leading" constant="135" id="eW0-mL-YxV"/>
+                            <constraint firstItem="4hq-ZD-cYc" firstAttribute="trailing" secondItem="s1q-W0-bBa" secondAttribute="trailing" type="default" id="koO-p7-g08"/>
+                            <constraint firstAttribute="bottom" secondItem="4hq-ZD-cYc" secondAttribute="bottom" constant="98" id="lVC-Dq-zJE"/>
+                            <constraint firstAttribute="bottom" secondItem="rJV-R6-O7d" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="ypl-7O-xVu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pageControll" destination="47N-1I-ben" id="NqI-Ar-czP"/>
+                        <outlet property="scrollView" destination="4hq-ZD-cYc" id="9r3-Il-Djo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C81-Z4-1AL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="90" y="14"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="BRTutorialViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BRTutorialViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="pageControll" candidateClass="UIPageControl"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
