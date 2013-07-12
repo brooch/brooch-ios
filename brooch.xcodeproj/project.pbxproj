@@ -85,9 +85,9 @@
 		96484690178DA4680072737E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		96484692178DA4680072737E /* broochTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = broochTests.h; sourceTree = "<group>"; };
 		96484693178DA4680072737E /* broochTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = broochTests.m; sourceTree = "<group>"; };
-		968614FC1790375200400ABD /* InitStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = InitStoryboard.storyboard; path = ../InitStoryboard.storyboard; sourceTree = "<group>"; };
-		968615061790381400400ABD /* BRTutorialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BRTutorialViewController.h; path = ../BRTutorialViewController.h; sourceTree = "<group>"; };
-		968615071790381400400ABD /* BRTutorialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BRTutorialViewController.m; path = ../BRTutorialViewController.m; sourceTree = "<group>"; };
+		968614FC1790375200400ABD /* InitStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = InitStoryboard.storyboard; path = en.lproj/InitStoryboard.storyboard; sourceTree = "<group>"; };
+		968615061790381400400ABD /* BRTutorialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRTutorialViewController.h; sourceTree = "<group>"; };
+		968615071790381400400ABD /* BRTutorialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRTutorialViewController.m; sourceTree = "<group>"; };
 		9686151717903F7900400ABD /* BRUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRUser.h; sourceTree = "<group>"; };
 		9686151817903F7900400ABD /* BRUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRUser.m; sourceTree = "<group>"; };
 		9686152617906D8C00400ABD /* en */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = en; path = "en.lproj/UImage+H568.h"; sourceTree = "<group>"; };

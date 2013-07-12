@@ -155,6 +155,32 @@
             <point key="canvasLocation" x="85" y="484"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="BRSigninViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BRSigninViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="moveToMainScreen:"/>
+                <relationship kind="outlet" name="signinButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="BRSignupViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BRSignupViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="moveToMainScreen:"/>
+                <relationship kind="outlet" name="signupButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="BRTutorialViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BRTutorialViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="pageControll" candidateClass="UIPageControl"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
