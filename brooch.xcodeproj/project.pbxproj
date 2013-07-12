@@ -219,14 +219,8 @@
 		968614F7179032FE00400ABD /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				968615061790381400400ABD /* BRTutorialViewController.h */,
-				968615071790381400400ABD /* BRTutorialViewController.m */,
-				9648467E178DA4680072737E /* BRViewController.m */,
-				9648467D178DA4680072737E /* BRViewController.h */,
-				96861541179081D500400ABD /* BRSignupViewController.h */,
-				96861542179081D500400ABD /* BRSignupViewController.m */,
-				96861545179081EA00400ABD /* BRSigninViewController.h */,
-				96861546179081EA00400ABD /* BRSigninViewController.m */,
+				9686154917908C7F00400ABD /* Init */,
+				9686154A17908C9700400ABD /* Main */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -247,6 +241,28 @@
 				9686152717906D8C00400ABD /* UImage+H568.m */,
 			);
 			name = Categories;
+			sourceTree = "<group>";
+		};
+		9686154917908C7F00400ABD /* Init */ = {
+			isa = PBXGroup;
+			children = (
+				968615061790381400400ABD /* BRTutorialViewController.h */,
+				968615071790381400400ABD /* BRTutorialViewController.m */,
+				96861541179081D500400ABD /* BRSignupViewController.h */,
+				96861542179081D500400ABD /* BRSignupViewController.m */,
+				96861545179081EA00400ABD /* BRSigninViewController.h */,
+				96861546179081EA00400ABD /* BRSigninViewController.m */,
+			);
+			name = Init;
+			sourceTree = "<group>";
+		};
+		9686154A17908C9700400ABD /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				9648467E178DA4680072737E /* BRViewController.m */,
+				9648467D178DA4680072737E /* BRViewController.h */,
+			);
+			name = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
