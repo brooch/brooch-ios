@@ -168,8 +168,7 @@
 				968614F7179032FE00400ABD /* ViewControllers */,
 				96484671178DA4680072737E /* BRAppDelegate.h */,
 				96484672178DA4680072737E /* BRAppDelegate.m */,
-				968614FC1790375200400ABD /* InitStoryboard.storyboard */,
-				9648467A178DA4680072737E /* MainStoryboard.storyboard */,
+				9686154B17908CEB00400ABD /* Storyboards */,
 				96484669178DA4680072737E /* Supporting Files */,
 			);
 			path = brooch;
@@ -263,6 +262,15 @@
 				9648467D178DA4680072737E /* BRViewController.h */,
 			);
 			name = Main;
+			sourceTree = "<group>";
+		};
+		9686154B17908CEB00400ABD /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				9648467A178DA4680072737E /* MainStoryboard.storyboard */,
+				968614FC1790375200400ABD /* InitStoryboard.storyboard */,
+			);
+			name = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
