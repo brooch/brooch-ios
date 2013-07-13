@@ -10,7 +10,7 @@
 
 @implementation BRUser
 
-- (BOOL) isLoggedIn
+- (BOOL) isSignedIn
 {
     return NO;
 }

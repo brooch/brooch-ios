@@ -10,6 +10,6 @@
 
 @interface BRUser : NSObject
 
-- (BOOL) isLoggedIn;
+- (BOOL) isSignedIn;
 
 @end

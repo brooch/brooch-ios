@@ -15,7 +15,7 @@
 {
     BRUser *user = [[BRUser alloc] init];
     
-    if (![user isLoggedIn]) {
+    if (![user isSignedIn]) {
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"InitStoryboard" bundle:[NSBundle mainBundle]];
         UIViewController *initialViewController = [storyboard instantiateInitialViewController];
 
