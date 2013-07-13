@@ -12,6 +12,7 @@
 
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (strong, nonatomic) IBOutlet UIPageControl *pageControll;
+@property (strong, nonatomic) IBOutlet UIView *buttonsContainer;
 @property (strong, nonatomic) NSArray *tutorialImages;
 
 @end
