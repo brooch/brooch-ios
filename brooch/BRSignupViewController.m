@@ -16,6 +16,11 @@
 
 @implementation BRSignupViewController
 
+- (UITextField *)password_confirmationField
+{
+    return self.passwordConfirmationFIeld;
+}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -40,6 +45,11 @@
 - (IBAction)closeSoftwareKeybodard:(id)sender
 {
     [self.view endEditing: YES];
+}
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    textField.textColor = [UIColor blackColor];
 }
 
 -(BOOL)textFieldShouldReturn:(UITextField*)textField;
@@ -67,7 +77,7 @@
 
     BRAPIClient *client = [[BRAPIClient alloc] init];
     [client request:@"POST"
-              path:@"/v1/users"
+               path:@"/v1/users"
              params:params
             success:^(NSHTTPURLResponse *response, NSDictionary *result) {
                 BRUser *user = [BRUser sharedManager];
@@ -78,10 +88,39 @@
                
                 [self presentViewController:initialViewController animated:NO completion:nil];
             } failure:^(NSHTTPURLResponse *response, NSDictionary *result) {
-                NSLog(@"%d", [response statusCode]);
-                NSLog(@"%@", result);
+                for (NSString * key in @[@"name", @"email", @"password", @"password_confirmation"]) {
+                    SEL sel = NSSelectorFromString([NSString stringWithFormat:@"%@Field", key]);
+
+// 警告"PerformSelector may cause a leak because its selector is unknown"への対処
+// http://captainshadow.hatenablog.com/entry/20121114/1352834276
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
+                    if ([result objectForKey:key] &&
+                        [[[self performSelector:sel] text] length] > 0) {
+                        [[self performSelector:sel] setTextColor:[UIColor redColor]];
+                    }
+                    else {
+                        [[self performSelector:sel] setTextColor:[UIColor blackColor]];
+                    }
+#pragma clang diagnostic pop
+                   
+                }
+
+                UIAlertView *alertView = [[UIAlertView alloc]
+                                          initWithTitle:@"ユーザー登録できません"
+                                          message:@"入力内容を見直してください"
+                                          delegate:nil
+                                          cancelButtonTitle:nil
+                                          otherButtonTitles:@"もう一度", nil];
+                [alertView show];
             } error:^(NSError *error) {
-                NSLog(@"%@", error);
+                UIAlertView *alertView = [[UIAlertView alloc]
+                                          initWithTitle:@"エラー"
+                                          message:@"通信中に問題が発生しました"
+                                          delegate:nil
+                                          cancelButtonTitle:nil
+                                          otherButtonTitles:@"もう一度", nil];
+                [alertView show];
             }];
 }
 
