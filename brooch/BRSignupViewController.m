@@ -76,9 +76,7 @@
     };
 
     BRAPIClient *client = [[BRAPIClient alloc] init];
-    [client request:@"POST"
-               path:@"/v1/users"
-             params:params
+    [client signUp:params
             success:^(NSHTTPURLResponse *response, NSDictionary *result) {
                 BRUser *user = [BRUser sharedManager];
                 [user saveUserData:result];

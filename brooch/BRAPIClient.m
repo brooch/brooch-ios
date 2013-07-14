@@ -11,10 +11,23 @@
 @implementation BRAPIClient
 
 #ifdef DEBUG
-static NSString *base_url = @"http://localhost:3000";
+static NSString *base_url = @"http://localhost:3000/v1";
 #else
-static NSString *base_url = @"https://api.brooch.mobi";
+static NSString *base_url = @"https://api.brooch.mobi/v1";
 #endif
+
+- (void)signUp:(NSDictionary *)params
+        success:(SuccessHandler)successHandler
+        failure:(FailureHandler)failureHandler
+          error:(ErrorHandler)errorHandler
+{
+    [self request:@"POST"
+             path:@"/users"
+           params:params
+          success:successHandler
+          failure:failureHandler
+            error:errorHandler];
+}
 
 - (void)request:(NSString *)method
            path:(NSString *)path
