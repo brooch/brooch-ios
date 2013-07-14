@@ -151,19 +151,114 @@
                                     <action selector="moveToMainScreen:" destination="eja-KC-pgV" eventType="touchDown" id="QYC-L5-Q7d"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="名前" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qcb-sJ-nvl">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="hcr-xn-6PG">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="123" id="GCO-N3-d5m"/>
+                                    <constraint firstAttribute="height" constant="30" id="UPT-fr-lYt"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits" keyboardType="alphabet" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="eja-KC-pgV" id="l6s-Zj-4qD"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="メール" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xb4-j8-gkJ">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Lyr-pa-31u">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Gth-Nw-l2P"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="eja-KC-pgV" id="U6t-yl-Jmi"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="パスワード" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QC5-zb-b58">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G2I-Ab-Zdq">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="6cc-Ko-6Xf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="alphabet" returnKeyType="next" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="eja-KC-pgV" id="KLY-ef-fTy"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="もう一度" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4BU-ey-svy">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VLt-z7-cDM">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="upg-QW-ns0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="alphabet" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="eja-KC-pgV" id="hIp-qm-qqV"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="n6F-q7-l5Z" firstAttribute="top" secondItem="1nC-wZ-5P8" secondAttribute="top" constant="252" id="61q-8l-AAI"/>
+                            <constraint firstItem="G2I-Ab-Zdq" firstAttribute="top" secondItem="Lyr-pa-31u" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="5Sg-he-nyU"/>
+                            <constraint firstItem="Lyr-pa-31u" firstAttribute="trailing" secondItem="hcr-xn-6PG" secondAttribute="trailing" type="default" id="9PO-SO-vid"/>
+                            <constraint firstItem="Lyr-pa-31u" firstAttribute="top" secondItem="hcr-xn-6PG" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Add-EQ-1j9"/>
+                            <constraint firstItem="hcr-xn-6PG" firstAttribute="top" secondItem="1nC-wZ-5P8" secondAttribute="top" constant="164" id="AjM-UI-rHD"/>
+                            <constraint firstItem="Qcb-sJ-nvl" firstAttribute="top" secondItem="1nC-wZ-5P8" secondAttribute="top" constant="167" id="B4T-a0-PIX"/>
+                            <constraint firstAttribute="bottom" secondItem="n6F-q7-l5Z" secondAttribute="bottom" constant="164" id="CkQ-Dc-Skf"/>
+                            <constraint firstItem="4BU-ey-svy" firstAttribute="leading" secondItem="QC5-zb-b58" secondAttribute="leading" type="default" id="F4A-t0-qgH"/>
+                            <constraint firstItem="G2I-Ab-Zdq" firstAttribute="trailing" secondItem="Lyr-pa-31u" secondAttribute="trailing" type="default" id="LXX-33-LuS"/>
+                            <constraint firstItem="Lyr-pa-31u" firstAttribute="leading" secondItem="hcr-xn-6PG" secondAttribute="leading" type="default" id="XVV-Iq-9p0"/>
+                            <constraint firstItem="QC5-zb-b58" firstAttribute="leading" secondItem="xb4-j8-gkJ" secondAttribute="leading" type="default" id="XXM-Qm-zye"/>
+                            <constraint firstItem="hcr-xn-6PG" firstAttribute="leading" secondItem="1nC-wZ-5P8" secondAttribute="leading" constant="150" id="XwX-QN-IC3"/>
+                            <constraint firstItem="xb4-j8-gkJ" firstAttribute="leading" secondItem="Qcb-sJ-nvl" secondAttribute="leading" type="default" id="afJ-bV-aef"/>
+                            <constraint firstItem="xb4-j8-gkJ" firstAttribute="baseline" secondItem="Lyr-pa-31u" secondAttribute="baseline" type="default" id="cjh-jN-7Ax"/>
+                            <constraint firstItem="VLt-z7-cDM" firstAttribute="leading" secondItem="G2I-Ab-Zdq" secondAttribute="leading" type="default" id="coV-K2-oVg"/>
+                            <constraint firstItem="G2I-Ab-Zdq" firstAttribute="baseline" secondItem="QC5-zb-b58" secondAttribute="baseline" type="default" id="d9q-3u-ild"/>
+                            <constraint firstItem="VLt-z7-cDM" firstAttribute="trailing" secondItem="G2I-Ab-Zdq" secondAttribute="trailing" type="default" id="hwj-Mk-3Je"/>
+                            <constraint firstItem="Qcb-sJ-nvl" firstAttribute="leading" secondItem="1nC-wZ-5P8" secondAttribute="leading" constant="47" id="i18-ay-hK6"/>
+                            <constraint firstItem="VLt-z7-cDM" firstAttribute="top" secondItem="G2I-Ab-Zdq" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="kf8-RX-uzc"/>
+                            <constraint firstItem="4BU-ey-svy" firstAttribute="baseline" secondItem="VLt-z7-cDM" secondAttribute="baseline" type="default" id="n23-SG-gyf"/>
                             <constraint firstItem="n6F-q7-l5Z" firstAttribute="centerX" secondItem="1nC-wZ-5P8" secondAttribute="centerX" type="default" id="smS-Q6-9US"/>
+                            <constraint firstItem="hcr-xn-6PG" firstAttribute="baseline" secondItem="Qcb-sJ-nvl" secondAttribute="baseline" type="default" id="v1l-eU-Goc"/>
+                            <constraint firstItem="G2I-Ab-Zdq" firstAttribute="leading" secondItem="Lyr-pa-31u" secondAttribute="leading" type="default" id="zgz-YK-SRi"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="VQm-G0-cGE" appends="YES" id="eKe-8Z-62g"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="h9y-ex-SFh"/>
                     <connections>
+                        <outlet property="emailField" destination="Lyr-pa-31u" id="h63-gg-Z2a"/>
+                        <outlet property="nameField" destination="hcr-xn-6PG" id="hyc-cU-x5c"/>
+                        <outlet property="passwordConfirmationFIeld" destination="VLt-z7-cDM" id="fvm-ZW-cAr"/>
+                        <outlet property="passwordField" destination="G2I-Ab-Zdq" id="yjt-AT-a47"/>
                         <outlet property="signupButton" destination="n6F-q7-l5Z" id="Mz0-Uh-vnS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B8Q-aJ-IIx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="VQm-G0-cGE">
+                    <connections>
+                        <action selector="closeSoftwareKeybodard:" destination="eja-KC-pgV" id="Ehb-2d-lz8"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="85" y="484"/>
         </scene>
@@ -179,7 +274,12 @@
         <class className="BRSignupViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BRSignupViewController.h"/>
             <relationships>
+                <relationship kind="action" name="closeSoftwareKeybodard:"/>
                 <relationship kind="action" name="moveToMainScreen:"/>
+                <relationship kind="outlet" name="emailField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="nameField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="passwordConfirmationFIeld" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="passwordField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="signupButton" candidateClass="UIButton"/>
             </relationships>
         </class>

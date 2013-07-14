@@ -9,9 +9,15 @@
 #import <UIKit/UIKit.h>
 
 @interface BRSignupViewController : UIViewController
+<UITextFieldDelegate>
 
+@property (strong, nonatomic) IBOutlet UITextField *nameField;
+@property (strong, nonatomic) IBOutlet UITextField *emailField;
+@property (strong, nonatomic) IBOutlet UITextField *passwordField;
+@property (strong, nonatomic) IBOutlet UITextField *passwordConfirmationFIeld;
 @property (strong, nonatomic) IBOutlet UIButton *signupButton;
 
+- (IBAction)closeSoftwareKeybodard:(id)sender;
 - (IBAction)moveToMainScreen:(id)sender;
 
 @end

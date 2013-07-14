@@ -36,12 +36,31 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)closeSoftwareKeybodard:(id)sender
+{
+    [self.view endEditing: YES];
+}
+
+-(BOOL)textFieldShouldReturn:(UITextField*)textField;
+{
+    NSInteger nextTag = textField.tag + 1;
+    UIResponder* nextResponder = [textField.superview viewWithTag:nextTag];
+
+    if (nextResponder) {
+        [nextResponder becomeFirstResponder];
+    } else {
+        [textField resignFirstResponder];
+    }
+
+    return NO;
+}
+
 - (IBAction)moveToMainScreen:(id)sender
 {
     BRAPIClient *client = [[BRAPIClient alloc] init];
     [client request:@"POST"
               path:@"/v1/users"
-             params:@{@"name":@"antipop", @"email":@"kentarok@gmail.com", @"password":@"password", @"password_confirmation":@"password"}
+             params:@{@"name":self.nameField.text, @"email":self.emailField.text, @"password":self.passwordField.text, @"password_confirmation":self.passwordConfirmationFIeld.text}
             success:^(NSHTTPURLResponse *response, NSDictionary *result) {
                 NSLog(@"%d", [response statusCode]);
                 NSLog(@"%@", result);
