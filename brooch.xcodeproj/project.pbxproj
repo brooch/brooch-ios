@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9626857317926BDA005D1F26 /* BRAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 9626857217926BDA005D1F26 /* BRAPIClient.m */; };
+		9626857417926BDA005D1F26 /* BRAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 9626857217926BDA005D1F26 /* BRAPIClient.m */; };
 		96484663178DA4680072737E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96484662178DA4680072737E /* UIKit.framework */; };
 		96484665178DA4680072737E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96484664178DA4680072737E /* Foundation.framework */; };
 		96484667178DA4680072737E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96484666178DA4680072737E /* CoreGraphics.framework */; };
@@ -63,6 +65,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9626857117926BDA005D1F26 /* BRAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRAPIClient.h; sourceTree = "<group>"; };
+		9626857217926BDA005D1F26 /* BRAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRAPIClient.m; sourceTree = "<group>"; };
 		9648465F178DA4680072737E /* brooch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = brooch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96484662178DA4680072737E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		96484664178DA4680072737E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -130,6 +134,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9626857017926BB3005D1F26 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				9626857117926BDA005D1F26 /* BRAPIClient.h */,
+				9626857217926BDA005D1F26 /* BRAPIClient.m */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
 		96484656178DA4680072737E = {
 			isa = PBXGroup;
 			children = (
@@ -163,6 +176,7 @@
 		96484668178DA4680072737E /* brooch */ = {
 			isa = PBXGroup;
 			children = (
+				9626857017926BB3005D1F26 /* Libraries */,
 				9686152417906D4600400ABD /* Categories */,
 				968614F81790331000400ABD /* Models */,
 				968614F7179032FE00400ABD /* ViewControllers */,
@@ -410,6 +424,7 @@
 				9686151917903F7900400ABD /* BRUser.m in Sources */,
 				96861543179081D500400ABD /* BRSignupViewController.m in Sources */,
 				96861547179081EA00400ABD /* BRSigninViewController.m in Sources */,
+				9626857317926BDA005D1F26 /* BRAPIClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,6 +437,7 @@
 				9686151A17903F7900400ABD /* BRUser.m in Sources */,
 				96861544179081D500400ABD /* BRSignupViewController.m in Sources */,
 				96861548179081EA00400ABD /* BRSigninViewController.m in Sources */,
+				9626857417926BDA005D1F26 /* BRAPIClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

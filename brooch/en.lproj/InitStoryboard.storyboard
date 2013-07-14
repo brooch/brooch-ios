@@ -154,8 +154,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="n6F-q7-l5Z" firstAttribute="top" secondItem="1nC-wZ-5P8" secondAttribute="top" constant="252" id="QQw-U9-TCa"/>
-                            <constraint firstItem="n6F-q7-l5Z" firstAttribute="centerX" secondItem="1nC-wZ-5P8" secondAttribute="centerX" type="default" id="ft2-JU-o7L"/>
+                            <constraint firstItem="n6F-q7-l5Z" firstAttribute="top" secondItem="1nC-wZ-5P8" secondAttribute="top" constant="252" id="61q-8l-AAI"/>
+                            <constraint firstItem="n6F-q7-l5Z" firstAttribute="centerX" secondItem="1nC-wZ-5P8" secondAttribute="centerX" type="default" id="smS-Q6-9US"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="h9y-ex-SFh"/>
