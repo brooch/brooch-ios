@@ -10,4 +10,6 @@
 
 @interface BRViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UILabel *helloLabel;
+
 @end

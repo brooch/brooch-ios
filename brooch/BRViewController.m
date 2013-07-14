@@ -7,6 +7,7 @@
 //
 
 #import "BRViewController.h"
+#import "BRUser.h"
 
 @interface BRViewController ()
 
@@ -17,7 +18,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+
+    self.helloLabel.text = [[BRUser sharedManager] name];
 }
 
 - (void)didReceiveMemoryWarning

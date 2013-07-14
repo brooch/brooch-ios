@@ -28,7 +28,7 @@ static BRUser *_sharedInstance = nil;
 {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSDictionary *userData = [defaults dictionaryForKey:userDefaultsKey];
-
+    NSLog(@"%@", userData);
     [self updateUserData:userData];
 }
 
