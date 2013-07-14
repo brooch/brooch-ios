@@ -10,7 +10,13 @@
 
 @interface BRUser : NSObject
 
+@property (nonatomic, strong) NSString *userId;
+@property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSString *email;
+@property (nonatomic, strong) NSString *api_token;
+
 + (BRUser *)sharedManager;
 - (BOOL) isSignedIn;
+- (void) saveUserData:(NSDictionary *)params;
 
 @end

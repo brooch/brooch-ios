@@ -8,6 +8,7 @@
 
 #import "BRSignupViewController.h"
 #import "BRAPIClient.h"
+#import "BRUser.h"
 
 @interface BRSignupViewController ()
 
@@ -69,6 +70,9 @@
               path:@"/v1/users"
              params:params
             success:^(NSHTTPURLResponse *response, NSDictionary *result) {
+                BRUser *user = [BRUser sharedManager];
+                [user saveUserData:result];
+
                 UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:[NSBundle mainBundle]];
                 UIViewController *initialViewController = [storyboard instantiateInitialViewController];
                
