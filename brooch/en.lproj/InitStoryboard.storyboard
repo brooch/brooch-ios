@@ -148,7 +148,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="moveToMainScreen:" destination="eja-KC-pgV" eventType="touchDown" id="QYC-L5-Q7d"/>
+                                    <action selector="register:" destination="eja-KC-pgV" eventType="touchUpInside" id="jdw-eB-ALR"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="名前" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qcb-sJ-nvl">
@@ -276,6 +276,7 @@
             <relationships>
                 <relationship kind="action" name="closeSoftwareKeybodard:"/>
                 <relationship kind="action" name="moveToMainScreen:"/>
+                <relationship kind="action" name="register:"/>
                 <relationship kind="outlet" name="emailField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="nameField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="passwordConfirmationFIeld" candidateClass="UITextField"/>

@@ -55,16 +55,20 @@
     return NO;
 }
 
-- (IBAction)moveToMainScreen:(id)sender
+- (IBAction)register:(id)sender
 {
+    NSDictionary *params = @{
+        @"name":self.nameField.text,
+        @"email":self.emailField.text,
+        @"password":self.passwordField.text,
+        @"password_confirmation":self.passwordConfirmationFIeld.text
+    };
+
     BRAPIClient *client = [[BRAPIClient alloc] init];
     [client request:@"POST"
               path:@"/v1/users"
-             params:@{@"name":self.nameField.text, @"email":self.emailField.text, @"password":self.passwordField.text, @"password_confirmation":self.passwordConfirmationFIeld.text}
+             params:params
             success:^(NSHTTPURLResponse *response, NSDictionary *result) {
-                NSLog(@"%d", [response statusCode]);
-                NSLog(@"%@", result);
-
                 UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:[NSBundle mainBundle]];
                 UIViewController *initialViewController = [storyboard instantiateInitialViewController];
                
