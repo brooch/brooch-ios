@@ -10,6 +10,18 @@
 
 @implementation BRUser
 
+static BRUser *_sharedInstance = nil;
+
++ (BRUser *)sharedManager
+{
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _sharedInstance = [[BRUser alloc] init];
+    });
+
+    return _sharedInstance;
+}
+
 - (BOOL) isSignedIn
 {
     return NO;

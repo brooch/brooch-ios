@@ -13,7 +13,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    BRUser *user = [[BRUser alloc] init];
+    BRUser *user = [BRUser sharedManager];
     
     if (![user isSignedIn]) {
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"InitStoryboard" bundle:[NSBundle mainBundle]];

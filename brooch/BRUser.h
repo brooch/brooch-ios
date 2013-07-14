@@ -10,6 +10,7 @@
 
 @interface BRUser : NSObject
 
++ (BRUser *)sharedManager;
 - (BOOL) isSignedIn;
 
 @end
