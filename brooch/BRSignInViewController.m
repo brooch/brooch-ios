@@ -1,5 +1,5 @@
 //
-//  BRSigninViewController.m
+//  BRSignInViewController.m
 //  brooch
 //
 //  Created by 栗林 健太郎 on 7/13/13.
@@ -10,11 +10,11 @@
 #import "BRAPIClient.h"
 #import "BRUser.h"
 
-@interface BRSigninViewController ()
+@interface BRSignInViewController ()
 
 @end
 
-@implementation BRSigninViewController
+@implementation BRSignInViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

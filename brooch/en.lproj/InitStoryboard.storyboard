@@ -36,7 +36,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="eja-KC-pgV" kind="modal" identifier="signup" modalTransitionStyle="flipHorizontal" id="3VT-ya-PgU"/>
+                                            <segue destination="eja-KC-pgV" kind="modal" identifier="signUp" modalTransitionStyle="flipHorizontal" id="3VT-ya-PgU"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rJV-R6-O7d">
@@ -53,7 +53,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="lRi-QA-qjq" kind="modal" identifier="signin" modalTransitionStyle="flipHorizontal" id="Hhd-lM-0Gg"/>
+                                            <segue destination="lRi-QA-qjq" kind="modal" identifier="signIn" modalTransitionStyle="flipHorizontal" id="Hhd-lM-0Gg"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -90,10 +90,10 @@
             </objects>
             <point key="canvasLocation" x="-403" y="24"/>
         </scene>
-        <!--Signin View Controller-->
+        <!--Sign In View Controller-->
         <scene sceneID="jAG-8k-JFw">
             <objects>
-                <viewController id="lRi-QA-qjq" customClass="BRSigninViewController" sceneMemberID="viewController">
+                <viewController id="lRi-QA-qjq" customClass="BRSignInViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9GV-mD-mHa">
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -111,7 +111,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="signIn:" destination="lRi-QA-qjq" eventType="touchDown" id="L4i-dU-X9C"/>
+                                    <action selector="signIn:" destination="lRi-QA-qjq" eventType="touchUpInside" id="XI4-2W-TGs"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="メールアドレスかユーザー名" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="xri-c1-wvo">
@@ -155,7 +155,7 @@
                     <connections>
                         <outlet property="emailField" destination="xri-c1-wvo" id="PfR-Ps-wwH"/>
                         <outlet property="passwordField" destination="EFk-y7-gdO" id="vgu-Aa-VrY"/>
-                        <outlet property="signinButton" destination="2QG-D3-sv6" id="Ezv-Ya-Mc0"/>
+                        <outlet property="signInButton" destination="2QG-D3-sv6" id="YwE-bx-lwF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8a8-2i-dRg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -167,10 +167,10 @@
             </objects>
             <point key="canvasLocation" x="85" y="-199"/>
         </scene>
-        <!--Signup View Controller-->
+        <!--Sign Up View Controller-->
         <scene sceneID="4By-Uz-BHm">
             <objects>
-                <viewController id="eja-KC-pgV" customClass="BRSignupViewController" sceneMemberID="viewController">
+                <viewController id="eja-KC-pgV" customClass="BRSignUpViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1nC-wZ-5P8">
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -185,7 +185,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="register:" destination="eja-KC-pgV" eventType="touchUpInside" id="jdw-eB-ALR"/>
+                                    <action selector="signUp:" destination="eja-KC-pgV" eventType="touchUpInside" id="Dtq-wi-Bxl"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="ユーザー名" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="hcr-xn-6PG">
@@ -258,7 +258,7 @@
                         <outlet property="nameField" destination="hcr-xn-6PG" id="hyc-cU-x5c"/>
                         <outlet property="passwordConfirmationFIeld" destination="VLt-z7-cDM" id="fvm-ZW-cAr"/>
                         <outlet property="passwordField" destination="G2I-Ab-Zdq" id="yjt-AT-a47"/>
-                        <outlet property="signupButton" destination="n6F-q7-l5Z" id="Mz0-Uh-vnS"/>
+                        <outlet property="signUpButton" destination="n6F-q7-l5Z" id="bta-FQ-bcn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B8Q-aJ-IIx" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -272,26 +272,27 @@
         </scene>
     </scenes>
     <classes>
-        <class className="BRSigninViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BRSigninViewController.h"/>
+        <class className="BRSignInViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BRSignInViewController.h"/>
             <relationships>
                 <relationship kind="action" name="closeSoftwareKeybodard:"/>
                 <relationship kind="action" name="signIn:"/>
                 <relationship kind="outlet" name="emailField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="passwordField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="signinButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="signInButton" candidateClass="UIButton"/>
             </relationships>
         </class>
-        <class className="BRSignupViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BRSignupViewController.h"/>
+        <class className="BRSignUpViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BRSignUpViewController.h"/>
             <relationships>
                 <relationship kind="action" name="closeSoftwareKeybodard:"/>
                 <relationship kind="action" name="moveToMainScreen:"/>
+                <relationship kind="action" name="signUp:"/>
                 <relationship kind="outlet" name="emailField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="nameField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="passwordConfirmationFIeld" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="passwordField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="signupButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="signUpButton" candidateClass="UIButton"/>
             </relationships>
         </class>
         <class className="BRTutorialViewController" superclassName="UIViewController">

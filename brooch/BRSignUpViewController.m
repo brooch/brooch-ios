@@ -1,5 +1,5 @@
 //
-//  BRSignupViewController.m
+//  BRSignUpViewController.m
 //  brooch
 //
 //  Created by 栗林 健太郎 on 7/13/13.
@@ -10,11 +10,11 @@
 #import "BRAPIClient.h"
 #import "BRUser.h"
 
-@interface BRSignupViewController ()
+@interface BRSignUpViewController ()
 
 @end
 
-@implementation BRSignupViewController
+@implementation BRSignUpViewController
 
 - (UITextField *)password_confirmationField
 {
@@ -66,7 +66,7 @@
     return NO;
 }
 
-- (IBAction)register:(id)sender
+- (IBAction)signUp:(id)sender
 {
     NSDictionary *params = @{
         @"name":self.nameField.text,

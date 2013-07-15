@@ -1,5 +1,5 @@
 //
-//  BRSignupViewController.h
+//  BRSignUpViewController.h
 //  brooch
 //
 //  Created by 栗林 健太郎 on 7/13/13.
@@ -8,15 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BRSignupViewController : UIViewController
+@interface BRSignUpViewController : UIViewController
 
 @property (strong, nonatomic) IBOutlet UITextField *nameField;
 @property (strong, nonatomic) IBOutlet UITextField *emailField;
 @property (strong, nonatomic) IBOutlet UITextField *passwordField;
 @property (strong, nonatomic) IBOutlet UITextField *passwordConfirmationFIeld;
-@property (strong, nonatomic) IBOutlet UIButton *signupButton;
-
-- (IBAction)closeSoftwareKeybodard:(id)sender;
-- (IBAction)moveToMainScreen:(id)sender;
+@property (strong, nonatomic) IBOutlet UIButton *signUpButton;
 
 @end

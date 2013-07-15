@@ -1,5 +1,5 @@
 //
-//  BRSigninViewController.h
+//  BRSignInViewController.h
 //  brooch
 //
 //  Created by 栗林 健太郎 on 7/13/13.
@@ -8,12 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BRSigninViewController : UIViewController
+@interface BRSignInViewController : UIViewController
 
 @property (strong, nonatomic) IBOutlet UITextField *emailField;
 @property (strong, nonatomic) IBOutlet UITextField *passwordField;
-@property (strong, nonatomic) IBOutlet UIButton *signinButton;
-
-- (IBAction)signIn:(id)sender;
+@property (strong, nonatomic) IBOutlet UIButton *signInButton;
 
 @end

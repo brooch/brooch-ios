@@ -48,10 +48,10 @@
 		9686153E1790711300400ABD /* tutorial_3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 968615371790711300400ABD /* tutorial_3@2x.png */; };
 		9686153F1790711300400ABD /* tutorial_4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 968615381790711300400ABD /* tutorial_4@2x.png */; };
 		968615401790711300400ABD /* tutorial_4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 968615381790711300400ABD /* tutorial_4@2x.png */; };
-		96861543179081D500400ABD /* BRSignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96861542179081D500400ABD /* BRSignupViewController.m */; };
-		96861544179081D500400ABD /* BRSignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96861542179081D500400ABD /* BRSignupViewController.m */; };
-		96861547179081EA00400ABD /* BRSigninViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96861546179081EA00400ABD /* BRSigninViewController.m */; };
-		96861548179081EA00400ABD /* BRSigninViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96861546179081EA00400ABD /* BRSigninViewController.m */; };
+		96861543179081D500400ABD /* BRSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96861542179081D500400ABD /* BRSignUpViewController.m */; };
+		96861544179081D500400ABD /* BRSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96861542179081D500400ABD /* BRSignUpViewController.m */; };
+		96861547179081EA00400ABD /* BRSignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96861546179081EA00400ABD /* BRSignInViewController.m */; };
+		96861548179081EA00400ABD /* BRSignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96861546179081EA00400ABD /* BRSignInViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,10 +104,10 @@
 		968615361790711300400ABD /* tutorial_2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tutorial_2@2x.png"; sourceTree = "<group>"; };
 		968615371790711300400ABD /* tutorial_3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tutorial_3@2x.png"; sourceTree = "<group>"; };
 		968615381790711300400ABD /* tutorial_4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tutorial_4@2x.png"; sourceTree = "<group>"; };
-		96861541179081D500400ABD /* BRSignupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRSignupViewController.h; sourceTree = "<group>"; };
-		96861542179081D500400ABD /* BRSignupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRSignupViewController.m; sourceTree = "<group>"; };
-		96861545179081EA00400ABD /* BRSigninViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRSigninViewController.h; sourceTree = "<group>"; };
-		96861546179081EA00400ABD /* BRSigninViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRSigninViewController.m; sourceTree = "<group>"; };
+		96861541179081D500400ABD /* BRSignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRSignUpViewController.h; sourceTree = "<group>"; };
+		96861542179081D500400ABD /* BRSignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRSignUpViewController.m; sourceTree = "<group>"; };
+		96861545179081EA00400ABD /* BRSignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRSignInViewController.h; sourceTree = "<group>"; };
+		96861546179081EA00400ABD /* BRSignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRSignInViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -261,10 +261,10 @@
 			children = (
 				968615061790381400400ABD /* BRTutorialViewController.h */,
 				968615071790381400400ABD /* BRTutorialViewController.m */,
-				96861541179081D500400ABD /* BRSignupViewController.h */,
-				96861542179081D500400ABD /* BRSignupViewController.m */,
-				96861545179081EA00400ABD /* BRSigninViewController.h */,
-				96861546179081EA00400ABD /* BRSigninViewController.m */,
+				96861541179081D500400ABD /* BRSignUpViewController.h */,
+				96861542179081D500400ABD /* BRSignUpViewController.m */,
+				96861545179081EA00400ABD /* BRSignInViewController.h */,
+				96861546179081EA00400ABD /* BRSignInViewController.m */,
 			);
 			name = Init;
 			sourceTree = "<group>";
@@ -422,8 +422,8 @@
 				9648467F178DA4680072737E /* BRViewController.m in Sources */,
 				968615081790381400400ABD /* BRTutorialViewController.m in Sources */,
 				9686151917903F7900400ABD /* BRUser.m in Sources */,
-				96861543179081D500400ABD /* BRSignupViewController.m in Sources */,
-				96861547179081EA00400ABD /* BRSigninViewController.m in Sources */,
+				96861543179081D500400ABD /* BRSignUpViewController.m in Sources */,
+				96861547179081EA00400ABD /* BRSignInViewController.m in Sources */,
 				9626857317926BDA005D1F26 /* BRAPIClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -435,8 +435,8 @@
 				96484694178DA4680072737E /* broochTests.m in Sources */,
 				968615091790381400400ABD /* BRTutorialViewController.m in Sources */,
 				9686151A17903F7900400ABD /* BRUser.m in Sources */,
-				96861544179081D500400ABD /* BRSignupViewController.m in Sources */,
-				96861548179081EA00400ABD /* BRSigninViewController.m in Sources */,
+				96861544179081D500400ABD /* BRSignUpViewController.m in Sources */,
+				96861548179081EA00400ABD /* BRSignInViewController.m in Sources */,
 				9626857417926BDA005D1F26 /* BRAPIClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
