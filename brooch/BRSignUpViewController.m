@@ -61,6 +61,7 @@
         [nextResponder becomeFirstResponder];
     } else {
         [textField resignFirstResponder];
+        [self signUp:self.signUpButton];
     }
 
     return NO;
