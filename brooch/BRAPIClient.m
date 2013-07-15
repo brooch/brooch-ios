@@ -41,10 +41,10 @@ static NSString *base_url = @"https://api.brooch.mobi/v1";
         NSMutableArray *pairs = [NSMutableArray array];
         if (params) {
             for (NSString *key in [params keyEnumerator]) {
-                [pairs addObject:[NSString stringWithFormat:@"%@=%@", key, [params valueForKey:key]]];
+                [pairs addObject:[NSString stringWithFormat:@"%@=%@", [self encodeURLComponent:key], [self encodeURLComponent:[params valueForKey:key]]]];
             }
         }
-    
+
         NSString *query   = [pairs componentsJoinedByString:@"&"];
         NSData *queryData = [query dataUsingEncoding:NSUTF8StringEncoding];
     
@@ -87,6 +87,20 @@ static NSString *base_url = @"https://api.brooch.mobi/v1";
 - (NSURL *)buildURL:(NSString *)path
 {
     return [NSURL URLWithString:[NSString stringWithFormat:@"%@%@", base_url, path]];
+}
+
+- (NSString *)encodeURLComponent:(NSString *)str
+{
+    CFStringRef strRef = CFURLCreateStringByAddingPercentEscapes(
+        NULL,
+        (CFStringRef)str,
+        NULL,
+        (CFStringRef)@"!*'();:@&=+$,/?%#[]~",
+        kCFStringEncodingUTF8
+    );
+    NSString *encodedStr = [NSString stringWithString:(__bridge NSString *)strRef];
+    CFRelease(strRef);
+    return encodedStr;
 }
 
 @end
