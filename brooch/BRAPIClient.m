@@ -29,6 +29,19 @@ static NSString *base_url = @"https://api.brooch.mobi/v1";
             error:errorHandler];
 }
 
+- (void)signIn:(NSDictionary *)params
+       success:(SuccessHandler)successHandler
+       failure:(FailureHandler)failureHandler
+         error:(ErrorHandler)errorHandler
+{
+    [self request:@"POST"
+             path:@"/signin"
+           params:params
+          success:successHandler
+          failure:failureHandler
+            error:errorHandler];
+}
+
 - (void)request:(NSString *)method
            path:(NSString *)path
          params:(NSDictionary *)params

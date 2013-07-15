@@ -26,4 +26,9 @@ typedef void (^ErrorHandler)(NSError *error);
        failure:(FailureHandler)faulureHandler
          error:(ErrorHandler)errorHandler;
 
+- (void)signIn:(NSDictionary *)params
+       success:(SuccessHandler)successHandler
+       failure:(FailureHandler)faulureHandler
+         error:(ErrorHandler)errorHandler;
+
 @end

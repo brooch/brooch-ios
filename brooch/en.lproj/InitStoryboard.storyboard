@@ -111,22 +111,59 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="moveToMainScreen:" destination="lRi-QA-qjq" eventType="touchDown" id="EFm-0b-3eA"/>
+                                    <action selector="signIn:" destination="lRi-QA-qjq" eventType="touchDown" id="L4i-dU-X9C"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="メールアドレスかユーザー名" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="xri-c1-wvo">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="stg-bt-ITb"/>
+                                    <constraint firstAttribute="width" constant="243" id="yhp-qa-0Oh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="eja-KC-pgV" id="aSc-S8-7Mb"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="パスワード" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="EFk-y7-gdO">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="qVN-2h-rZp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="alphabet" returnKeyType="next" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="eja-KC-pgV" id="mPA-qi-wn2"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="2QG-D3-sv6" firstAttribute="centerX" secondItem="9GV-mD-mHa" secondAttribute="centerX" type="default" id="7KF-Y0-Yza"/>
-                            <constraint firstItem="2QG-D3-sv6" firstAttribute="top" secondItem="9GV-mD-mHa" secondAttribute="top" constant="252" id="Ze5-BN-eNr"/>
+                            <constraint firstAttribute="bottom" secondItem="2QG-D3-sv6" secondAttribute="bottom" constant="208" id="1dz-Hr-rq2"/>
+                            <constraint firstItem="xri-c1-wvo" firstAttribute="top" secondItem="9GV-mD-mHa" secondAttribute="top" constant="208" id="7mp-UH-zRl"/>
+                            <constraint firstItem="EFk-y7-gdO" firstAttribute="top" secondItem="xri-c1-wvo" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="bH2-HA-t1M"/>
+                            <constraint firstItem="xri-c1-wvo" firstAttribute="leading" secondItem="EFk-y7-gdO" secondAttribute="leading" type="default" id="bdU-Ks-NS0"/>
+                            <constraint firstItem="EFk-y7-gdO" firstAttribute="trailing" secondItem="xri-c1-wvo" secondAttribute="trailing" type="default" id="ksW-vk-EJ8"/>
+                            <constraint firstItem="EFk-y7-gdO" firstAttribute="centerX" secondItem="2QG-D3-sv6" secondAttribute="centerX" type="default" id="qeR-6D-d34"/>
+                            <constraint firstItem="2QG-D3-sv6" firstAttribute="centerX" secondItem="9GV-mD-mHa" secondAttribute="centerX" type="default" id="zJM-cC-y7a"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="K0g-av-dmw" appends="YES" id="guB-14-dyZ"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="vhl-U7-E5a"/>
                     <connections>
+                        <outlet property="emailField" destination="xri-c1-wvo" id="PfR-Ps-wwH"/>
+                        <outlet property="passwordField" destination="EFk-y7-gdO" id="vgu-Aa-VrY"/>
                         <outlet property="signinButton" destination="2QG-D3-sv6" id="Ezv-Ya-Mc0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8a8-2i-dRg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="K0g-av-dmw">
+                    <connections>
+                        <action selector="closeSoftwareKeybodard:" destination="lRi-QA-qjq" id="Jjs-Fq-52D"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="85" y="-199"/>
         </scene>
@@ -151,7 +188,7 @@
                                     <action selector="register:" destination="eja-KC-pgV" eventType="touchUpInside" id="jdw-eB-ALR"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="長過ぎない名前" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="hcr-xn-6PG">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="ユーザー名" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="hcr-xn-6PG">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="UPT-fr-lYt"/>
                                     <constraint firstAttribute="width" constant="243" id="ccZ-hr-TTn"/>
@@ -163,7 +200,7 @@
                                     <outlet property="delegate" destination="eja-KC-pgV" id="l6s-Zj-4qD"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="ちゃんと届くもの" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Lyr-pa-31u">
+                            <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="メールアドレス" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Lyr-pa-31u">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Gth-Nw-l2P"/>
                                 </constraints>
@@ -238,7 +275,10 @@
         <class className="BRSigninViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BRSigninViewController.h"/>
             <relationships>
-                <relationship kind="action" name="moveToMainScreen:"/>
+                <relationship kind="action" name="closeSoftwareKeybodard:"/>
+                <relationship kind="action" name="signIn:"/>
+                <relationship kind="outlet" name="emailField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="passwordField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="signinButton" candidateClass="UIButton"/>
             </relationships>
         </class>
@@ -247,7 +287,6 @@
             <relationships>
                 <relationship kind="action" name="closeSoftwareKeybodard:"/>
                 <relationship kind="action" name="moveToMainScreen:"/>
-                <relationship kind="action" name="register:"/>
                 <relationship kind="outlet" name="emailField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="nameField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="passwordConfirmationFIeld" candidateClass="UITextField"/>

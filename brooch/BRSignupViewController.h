@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface BRSignupViewController : UIViewController
-<UITextFieldDelegate>
 
 @property (strong, nonatomic) IBOutlet UITextField *nameField;
 @property (strong, nonatomic) IBOutlet UITextField *emailField;

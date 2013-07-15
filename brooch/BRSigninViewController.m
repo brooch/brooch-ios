@@ -7,6 +7,8 @@
 //
 
 #import "BRSigninViewController.h"
+#import "BRAPIClient.h"
+#import "BRUser.h"
 
 @interface BRSigninViewController ()
 
@@ -35,12 +37,66 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)moveToMainScreen:(id)sender
+- (IBAction)closeSoftwareKeybodard:(id)sender
 {
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:[NSBundle mainBundle]];
-    UIViewController *initialViewController = [storyboard instantiateInitialViewController];
+    [self.view endEditing: YES];
+}
 
-    [self presentViewController:initialViewController animated:NO completion:nil];
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    textField.textColor = [UIColor blackColor];
+}
+
+-(BOOL)textFieldShouldReturn:(UITextField*)textField;
+{
+    NSInteger nextTag = textField.tag + 1;
+    UIResponder* nextResponder = [textField.superview viewWithTag:nextTag];
+    
+    if (nextResponder) {
+        [nextResponder becomeFirstResponder];
+    } else {
+        [textField resignFirstResponder];
+    }
+    
+    return NO;
+}
+
+- (IBAction)signIn:(id)sender
+{
+    NSDictionary *params = @{
+        @"email":self.emailField.text,
+        @"password":self.passwordField.text
+    };
+    
+    BRAPIClient *client = [[BRAPIClient alloc] init];
+    [client signIn:params
+           success:^(NSHTTPURLResponse *response, NSDictionary *result) {
+               BRUser *user = [BRUser sharedManager];
+               [user saveUserData:result];
+               
+               UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:[NSBundle mainBundle]];
+               UIViewController *initialViewController = [storyboard instantiateInitialViewController];
+               
+               [self presentViewController:initialViewController animated:NO completion:nil];
+           } failure:^(NSHTTPURLResponse *response, NSDictionary *result) {
+               NSString *errorMessage = [[result objectForKey:@"sign_in_error"] objectAtIndex:0];
+               
+               UIAlertView *alertView = [[UIAlertView alloc]
+                                         initWithTitle:@"ログインできません"
+                                         message:errorMessage
+                                         delegate:nil
+                                         cancelButtonTitle:nil
+                                         otherButtonTitles:@"もう一度", nil];
+               [alertView show];
+           } error:^(NSError *error) {
+               UIAlertView *alertView = [[UIAlertView alloc]
+                                         initWithTitle:@"エラー"
+                                         message:@"通信中に問題が発生しました"
+                                         delegate:nil
+                                         cancelButtonTitle:nil
+                                         otherButtonTitles:@"もう一度", nil];
+               [alertView show];
+           }];
 }
 
 @end

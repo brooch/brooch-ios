@@ -10,8 +10,10 @@
 
 @interface BRSigninViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UITextField *emailField;
+@property (strong, nonatomic) IBOutlet UITextField *passwordField;
 @property (strong, nonatomic) IBOutlet UIButton *signinButton;
 
-- (IBAction)moveToMainScreen:(id)sender;
+- (IBAction)signIn:(id)sender;
 
 @end
