@@ -28,4 +28,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)firstViewReturnActionForSegue:(UIStoryboardSegue *)segue
+{
+    NSLog(@"First view return action invoked.");
+}
+
 @end

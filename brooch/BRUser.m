@@ -18,7 +18,7 @@ static BRUser *_sharedInstance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         _sharedInstance = [[BRUser alloc] init];
-        //[_sharedInstance loadUserData];
+        [_sharedInstance loadUserData];
     });
 
     return _sharedInstance;
