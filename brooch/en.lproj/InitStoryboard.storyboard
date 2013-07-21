@@ -30,7 +30,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="eja-KC-pgV" kind="modal" identifier="signUp" modalTransitionStyle="flipHorizontal" id="3VT-ya-PgU"/>
+                                    <segue destination="eja-KC-pgV" kind="modal" identifier="signUp" modalTransitionStyle="flipHorizontal" animates="NO" id="3VT-ya-PgU"/>
                                 </connections>
                             </button>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="47N-1I-ben">
@@ -54,7 +54,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="lRi-QA-qjq" kind="modal" identifier="signIn" modalTransitionStyle="flipHorizontal" id="Hhd-lM-0Gg"/>
+                                    <segue destination="lRi-QA-qjq" kind="modal" identifier="signIn" modalTransitionStyle="flipHorizontal" animates="NO" id="Hhd-lM-0Gg"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -319,6 +319,9 @@
         <class className="BRSignInViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BRSignInViewController.h"/>
             <relationships>
+                <relationship kind="action" name="cancel:"/>
+                <relationship kind="action" name="closeSoftwareKeybodard:"/>
+                <relationship kind="action" name="signIn:"/>
                 <relationship kind="outlet" name="emailField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="passwordField" candidateClass="UITextField"/>
