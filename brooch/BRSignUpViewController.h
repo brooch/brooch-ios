@@ -10,10 +10,10 @@
 
 @interface BRSignUpViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UIImageView *imageView;
 @property (strong, nonatomic) IBOutlet UITextField *nameField;
 @property (strong, nonatomic) IBOutlet UITextField *emailField;
 @property (strong, nonatomic) IBOutlet UITextField *passwordField;
-@property (strong, nonatomic) IBOutlet UITextField *passwordConfirmationFIeld;
 @property (strong, nonatomic) IBOutlet UIButton *signUpButton;
 
 @end

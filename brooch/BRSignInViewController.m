@@ -28,7 +28,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+
+    UIImage *image = [UIImage imageNamed:@"sign_in_bg"];
+    self.imageView.image = image;
 }
 
 - (void)didReceiveMemoryWarning

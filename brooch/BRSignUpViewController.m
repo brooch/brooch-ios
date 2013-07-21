@@ -16,10 +16,6 @@
 
 @implementation BRSignUpViewController
 
-- (UITextField *)password_confirmationField
-{
-    return self.passwordConfirmationFIeld;
-}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -33,7 +29,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+
+    UIImage *image = [UIImage imageNamed:@"sign_up_bg"];
+    self.imageView.image = image;
 }
 
 - (void)didReceiveMemoryWarning
@@ -70,10 +68,9 @@
 - (IBAction)signUp:(id)sender
 {
     NSDictionary *params = @{
-        @"name":self.nameField.text,
-        @"email":self.emailField.text,
-        @"password":self.passwordField.text,
-        @"password_confirmation":self.passwordConfirmationFIeld.text
+        @"name":     self.nameField.text,
+        @"email":    self.emailField.text,
+        @"password": self.passwordField.text
     };
 
     BRAPIClient *client = [[BRAPIClient alloc] init];

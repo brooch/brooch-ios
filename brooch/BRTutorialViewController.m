@@ -28,10 +28,10 @@
     [super viewDidLayoutSubviews];
 
     self.tutorialImages = @[
-        [UIImage imageNamed:@"tutorial_1"],
-        [UIImage imageNamed:@"tutorial_2"],
-        [UIImage imageNamed:@"tutorial_3"],
-        [UIImage imageNamed:@"tutorial_4"]
+        [UIImage imageNamed:@"intro_1"],
+        [UIImage imageNamed:@"intro_2"],
+        [UIImage imageNamed:@"intro_3"],
+        [UIImage imageNamed:@"intro_4"]
     ];
     
     self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width * self.tutorialImages.count, self.scrollView.frame.size.height);
@@ -39,8 +39,8 @@
 
     for (int i = 0; i < self.tutorialImages.count; i++) {
         CGRect frame;
-        frame.size.height = self.scrollView.frame.size.height;
-        frame.size.width  = self.scrollView.frame.size.width;
+        frame.size.height = [[self.tutorialImages objectAtIndex:i] size].height;
+        frame.size.width  = [[self.tutorialImages objectAtIndex:i] size].width;
         frame.origin.x    = self.scrollView.frame.origin.x + scrollWidth;
         frame.origin.y    = self.scrollView.frame.origin.y;
 
