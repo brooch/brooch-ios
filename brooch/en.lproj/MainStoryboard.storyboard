@@ -9,7 +9,7 @@
             <objects>
                 <viewController id="2" customClass="BRViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="brooch" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MNa-ts-O2S">
@@ -27,7 +27,7 @@
                     <navigationItem key="navigationItem" id="VGp-pX-Exf">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="FjG-ne-DoI">
                             <connections>
-                                <segue destination="GJz-2p-H9a" kind="push" id="QMg-zK-GXv"/>
+                                <segue destination="GJz-2p-H9a" kind="push" identifier="postScreen" id="QMg-zK-GXv"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -39,14 +39,68 @@
             </objects>
             <point key="canvasLocation" x="324" y="20"/>
         </scene>
-        <!--View Controller-->
+        <!--Post View Controller-->
         <scene sceneID="6LP-qF-UfL">
             <objects>
-                <viewController id="GJz-2p-H9a" sceneMemberID="viewController">
+                <viewController id="GJz-2p-H9a" customClass="BRPostViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dnR-RI-XU1">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5P8-zc-eJm">
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HNh-wL-lvS">
+                                        <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="236" id="45S-sb-baW"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="r5w-pd-OmW" appends="YES" id="P4D-hK-cd9"/>
+                                        </connections>
+                                    </textView>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XTP-SW-2jB">
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cqD-9J-El1">
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="cqD-9J-El1" firstAttribute="leading" secondItem="5P8-zc-eJm" secondAttribute="leading" constant="28" id="AYd-Ra-Gg3"/>
+                                    <constraint firstAttribute="bottom" secondItem="cqD-9J-El1" secondAttribute="bottom" constant="91" id="CfX-NT-LqV"/>
+                                    <constraint firstItem="cqD-9J-El1" firstAttribute="top" secondItem="XTP-SW-2jB" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Dgn-zv-men"/>
+                                    <constraint firstItem="HNh-wL-lvS" firstAttribute="leading" secondItem="5P8-zc-eJm" secondAttribute="leading" type="default" id="Jz5-6E-Ubq"/>
+                                    <constraint firstItem="HNh-wL-lvS" firstAttribute="top" secondItem="5P8-zc-eJm" secondAttribute="top" type="default" id="Oan-8A-Ocz"/>
+                                    <constraint firstItem="XTP-SW-2jB" firstAttribute="leading" secondItem="5P8-zc-eJm" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Ozn-XY-TlW"/>
+                                    <constraint firstAttribute="trailing" secondItem="XTP-SW-2jB" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Ujm-VH-JBo"/>
+                                    <constraint firstItem="XTP-SW-2jB" firstAttribute="top" secondItem="HNh-wL-lvS" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="cNS-LO-ne7"/>
+                                    <constraint firstItem="HNh-wL-lvS" firstAttribute="centerX" secondItem="5P8-zc-eJm" secondAttribute="centerX" type="default" id="ifB-mf-ySW"/>
+                                    <constraint firstItem="HNh-wL-lvS" firstAttribute="trailing" secondItem="5P8-zc-eJm" secondAttribute="trailing" type="default" id="j9x-45-AN5"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="gS7-kG-D8a" appends="YES" id="9DU-jp-vZ2"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5P8-zc-eJm" firstAttribute="top" secondItem="dnR-RI-XU1" secondAttribute="top" type="default" id="1h3-YT-uAd"/>
+                            <constraint firstItem="5P8-zc-eJm" firstAttribute="leading" secondItem="dnR-RI-XU1" secondAttribute="leading" type="default" id="418-gU-dRQ"/>
+                            <constraint firstItem="5P8-zc-eJm" firstAttribute="bottom" secondItem="dnR-RI-XU1" secondAttribute="bottom" type="default" id="7pU-CM-m2S"/>
+                            <constraint firstItem="5P8-zc-eJm" firstAttribute="trailing" secondItem="dnR-RI-XU1" secondAttribute="trailing" type="default" id="NAj-bA-riY"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="4cX-KS-6Ra">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="ztp-Sw-Wzr">
@@ -56,10 +110,63 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="wV9-eS-izT"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="authorField" destination="XTP-SW-2jB" id="O7N-Hz-9Vh"/>
+                        <outlet property="scrollView" destination="5P8-zc-eJm" id="oyP-eA-uVd"/>
+                        <outlet property="tagsField" destination="cqD-9J-El1" id="9Lw-vw-bgJ"/>
+                        <outlet property="textField" destination="HNh-wL-lvS" id="YcH-RX-ykY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5oS-Mg-g2I" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="r5w-pd-OmW">
+                    <connections>
+                        <segue destination="ZxN-mE-mj4" kind="push" identifier="editText" id="NuE-vx-UJb"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="gS7-kG-D8a">
+                    <connections>
+                        <action selector="closeSoftwareKeybodard:" destination="GJz-2p-H9a" id="kJW-LO-xN0"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="906" y="20"/>
+            <point key="canvasLocation" x="773" y="20"/>
+        </scene>
+        <!--Post Text View Controller-->
+        <scene sceneID="Dsb-Rt-hIW">
+            <objects>
+                <viewController id="ZxN-mE-mj4" customClass="BRPostTextViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6pE-Lx-QGu">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ttJ-3V-Xtj">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="277" id="gMd-yI-lCB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="delegate" destination="ZxN-mE-mj4" id="evb-g9-qPA"/>
+                                </connections>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ttJ-3V-Xtj" firstAttribute="top" secondItem="6pE-Lx-QGu" secondAttribute="top" type="default" id="W3q-ud-zRI"/>
+                            <constraint firstItem="ttJ-3V-Xtj" firstAttribute="leading" secondItem="6pE-Lx-QGu" secondAttribute="leading" type="default" id="bar-DD-Y2X"/>
+                            <constraint firstItem="ttJ-3V-Xtj" firstAttribute="trailing" secondItem="6pE-Lx-QGu" secondAttribute="trailing" type="default" id="ne2-oB-P0s"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="yyK-4k-Wua"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="textField" destination="ttJ-3V-Xtj" id="rDd-3a-Fur"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GW0-ds-eFk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1282" y="20"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="uoT-vx-9Vp">
@@ -82,6 +189,22 @@
         </scene>
     </scenes>
     <classes>
+        <class className="BRPostTextViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BRPostTextViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="textField" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+        <class className="BRPostViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BRPostViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="closeSoftwareKeybodard:"/>
+                <relationship kind="outlet" name="authorField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="tagsField" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="textField" candidateClass="UITextView"/>
+            </relationships>
+        </class>
         <class className="BRViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BRViewController.h"/>
             <relationships>
@@ -99,6 +222,6 @@
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
+        <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
 </document>

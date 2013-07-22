@@ -24,8 +24,10 @@
 		96484689178DA4680072737E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96484664178DA4680072737E /* Foundation.framework */; };
 		96484691178DA4680072737E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9648468F178DA4680072737E /* InfoPlist.strings */; };
 		96484694178DA4680072737E /* broochTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 96484693178DA4680072737E /* broochTests.m */; };
-		966E8EF9179BB4AA00957D53 /* BRPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 966E8EF8179BB4AA00957D53 /* BRPostViewController.m */; };
-		966E8EFA179BB4AA00957D53 /* BRPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 966E8EF8179BB4AA00957D53 /* BRPostViewController.m */; };
+		966E8EFD179D436E00957D53 /* BRPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 966E8EFC179D436E00957D53 /* BRPostViewController.m */; };
+		966E8EFE179D436E00957D53 /* BRPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 966E8EFC179D436E00957D53 /* BRPostViewController.m */; };
+		966E8F01179D4A1200957D53 /* BRPostTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 966E8F00179D4A1200957D53 /* BRPostTextViewController.m */; };
+		966E8F02179D4A1200957D53 /* BRPostTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 966E8F00179D4A1200957D53 /* BRPostTextViewController.m */; };
 		968614FD1790375200400ABD /* InitStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 968614FC1790375200400ABD /* InitStoryboard.storyboard */; };
 		968614FE1790375200400ABD /* InitStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 968614FC1790375200400ABD /* InitStoryboard.storyboard */; };
 		968615081790381400400ABD /* BRTutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 968615071790381400400ABD /* BRTutorialViewController.m */; };
@@ -96,8 +98,10 @@
 		96484690178DA4680072737E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		96484692178DA4680072737E /* broochTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = broochTests.h; sourceTree = "<group>"; };
 		96484693178DA4680072737E /* broochTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = broochTests.m; sourceTree = "<group>"; };
-		966E8EF7179BB4AA00957D53 /* BRPostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRPostViewController.h; sourceTree = "<group>"; };
-		966E8EF8179BB4AA00957D53 /* BRPostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRPostViewController.m; sourceTree = "<group>"; };
+		966E8EFB179D436E00957D53 /* BRPostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRPostViewController.h; sourceTree = "<group>"; };
+		966E8EFC179D436E00957D53 /* BRPostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRPostViewController.m; sourceTree = "<group>"; };
+		966E8EFF179D4A1200957D53 /* BRPostTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRPostTextViewController.h; sourceTree = "<group>"; };
+		966E8F00179D4A1200957D53 /* BRPostTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRPostTextViewController.m; sourceTree = "<group>"; };
 		968614FC1790375200400ABD /* InitStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = InitStoryboard.storyboard; path = en.lproj/InitStoryboard.storyboard; sourceTree = "<group>"; };
 		968615061790381400400ABD /* BRTutorialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRTutorialViewController.h; sourceTree = "<group>"; };
 		968615071790381400400ABD /* BRTutorialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRTutorialViewController.m; sourceTree = "<group>"; };
@@ -235,8 +239,10 @@
 		966E8EF6179BB48E00957D53 /* post */ = {
 			isa = PBXGroup;
 			children = (
-				966E8EF7179BB4AA00957D53 /* BRPostViewController.h */,
-				966E8EF8179BB4AA00957D53 /* BRPostViewController.m */,
+				966E8EFB179D436E00957D53 /* BRPostViewController.h */,
+				966E8EFC179D436E00957D53 /* BRPostViewController.m */,
+				966E8EFF179D4A1200957D53 /* BRPostTextViewController.h */,
+				966E8F00179D4A1200957D53 /* BRPostTextViewController.m */,
 			);
 			name = post;
 			sourceTree = "<group>";
@@ -473,7 +479,8 @@
 				96861543179081D500400ABD /* BRSignUpViewController.m in Sources */,
 				96861547179081EA00400ABD /* BRSignInViewController.m in Sources */,
 				9626857317926BDA005D1F26 /* BRAPIClient.m in Sources */,
-				966E8EF9179BB4AA00957D53 /* BRPostViewController.m in Sources */,
+				966E8EFD179D436E00957D53 /* BRPostViewController.m in Sources */,
+				966E8F01179D4A1200957D53 /* BRPostTextViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,7 +494,8 @@
 				96861544179081D500400ABD /* BRSignUpViewController.m in Sources */,
 				96861548179081EA00400ABD /* BRSignInViewController.m in Sources */,
 				9626857417926BDA005D1F26 /* BRAPIClient.m in Sources */,
-				966E8EFA179BB4AA00957D53 /* BRPostViewController.m in Sources */,
+				966E8EFE179D436E00957D53 /* BRPostViewController.m in Sources */,
+				966E8F02179D4A1200957D53 /* BRPostTextViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
