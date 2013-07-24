@@ -71,13 +71,20 @@ static BRUser *_sharedInstance = nil;
 
 - (void)requestWithApiToken:(NSString *)method
                        path:(NSString *)path
-                     params:(NSMutableDictionary *)params
+                     params:(NSDictionary *)params
                     success:(SuccessHandler)successHandler
-                    failure:(FailureHandler)faulureHandler
+                    failure:(FailureHandler)failureHandler
                       error:(ErrorHandler)errorHandler
 {
-    [params setObject:self.apiToken forKey:@"api_token"];
-    
+    NSMutableDictionary *paramsWithApiToken = [params mutableCopy];
+    [paramsWithApiToken setObject:self.apiToken forKey:@"api_token"];
+
+    [self.apiClient request:@"POST"
+                       path:path
+                     params:(NSDictionary *)paramsWithApiToken
+                    success:successHandler
+                    failure:failureHandler
+                      error:errorHandler];
 }
 
 - (void)createPost:(NSString *)text
@@ -87,17 +94,17 @@ static BRUser *_sharedInstance = nil;
            failure:(FailureHandler)failureHandler
              error:(ErrorHandler)errorHandler
 {
-    NSMutableDictionary *params = (NSMutableDictionary *)@{
+    NSDictionary *params = @{
         @"text":   text,
-        @"author": author
+        @"author": author,
     };
 
-    [self.apiClient request:@"POST"
-                       path:[NSString stringWithFormat:@"/users/%@/posts", self.userId]
-                     params:params
-                    success:successHandler
-                    failure:failureHandler
-                      error:errorHandler];
+    [self requestWithApiToken:@"POST"
+                         path:[NSString stringWithFormat:@"/users/%@/posts", self.userId]
+                       params:params
+                      success:successHandler
+                      failure:failureHandler
+                        error:errorHandler];
 }
 
 @end
