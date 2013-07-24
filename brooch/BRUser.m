@@ -8,6 +8,12 @@
 
 #import "BRUser.h"
 
+@interface BRUser ()
+
+@property (nonatomic, strong) BRAPIClient *apiClient;
+
+@end
+
 @implementation BRUser
 
 static NSString *userDefaultsKey = @"mobi.brooch.BRUser";
@@ -18,6 +24,7 @@ static BRUser *_sharedInstance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         _sharedInstance = [[BRUser alloc] init];
+        _sharedInstance.apiClient = [[BRAPIClient alloc] init];
         [_sharedInstance loadUserData];
     });
 
@@ -36,7 +43,7 @@ static BRUser *_sharedInstance = nil;
     self.userId    = [userData objectForKey:@"id"];
     self.name      = [userData objectForKey:@"name"];
     self.email     = [userData objectForKey:@"email"];
-    self.api_token = [userData objectForKey:@"api_token"];
+    self.apiToken  = [userData objectForKey:@"api_token"];
 }
 
 - (void)saveUserData:(NSDictionary *)userData
@@ -57,9 +64,40 @@ static BRUser *_sharedInstance = nil;
     [defaults synchronize];
 }
 
-- (BOOL) isSignedIn
+- (BOOL)isSignedIn
 {
-    return !!self.api_token;
+    return !!self.apiToken;
+}
+
+- (void)requestWithApiToken:(NSString *)method
+                       path:(NSString *)path
+                     params:(NSMutableDictionary *)params
+                    success:(SuccessHandler)successHandler
+                    failure:(FailureHandler)faulureHandler
+                      error:(ErrorHandler)errorHandler
+{
+    [params setObject:self.apiToken forKey:@"api_token"];
+    
+}
+
+- (void)createPost:(NSString *)text
+            author:(NSString *)author
+              tags:(NSArray *)tags
+           success:(SuccessHandler)successHandler
+           failure:(FailureHandler)failureHandler
+             error:(ErrorHandler)errorHandler
+{
+    NSMutableDictionary *params = (NSMutableDictionary *)@{
+        @"text":   text,
+        @"author": author
+    };
+
+    [self.apiClient request:@"POST"
+                       path:[NSString stringWithFormat:@"/users/%@/posts", self.userId]
+                     params:params
+                    success:successHandler
+                    failure:failureHandler
+                      error:errorHandler];
 }
 
 @end

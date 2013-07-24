@@ -108,7 +108,11 @@
                                 <segue destination="QD8-tc-YKM" kind="unwind" unwindAction="firstViewReturnActionForSegue:" id="PdR-gs-QcG"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="wV9-eS-izT"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="wV9-eS-izT">
+                            <connections>
+                                <action selector="createPost:" destination="GJz-2p-H9a" id="rCY-Ws-35m"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="authorField" destination="XTP-SW-2jB" id="O7N-Hz-9Vh"/>
@@ -188,37 +192,6 @@
             <point key="canvasLocation" x="-202" y="20"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="BRPostTextViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BRPostTextViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="textField" candidateClass="UITextView"/>
-            </relationships>
-        </class>
-        <class className="BRPostViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BRPostViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="closeSoftwareKeybodard:"/>
-                <relationship kind="outlet" name="authorField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
-                <relationship kind="outlet" name="tagsField" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="textField" candidateClass="UITextView"/>
-            </relationships>
-        </class>
-        <class className="BRViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BRViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="firstViewReturnActionForSegue:" candidateClass="UIStoryboardSegue"/>
-                <relationship kind="outlet" name="helloLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="UIStoryboardSegue" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UIStoryboardSegue.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

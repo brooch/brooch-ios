@@ -7,16 +7,24 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "BRAPIClient.h"
 
 @interface BRUser : NSObject
 
 @property (nonatomic, strong) NSString *userId;
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *email;
-@property (nonatomic, strong) NSString *api_token;
+@property (nonatomic, strong) NSString *apiToken;
 
 + (BRUser *)sharedManager;
 - (BOOL) isSignedIn;
 - (void) saveUserData:(NSDictionary *)params;
+
+- (void)createPost:(NSString *)text
+            author:(NSString *)author
+              tags:(NSArray *)tags
+           success:(SuccessHandler)successHandler
+           failure:(FailureHandler)failureHandler
+             error:(ErrorHandler)errorHandler;
 
 @end

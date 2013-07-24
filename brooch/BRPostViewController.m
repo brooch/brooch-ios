@@ -8,6 +8,7 @@
 
 #import "BRPostViewController.h"
 #import "BRPostTextViewController.h"
+#import "BRUser.h"
 
 @interface BRPostViewController ()
 
@@ -66,6 +67,21 @@
     if ([@"editText" isEqualToString:segue.identifier]) {
         [[segue destinationViewController] setParentTextField:self.textField];
     }
+}
+
+- (IBAction)createPost:(id)sender
+{
+    BRUser *user = [BRUser sharedManager];
+    [user createPost:self.textField.text
+              author:self.authorField.text
+                tags:@[@"foo"]
+             success:^(NSHTTPURLResponse *response, NSDictionary *result) {
+                 NSLog(@"%@", result);
+             } failure:^(NSHTTPURLResponse *response, NSDictionary *result) {
+                 NSLog(@"%@", result);
+             } error:^(NSError *error) {
+                 NSLog(@"%@", error);
+             }];
 }
 
 @end
