@@ -26,9 +26,7 @@
             [self.tableView reloadData];
         } failure:^(NSHTTPURLResponse *response, NSDictionary *result) {
             NSLog(@"%@", result);
-        } error:^(NSError *error) {
-            NSLog(@"%@", error);
-        }];
+        } error:nil];
 }
 
 - (void)didReceiveMemoryWarning

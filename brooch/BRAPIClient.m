@@ -81,7 +81,17 @@ static NSString *base_url = @"https://api.brooch.mobi/v1";
 
         if (requestError) {
             dispatch_async(dispatch_get_main_queue(), ^{
-                errorHandler(requestError);
+                if (errorHandler) {
+                    errorHandler(requestError);
+                }
+                else {
+                    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"通信エラー"
+                                                                        message:@"通信中にエラーが発生しました。"
+                                                                       delegate:nil
+                                                              cancelButtonTitle:nil
+                                                              otherButtonTitles:@"OK", nil];
+                    [alertView show];
+                }
             });
         }
         else {
@@ -90,7 +100,17 @@ static NSString *base_url = @"https://api.brooch.mobi/v1";
 
             dispatch_async(dispatch_get_main_queue(), ^{
                 if (jsonError) {
-                    errorHandler(jsonError);
+                    if (errorHandler) {
+                        errorHandler(jsonError);
+                    }
+                    else {
+                        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"レスポンスエラー"
+                                                                            message:@"サーバからのレスポンスが不正です。"
+                                                                           delegate:nil
+                                                                  cancelButtonTitle:nil
+                                                                  otherButtonTitles:@"OK", nil];
+                        [alertView show];
+                    }
                 }
                 else if ([response statusCode] < 300) {
                     successHandler(response, result);

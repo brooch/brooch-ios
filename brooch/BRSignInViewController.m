@@ -91,15 +91,7 @@
                                          cancelButtonTitle:nil
                                          otherButtonTitles:@"もう一度", nil];
                [alertView show];
-           } error:^(NSError *error) {
-               UIAlertView *alertView = [[UIAlertView alloc]
-                                         initWithTitle:@"エラー"
-                                         message:@"通信中に問題が発生しました"
-                                         delegate:nil
-                                         cancelButtonTitle:nil
-                                         otherButtonTitles:@"もう一度", nil];
-               [alertView show];
-           }];
+           } error:nil];
 }
 
 - (IBAction)cancel:(id)sender
