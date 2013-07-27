@@ -6,15 +6,15 @@
 //  Copyright (c) 2013 栗林 健太郎. All rights reserved.
 //
 
-#import "BRPostViewController.h"
-#import "BRPostTextViewController.h"
+#import "BRPostFormViewController.h"
+#import "BRPostFormTextViewController.h"
 #import "BRUser.h"
 
-@interface BRPostViewController ()
+@interface BRPostFormViewController ()
 
 @end
 
-@implementation BRPostViewController
+@implementation BRPostFormViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

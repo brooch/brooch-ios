@@ -26,10 +26,10 @@
 		96484689178DA4680072737E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96484664178DA4680072737E /* Foundation.framework */; };
 		96484691178DA4680072737E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9648468F178DA4680072737E /* InfoPlist.strings */; };
 		96484694178DA4680072737E /* broochTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 96484693178DA4680072737E /* broochTests.m */; };
-		966E8EFD179D436E00957D53 /* BRPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 966E8EFC179D436E00957D53 /* BRPostViewController.m */; };
-		966E8EFE179D436E00957D53 /* BRPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 966E8EFC179D436E00957D53 /* BRPostViewController.m */; };
-		966E8F01179D4A1200957D53 /* BRPostTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 966E8F00179D4A1200957D53 /* BRPostTextViewController.m */; };
-		966E8F02179D4A1200957D53 /* BRPostTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 966E8F00179D4A1200957D53 /* BRPostTextViewController.m */; };
+		966E8EFD179D436E00957D53 /* BRPostFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 966E8EFC179D436E00957D53 /* BRPostFormViewController.m */; };
+		966E8EFE179D436E00957D53 /* BRPostFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 966E8EFC179D436E00957D53 /* BRPostFormViewController.m */; };
+		966E8F01179D4A1200957D53 /* BRPostFormTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 966E8F00179D4A1200957D53 /* BRPostFormTextViewController.m */; };
+		966E8F02179D4A1200957D53 /* BRPostFormTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 966E8F00179D4A1200957D53 /* BRPostFormTextViewController.m */; };
 		968614FD1790375200400ABD /* InitStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 968614FC1790375200400ABD /* InitStoryboard.storyboard */; };
 		968614FE1790375200400ABD /* InitStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 968614FC1790375200400ABD /* InitStoryboard.storyboard */; };
 		968615081790381400400ABD /* BRTutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 968615071790381400400ABD /* BRTutorialViewController.m */; };
@@ -102,10 +102,10 @@
 		96484690178DA4680072737E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		96484692178DA4680072737E /* broochTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = broochTests.h; sourceTree = "<group>"; };
 		96484693178DA4680072737E /* broochTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = broochTests.m; sourceTree = "<group>"; };
-		966E8EFB179D436E00957D53 /* BRPostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRPostViewController.h; sourceTree = "<group>"; };
-		966E8EFC179D436E00957D53 /* BRPostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRPostViewController.m; sourceTree = "<group>"; };
-		966E8EFF179D4A1200957D53 /* BRPostTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRPostTextViewController.h; sourceTree = "<group>"; };
-		966E8F00179D4A1200957D53 /* BRPostTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRPostTextViewController.m; sourceTree = "<group>"; };
+		966E8EFB179D436E00957D53 /* BRPostFormViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRPostFormViewController.h; sourceTree = "<group>"; };
+		966E8EFC179D436E00957D53 /* BRPostFormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRPostFormViewController.m; sourceTree = "<group>"; };
+		966E8EFF179D4A1200957D53 /* BRPostFormTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRPostFormTextViewController.h; sourceTree = "<group>"; };
+		966E8F00179D4A1200957D53 /* BRPostFormTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRPostFormTextViewController.m; sourceTree = "<group>"; };
 		968614FC1790375200400ABD /* InitStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = InitStoryboard.storyboard; path = en.lproj/InitStoryboard.storyboard; sourceTree = "<group>"; };
 		968615061790381400400ABD /* BRTutorialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRTutorialViewController.h; sourceTree = "<group>"; };
 		968615071790381400400ABD /* BRTutorialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRTutorialViewController.m; sourceTree = "<group>"; };
@@ -162,6 +162,53 @@
 				9626857217926BDA005D1F26 /* BRAPIClient.m */,
 			);
 			name = Libraries;
+			sourceTree = "<group>";
+		};
+		96325B6117A3F11700EFE7BE /* Form */ = {
+			isa = PBXGroup;
+			children = (
+				966E8EFB179D436E00957D53 /* BRPostFormViewController.h */,
+				966E8EFC179D436E00957D53 /* BRPostFormViewController.m */,
+				966E8EFF179D4A1200957D53 /* BRPostFormTextViewController.h */,
+				966E8F00179D4A1200957D53 /* BRPostFormTextViewController.m */,
+			);
+			name = Form;
+			sourceTree = "<group>";
+		};
+		96325B6217A3F14A00EFE7BE /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				96325B5D17A3DFA800EFE7BE /* BRPostDetailViewController.h */,
+				96325B5E17A3DFA800EFE7BE /* BRPostDetailViewController.m */,
+			);
+			name = Detail;
+			sourceTree = "<group>";
+		};
+		96325B6317A3F17600EFE7BE /* Tutorial */ = {
+			isa = PBXGroup;
+			children = (
+				968615061790381400400ABD /* BRTutorialViewController.h */,
+				968615071790381400400ABD /* BRTutorialViewController.m */,
+			);
+			name = Tutorial;
+			sourceTree = "<group>";
+		};
+		96325B6417A3F18200EFE7BE /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				96861541179081D500400ABD /* BRSignUpViewController.h */,
+				96861542179081D500400ABD /* BRSignUpViewController.m */,
+			);
+			name = SignUp;
+			sourceTree = "<group>";
+		};
+		96325B6517A3F18F00EFE7BE /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				96861545179081EA00400ABD /* BRSignInViewController.h */,
+				96861546179081EA00400ABD /* BRSignInViewController.m */,
+			);
+			name = SignIn;
 			sourceTree = "<group>";
 		};
 		96484656178DA4680072737E = {
@@ -240,17 +287,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		966E8EF6179BB48E00957D53 /* post */ = {
+		966E8EF6179BB48E00957D53 /* Post */ = {
 			isa = PBXGroup;
 			children = (
-				966E8EFB179D436E00957D53 /* BRPostViewController.h */,
-				966E8EFC179D436E00957D53 /* BRPostViewController.m */,
-				966E8EFF179D4A1200957D53 /* BRPostTextViewController.h */,
-				966E8F00179D4A1200957D53 /* BRPostTextViewController.m */,
-				96325B5D17A3DFA800EFE7BE /* BRPostDetailViewController.h */,
-				96325B5E17A3DFA800EFE7BE /* BRPostDetailViewController.m */,
+				96325B6217A3F14A00EFE7BE /* Detail */,
+				96325B6117A3F11700EFE7BE /* Form */,
 			);
-			name = post;
+			name = Post;
 			sourceTree = "<group>";
 		};
 		968614F7179032FE00400ABD /* ViewControllers */ = {
@@ -283,12 +326,9 @@
 		9686154917908C7F00400ABD /* Init */ = {
 			isa = PBXGroup;
 			children = (
-				968615061790381400400ABD /* BRTutorialViewController.h */,
-				968615071790381400400ABD /* BRTutorialViewController.m */,
-				96861541179081D500400ABD /* BRSignUpViewController.h */,
-				96861542179081D500400ABD /* BRSignUpViewController.m */,
-				96861545179081EA00400ABD /* BRSignInViewController.h */,
-				96861546179081EA00400ABD /* BRSignInViewController.m */,
+				96325B6317A3F17600EFE7BE /* Tutorial */,
+				96325B6417A3F18200EFE7BE /* SignUp */,
+				96325B6517A3F18F00EFE7BE /* SignIn */,
 			);
 			name = Init;
 			sourceTree = "<group>";
@@ -296,7 +336,7 @@
 		9686154A17908C9700400ABD /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				966E8EF6179BB48E00957D53 /* post */,
+				966E8EF6179BB48E00957D53 /* Post */,
 				9648467D178DA4680072737E /* BRTopViewController.h */,
 				9648467E178DA4680072737E /* BRTopViewController.m */,
 			);
@@ -485,8 +525,8 @@
 				96861543179081D500400ABD /* BRSignUpViewController.m in Sources */,
 				96861547179081EA00400ABD /* BRSignInViewController.m in Sources */,
 				9626857317926BDA005D1F26 /* BRAPIClient.m in Sources */,
-				966E8EFD179D436E00957D53 /* BRPostViewController.m in Sources */,
-				966E8F01179D4A1200957D53 /* BRPostTextViewController.m in Sources */,
+				966E8EFD179D436E00957D53 /* BRPostFormViewController.m in Sources */,
+				966E8F01179D4A1200957D53 /* BRPostFormTextViewController.m in Sources */,
 				96325B5F17A3DFA800EFE7BE /* BRPostDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -501,8 +541,8 @@
 				96861544179081D500400ABD /* BRSignUpViewController.m in Sources */,
 				96861548179081EA00400ABD /* BRSignInViewController.m in Sources */,
 				9626857417926BDA005D1F26 /* BRAPIClient.m in Sources */,
-				966E8EFE179D436E00957D53 /* BRPostViewController.m in Sources */,
-				966E8F02179D4A1200957D53 /* BRPostTextViewController.m in Sources */,
+				966E8EFE179D436E00957D53 /* BRPostFormViewController.m in Sources */,
+				966E8F02179D4A1200957D53 /* BRPostFormTextViewController.m in Sources */,
 				96325B6017A3DFA800EFE7BE /* BRPostDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

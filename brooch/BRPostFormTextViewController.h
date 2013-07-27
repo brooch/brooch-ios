@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BRPostTextViewController : UIViewController
+@interface BRPostFormTextViewController : UIViewController
 
 @property (strong, nonatomic) UITextView *parentTextField;
 @property (strong, nonatomic) IBOutlet UITextView *textField;
