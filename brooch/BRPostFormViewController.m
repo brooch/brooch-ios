@@ -7,6 +7,7 @@
 //
 
 #import "BRPostFormViewController.h"
+#import "BRTopViewController.h"
 #import "BRPostFormTextViewController.h"
 #import "BRUser.h"
 
@@ -76,7 +77,12 @@
               author:self.authorField.text
                 tags:@[@"foo"]
              success:^(NSHTTPURLResponse *response, NSDictionary *result) {
-                 NSLog(@"%@", result);
+                 NSArray *controllers = self.navigationController.viewControllers;
+                 BRTopViewController *parent = [controllers objectAtIndex:[controllers count] - 2];
+                 [parent.posts insertObject:result atIndex:0];
+                 [parent.tableView reloadData];
+
+                 [self.navigationController popViewControllerAnimated:YES];
              } failure:^(NSHTTPURLResponse *response, NSDictionary *result) {
                  NSLog(@"%@", result);
              } error:nil];

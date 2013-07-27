@@ -22,7 +22,7 @@
     BRUser *user = [BRUser sharedManager];
     [user posts:@{@"offset": @0, @"limit": @10}
         success:^(NSHTTPURLResponse *response, NSArray *result) {
-            self.posts = result;
+            self.posts = [result mutableCopy];
             [self.tableView reloadData];
         } failure:^(NSHTTPURLResponse *response, NSDictionary *result) {
             NSLog(@"%@", result);
