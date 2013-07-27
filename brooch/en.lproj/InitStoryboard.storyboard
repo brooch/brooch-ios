@@ -9,7 +9,7 @@
             <objects>
                 <viewController id="fZs-YS-ju7" customClass="BRTutorialViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="s1q-W0-bBa">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4hq-ZD-cYc">
@@ -88,7 +88,7 @@
             <objects>
                 <viewController id="lRi-QA-qjq" customClass="BRSignInViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9GV-mD-mHa">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qOW-xG-z5t"/>
@@ -111,7 +111,7 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="メールアドレスかユーザー名" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="xri-c1-wvo">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" type="user" id="stg-bt-ITb"/>
-                                    <constraint firstAttribute="width" constant="225" id="ukQ-23-UHD"/>
+                                    <constraint firstAttribute="width" constant="225" type="user" id="ukQ-23-UHD"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
@@ -152,20 +152,21 @@
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="qOW-xG-z5t" firstAttribute="top" secondItem="9GV-mD-mHa" secondAttribute="top" type="user" id="0eI-1E-S9S"/>
-                            <constraint firstItem="xri-c1-wvo" firstAttribute="top" relation="greaterThanOrEqual" secondItem="9GV-mD-mHa" secondAttribute="top" priority="810" constant="222" type="user" id="3nY-7N-aj7"/>
+                            <constraint firstItem="EFk-y7-gdO" firstAttribute="leading" secondItem="9GV-mD-mHa" secondAttribute="leading" constant="48" type="user" id="1c6-uw-mK3"/>
                             <constraint firstAttribute="bottom" secondItem="2QG-D3-sv6" secondAttribute="bottom" constant="7" type="user" id="8im-N9-BlH"/>
-                            <constraint firstItem="xri-c1-wvo" firstAttribute="centerX" secondItem="qOW-xG-z5t" secondAttribute="centerX" type="default" id="Cu0-vx-ADC"/>
+                            <constraint firstItem="xri-c1-wvo" firstAttribute="centerX" secondItem="qOW-xG-z5t" secondAttribute="centerX" type="user" id="Cu0-vx-ADC"/>
                             <constraint firstItem="qOW-xG-z5t" firstAttribute="leading" secondItem="9GV-mD-mHa" secondAttribute="leading" type="user" id="DRU-uS-eVu"/>
                             <constraint firstItem="KU8-jz-x6H" firstAttribute="leading" secondItem="9GV-mD-mHa" secondAttribute="leading" constant="7" type="user" id="G3t-0U-t1W"/>
-                            <constraint firstItem="xri-c1-wvo" firstAttribute="top" secondItem="9GV-mD-mHa" secondAttribute="top" constant="227" id="G5B-RU-MYb"/>
                             <constraint firstItem="EFk-y7-gdO" firstAttribute="top" secondItem="xri-c1-wvo" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="H8p-sC-fNE"/>
-                            <constraint firstItem="qOW-xG-z5t" firstAttribute="trailing" secondItem="9GV-mD-mHa" secondAttribute="trailing" type="default" id="MtL-UI-vAl"/>
-                            <constraint firstItem="EFk-y7-gdO" firstAttribute="leading" secondItem="xri-c1-wvo" secondAttribute="leading" type="default" id="O9Z-CP-Crb"/>
+                            <constraint firstItem="qOW-xG-z5t" firstAttribute="trailing" secondItem="9GV-mD-mHa" secondAttribute="trailing" type="user" id="MtL-UI-vAl"/>
+                            <constraint firstItem="EFk-y7-gdO" firstAttribute="leading" secondItem="xri-c1-wvo" secondAttribute="leading" type="user" id="O9Z-CP-Crb"/>
                             <constraint firstItem="2QG-D3-sv6" firstAttribute="top" secondItem="KU8-jz-x6H" secondAttribute="top" type="default" id="VtE-gR-HD1"/>
+                            <constraint firstItem="KU8-jz-x6H" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="9GV-mD-mHa" secondAttribute="leading" constant="7" type="user" id="Z7Y-mJ-3pt"/>
+                            <constraint firstItem="xri-c1-wvo" firstAttribute="top" secondItem="9GV-mD-mHa" secondAttribute="top" constant="227" id="ZBP-79-9zb"/>
                             <constraint firstAttribute="trailing" secondItem="2QG-D3-sv6" secondAttribute="trailing" constant="7" type="user" id="bff-B0-Yxa"/>
                             <constraint firstItem="qOW-xG-z5t" firstAttribute="bottom" secondItem="9GV-mD-mHa" secondAttribute="bottom" type="user" id="bhy-pw-hSu"/>
-                            <constraint firstItem="EFk-y7-gdO" firstAttribute="top" relation="greaterThanOrEqual" secondItem="9GV-mD-mHa" secondAttribute="top" constant="265" type="user" id="iMM-bM-EgA"/>
                             <constraint firstAttribute="bottom" secondItem="KU8-jz-x6H" secondAttribute="bottom" constant="7" type="user" id="lIr-gF-K9J"/>
+                            <constraint firstItem="xri-c1-wvo" firstAttribute="leading" secondItem="9GV-mD-mHa" secondAttribute="leading" constant="48" type="user" id="pbr-VZ-roV"/>
                             <constraint firstItem="EFk-y7-gdO" firstAttribute="trailing" secondItem="xri-c1-wvo" secondAttribute="trailing" type="default" id="vKv-fI-kEO"/>
                         </constraints>
                         <connections>
@@ -194,7 +195,7 @@
             <objects>
                 <viewController id="eja-KC-pgV" customClass="BRSignUpViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1nC-wZ-5P8">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0nH-a3-NKd"/>
@@ -318,6 +319,6 @@
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
+        <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
 </document>
