@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		9626857317926BDA005D1F26 /* BRAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 9626857217926BDA005D1F26 /* BRAPIClient.m */; };
 		9626857417926BDA005D1F26 /* BRAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 9626857217926BDA005D1F26 /* BRAPIClient.m */; };
+		96325B5F17A3DFA800EFE7BE /* BRPostDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96325B5E17A3DFA800EFE7BE /* BRPostDetailViewController.m */; };
+		96325B6017A3DFA800EFE7BE /* BRPostDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96325B5E17A3DFA800EFE7BE /* BRPostDetailViewController.m */; };
 		96484663178DA4680072737E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96484662178DA4680072737E /* UIKit.framework */; };
 		96484665178DA4680072737E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96484664178DA4680072737E /* Foundation.framework */; };
 		96484667178DA4680072737E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96484666178DA4680072737E /* CoreGraphics.framework */; };
@@ -77,6 +79,8 @@
 /* Begin PBXFileReference section */
 		9626857117926BDA005D1F26 /* BRAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRAPIClient.h; sourceTree = "<group>"; };
 		9626857217926BDA005D1F26 /* BRAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRAPIClient.m; sourceTree = "<group>"; };
+		96325B5D17A3DFA800EFE7BE /* BRPostDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRPostDetailViewController.h; sourceTree = "<group>"; };
+		96325B5E17A3DFA800EFE7BE /* BRPostDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRPostDetailViewController.m; sourceTree = "<group>"; };
 		9648465F178DA4680072737E /* brooch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = brooch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96484662178DA4680072737E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		96484664178DA4680072737E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -243,6 +247,8 @@
 				966E8EFC179D436E00957D53 /* BRPostViewController.m */,
 				966E8EFF179D4A1200957D53 /* BRPostTextViewController.h */,
 				966E8F00179D4A1200957D53 /* BRPostTextViewController.m */,
+				96325B5D17A3DFA800EFE7BE /* BRPostDetailViewController.h */,
+				96325B5E17A3DFA800EFE7BE /* BRPostDetailViewController.m */,
 			);
 			name = post;
 			sourceTree = "<group>";
@@ -291,8 +297,8 @@
 			isa = PBXGroup;
 			children = (
 				966E8EF6179BB48E00957D53 /* post */,
-				9648467E178DA4680072737E /* BRTopViewController.m */,
 				9648467D178DA4680072737E /* BRTopViewController.h */,
+				9648467E178DA4680072737E /* BRTopViewController.m */,
 			);
 			name = Main;
 			sourceTree = "<group>";
@@ -481,6 +487,7 @@
 				9626857317926BDA005D1F26 /* BRAPIClient.m in Sources */,
 				966E8EFD179D436E00957D53 /* BRPostViewController.m in Sources */,
 				966E8F01179D4A1200957D53 /* BRPostTextViewController.m in Sources */,
+				96325B5F17A3DFA800EFE7BE /* BRPostDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,6 +503,7 @@
 				9626857417926BDA005D1F26 /* BRAPIClient.m in Sources */,
 				966E8EFE179D436E00957D53 /* BRPostViewController.m in Sources */,
 				966E8F02179D4A1200957D53 /* BRPostTextViewController.m in Sources */,
+				96325B6017A3DFA800EFE7BE /* BRPostDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

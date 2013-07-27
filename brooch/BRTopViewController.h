@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BRTopViewController : UIViewController
+@interface BRTopViewController : UITableViewController
+
+@property (strong, nonatomic) IBOutlet UITableView *listView;
+@property (strong, nonatomic) NSArray *posts;
 
 @end

@@ -79,7 +79,7 @@ static BRUser *_sharedInstance = nil;
     NSMutableDictionary *paramsWithApiToken = [params mutableCopy];
     [paramsWithApiToken setObject:self.apiToken forKey:@"api_token"];
 
-    [self.apiClient request:@"POST"
+    [self.apiClient request:method
                        path:path
                      params:(NSDictionary *)paramsWithApiToken
                     success:successHandler
@@ -100,6 +100,24 @@ static BRUser *_sharedInstance = nil;
     };
 
     [self requestWithApiToken:@"POST"
+                         path:[NSString stringWithFormat:@"/users/%@/posts", self.userId]
+                       params:params
+                      success:successHandler
+                      failure:failureHandler
+                        error:errorHandler];
+}
+
+- (void)posts:(NSDictionary *)args
+      success:(SuccessHandler)successHandler
+      failure:(FailureHandler)failureHandler
+        error:(ErrorHandler)errorHandler
+{
+    NSDictionary *params = @{
+        @"offset": [NSString stringWithFormat:@"%@", [args objectForKey:@"offset"]],
+        @"limit":  [NSString stringWithFormat:@"%@", [args objectForKey:@"limit"]]
+    };
+    
+    [self requestWithApiToken:@"GET"
                          path:[NSString stringWithFormat:@"/users/%@/posts", self.userId]
                        params:params
                       success:successHandler

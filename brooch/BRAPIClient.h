@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-typedef void (^SuccessHandler)(NSHTTPURLResponse *response, NSDictionary *result);
-typedef void (^FailureHandler)(NSHTTPURLResponse *response, NSDictionary *result);
+typedef void (^SuccessHandler)(NSHTTPURLResponse *response, id result);
+typedef void (^FailureHandler)(NSHTTPURLResponse *response, id result);
 typedef void (^ErrorHandler)(NSError *error);
 
 @interface BRAPIClient : NSObject

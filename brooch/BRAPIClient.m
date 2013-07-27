@@ -62,9 +62,15 @@ static NSString *base_url = @"https://api.brooch.mobi/v1";
         NSData *queryData = [query dataUsingEncoding:NSUTF8StringEncoding];
     
         NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
-        [request setURL:[self buildURL:path]];
         [request setHTTPMethod:method];
-        [request setHTTPBody:queryData];
+
+        if ([method isEqualToString:@"POST"]) {
+            [request setURL:[self buildURL:path query:nil]];
+            [request setHTTPBody:queryData];
+        }
+        else {
+            [request setURL:[self buildURL:path query:query]];
+        }
     
         NSHTTPURLResponse *response;
         NSError *requestError;
@@ -80,7 +86,7 @@ static NSString *base_url = @"https://api.brooch.mobi/v1";
         }
         else {
             NSError *jsonError   = nil;
-            NSDictionary *result = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&jsonError];
+            id result = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&jsonError];
 
             dispatch_async(dispatch_get_main_queue(), ^{
                 if (jsonError) {
@@ -98,8 +104,14 @@ static NSString *base_url = @"https://api.brooch.mobi/v1";
 }
 
 - (NSURL *)buildURL:(NSString *)path
+            query:(NSString *)query
 {
-    return [NSURL URLWithString:[NSString stringWithFormat:@"%@%@", base_url, path]];
+    if (query) {
+        return [NSURL URLWithString:[NSString stringWithFormat:@"%@%@?%@", base_url, path, query]];
+    }
+    else {
+        return [NSURL URLWithString:[NSString stringWithFormat:@"%@%@", base_url, path]];
+    }
 }
 
 - (NSString *)encodeURLComponent:(NSString *)str
