@@ -4,24 +4,24 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Top View Controller-->
         <scene sceneID="5">
             <objects>
-                <viewController id="2" customClass="BRViewController" sceneMemberID="viewController">
+                <viewController id="2" customClass="BRTopViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="brooch" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MNa-ts-O2S">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="cZr-bl-a0o">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="MNa-ts-O2S" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="CPV-5n-pU9"/>
-                            <constraint firstItem="MNa-ts-O2S" firstAttribute="top" secondItem="3" secondAttribute="top" constant="263" id="jvH-uj-6hc"/>
+                            <constraint firstItem="cZr-bl-a0o" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="63h-2d-TBz"/>
+                            <constraint firstItem="cZr-bl-a0o" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="gim-N2-WKr"/>
+                            <constraint firstItem="cZr-bl-a0o" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="jkK-fE-byA"/>
+                            <constraint firstItem="cZr-bl-a0o" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="kbl-Hp-aun"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="VGp-pX-Exf">
@@ -31,9 +31,6 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <outlet property="helloLabel" destination="MNa-ts-O2S" id="caI-RP-Eia"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
@@ -193,38 +190,6 @@
             <point key="canvasLocation" x="-202" y="20"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="BRPostTextViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BRPostTextViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="textField" candidateClass="UITextView"/>
-            </relationships>
-        </class>
-        <class className="BRPostViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BRPostViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="closeSoftwareKeybodard:"/>
-                <relationship kind="action" name="createPost:"/>
-                <relationship kind="outlet" name="authorField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
-                <relationship kind="outlet" name="tagsField" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="textField" candidateClass="UITextView"/>
-            </relationships>
-        </class>
-        <class className="BRViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BRViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="firstViewReturnActionForSegue:" candidateClass="UIStoryboardSegue"/>
-                <relationship kind="outlet" name="helloLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="UIStoryboardSegue" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UIStoryboardSegue.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

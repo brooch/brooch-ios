@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BRViewController : UIViewController
-
-@property (strong, nonatomic) IBOutlet UILabel *helloLabel;
+@interface BRTopViewController : UIViewController
 
 @end

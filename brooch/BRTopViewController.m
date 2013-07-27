@@ -6,20 +6,18 @@
 //  Copyright (c) 2013 栗林 健太郎. All rights reserved.
 //
 
-#import "BRViewController.h"
+#import "BRTopViewController.h"
 #import "BRUser.h"
 
-@interface BRViewController ()
+@interface BRTopViewController ()
 
 @end
 
-@implementation BRViewController
+@implementation BRTopViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    self.helloLabel.text = [[BRUser sharedManager] name];
 }
 
 - (void)didReceiveMemoryWarning

@@ -18,7 +18,7 @@
 		96484675178DA4680072737E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 96484674178DA4680072737E /* Default.png */; };
 		96484679178DA4680072737E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96484678178DA4680072737E /* Default-568h@2x.png */; };
 		9648467C178DA4680072737E /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9648467A178DA4680072737E /* MainStoryboard.storyboard */; };
-		9648467F178DA4680072737E /* BRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9648467E178DA4680072737E /* BRViewController.m */; };
+		9648467F178DA4680072737E /* BRTopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9648467E178DA4680072737E /* BRTopViewController.m */; };
 		96484687178DA4680072737E /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96484686178DA4680072737E /* SenTestingKit.framework */; };
 		96484688178DA4680072737E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96484662178DA4680072737E /* UIKit.framework */; };
 		96484689178DA4680072737E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96484664178DA4680072737E /* Foundation.framework */; };
@@ -90,8 +90,8 @@
 		96484674178DA4680072737E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		96484678178DA4680072737E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		9648467B178DA4680072737E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		9648467D178DA4680072737E /* BRViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BRViewController.h; sourceTree = "<group>"; };
-		9648467E178DA4680072737E /* BRViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BRViewController.m; sourceTree = "<group>"; };
+		9648467D178DA4680072737E /* BRTopViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BRTopViewController.h; sourceTree = "<group>"; };
+		9648467E178DA4680072737E /* BRTopViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BRTopViewController.m; sourceTree = "<group>"; };
 		96484685178DA4680072737E /* broochTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = broochTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		96484686178DA4680072737E /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		9648468E178DA4680072737E /* broochTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "broochTests-Info.plist"; sourceTree = "<group>"; };
@@ -291,8 +291,8 @@
 			isa = PBXGroup;
 			children = (
 				966E8EF6179BB48E00957D53 /* post */,
-				9648467E178DA4680072737E /* BRViewController.m */,
-				9648467D178DA4680072737E /* BRViewController.h */,
+				9648467E178DA4680072737E /* BRTopViewController.m */,
+				9648467D178DA4680072737E /* BRTopViewController.h */,
 			);
 			name = Main;
 			sourceTree = "<group>";
@@ -473,7 +473,7 @@
 			files = (
 				9648466F178DA4680072737E /* main.m in Sources */,
 				96484673178DA4680072737E /* BRAppDelegate.m in Sources */,
-				9648467F178DA4680072737E /* BRViewController.m in Sources */,
+				9648467F178DA4680072737E /* BRTopViewController.m in Sources */,
 				968615081790381400400ABD /* BRTutorialViewController.m in Sources */,
 				9686151917903F7900400ABD /* BRUser.m in Sources */,
 				96861543179081D500400ABD /* BRSignUpViewController.m in Sources */,
