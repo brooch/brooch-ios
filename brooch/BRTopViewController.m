@@ -64,6 +64,11 @@
     return cell;
 }
 
+- (void)showPostForm
+{
+    
+}
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([[segue identifier] isEqualToString:@"showPostDetail"]) {

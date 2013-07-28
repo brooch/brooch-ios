@@ -44,16 +44,31 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="VGp-pX-Exf">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="FjG-ne-DoI">
-                            <connections>
-                                <segue destination="GJz-2p-H9a" kind="push" identifier="postScreen" id="QMg-zK-GXv"/>
-                            </connections>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="jxd-aO-qGJ">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="zlJ-1S-PiH">
+                                <rect key="frame" x="295" y="11" width="20" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Button" backgroundImage="header_post@2x.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="GJz-2p-H9a" kind="push" identifier="shoPostForm" id="xYw-21-TOF"/>
+                                </connections>
+                            </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="navBarRightButton" destination="jxd-aO-qGJ" id="LXZ-kv-8Rm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="324" y="20"/>
+            <point key="canvasLocation" x="294" y="20"/>
         </scene>
         <!--Post Detail View Controller-->
         <scene sceneID="xPj-Er-1EG">
@@ -94,7 +109,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oza-H1-Itl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="621" y="590"/>
+            <point key="canvasLocation" x="773" y="648"/>
         </scene>
         <!--Post Form View Controller-->
         <scene sceneID="6LP-qF-UfL">
@@ -136,14 +151,14 @@
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="cqD-9J-El1" firstAttribute="leading" secondItem="5P8-zc-eJm" secondAttribute="leading" constant="28" id="AYd-Ra-Gg3"/>
-                                    <constraint firstAttribute="bottom" secondItem="cqD-9J-El1" secondAttribute="bottom" constant="91" id="CfX-NT-LqV"/>
                                     <constraint firstItem="cqD-9J-El1" firstAttribute="top" secondItem="XTP-SW-2jB" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Dgn-zv-men"/>
                                     <constraint firstItem="HNh-wL-lvS" firstAttribute="leading" secondItem="5P8-zc-eJm" secondAttribute="leading" type="default" id="Jz5-6E-Ubq"/>
                                     <constraint firstItem="HNh-wL-lvS" firstAttribute="top" secondItem="5P8-zc-eJm" secondAttribute="top" type="default" id="Oan-8A-Ocz"/>
                                     <constraint firstItem="XTP-SW-2jB" firstAttribute="leading" secondItem="5P8-zc-eJm" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Ozn-XY-TlW"/>
+                                    <constraint firstAttribute="bottom" secondItem="cqD-9J-El1" secondAttribute="bottom" constant="91" id="URw-pX-h2l"/>
                                     <constraint firstAttribute="trailing" secondItem="XTP-SW-2jB" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Ujm-VH-JBo"/>
+                                    <constraint firstItem="XTP-SW-2jB" firstAttribute="centerX" secondItem="5P8-zc-eJm" secondAttribute="centerX" type="default" id="bdi-xQ-o0n"/>
                                     <constraint firstItem="XTP-SW-2jB" firstAttribute="top" secondItem="HNh-wL-lvS" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="cNS-LO-ne7"/>
-                                    <constraint firstItem="HNh-wL-lvS" firstAttribute="centerX" secondItem="5P8-zc-eJm" secondAttribute="centerX" type="default" id="ifB-mf-ySW"/>
                                     <constraint firstItem="HNh-wL-lvS" firstAttribute="trailing" secondItem="5P8-zc-eJm" secondAttribute="trailing" type="default" id="j9x-45-AN5"/>
                                 </constraints>
                                 <connections>
@@ -250,6 +265,9 @@
             <point key="canvasLocation" x="-202" y="20"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="header_post@2x.png" width="40" height="40"/>
+    </resources>
     <classes>
         <class className="BRPostDetailViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BRPostDetailViewController.h"/>
@@ -279,6 +297,7 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BRTopViewController.h"/>
             <relationships>
                 <relationship kind="outlet" name="listView" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="navBarRightButton" candidateClass="UIBarButtonItem"/>
             </relationships>
         </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">

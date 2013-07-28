@@ -12,5 +12,6 @@
 
 @property (strong, nonatomic) IBOutlet UITableView *listView;
 @property (strong, nonatomic) NSMutableArray *posts;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *navBarRightButton;
 
 @end

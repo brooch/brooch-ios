@@ -11,6 +11,10 @@
 		9626857417926BDA005D1F26 /* BRAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 9626857217926BDA005D1F26 /* BRAPIClient.m */; };
 		96325B5F17A3DFA800EFE7BE /* BRPostDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96325B5E17A3DFA800EFE7BE /* BRPostDetailViewController.m */; };
 		96325B6017A3DFA800EFE7BE /* BRPostDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96325B5E17A3DFA800EFE7BE /* BRPostDetailViewController.m */; };
+		96325B6717A501B100EFE7BE /* header_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96325B6617A501B100EFE7BE /* header_bg@2x.png */; };
+		96325B6817A501B100EFE7BE /* header_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96325B6617A501B100EFE7BE /* header_bg@2x.png */; };
+		96325B6A17A501B700EFE7BE /* header_post@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96325B6917A501B700EFE7BE /* header_post@2x.png */; };
+		96325B6B17A501B700EFE7BE /* header_post@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96325B6917A501B700EFE7BE /* header_post@2x.png */; };
 		96484663178DA4680072737E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96484662178DA4680072737E /* UIKit.framework */; };
 		96484665178DA4680072737E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96484664178DA4680072737E /* Foundation.framework */; };
 		96484667178DA4680072737E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96484666178DA4680072737E /* CoreGraphics.framework */; };
@@ -81,6 +85,8 @@
 		9626857217926BDA005D1F26 /* BRAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRAPIClient.m; sourceTree = "<group>"; };
 		96325B5D17A3DFA800EFE7BE /* BRPostDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRPostDetailViewController.h; sourceTree = "<group>"; };
 		96325B5E17A3DFA800EFE7BE /* BRPostDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRPostDetailViewController.m; sourceTree = "<group>"; };
+		96325B6617A501B100EFE7BE /* header_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "header_bg@2x.png"; sourceTree = "<group>"; };
+		96325B6917A501B700EFE7BE /* header_post@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "header_post@2x.png"; sourceTree = "<group>"; };
 		9648465F178DA4680072737E /* brooch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = brooch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96484662178DA4680072737E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		96484664178DA4680072737E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -209,6 +215,15 @@
 				96861546179081EA00400ABD /* BRSignInViewController.m */,
 			);
 			name = SignIn;
+			sourceTree = "<group>";
+		};
+		96325B6C17A50A5500EFE7BE /* main */ = {
+			isa = PBXGroup;
+			children = (
+				96325B6617A501B100EFE7BE /* header_bg@2x.png */,
+				96325B6917A501B700EFE7BE /* header_post@2x.png */,
+			);
+			name = main;
 			sourceTree = "<group>";
 		};
 		96484656178DA4680072737E = {
@@ -355,6 +370,7 @@
 		9691103217980DA500A72D7B /* images */ = {
 			isa = PBXGroup;
 			children = (
+				96325B6C17A50A5500EFE7BE /* main */,
 				9691103317980DAF00A72D7B /* init */,
 			);
 			name = images;
@@ -470,6 +486,8 @@
 				969110471798A64E00A72D7B /* sign_up_select.png in Resources */,
 				9691104A179BA2A600A72D7B /* cancel.png in Resources */,
 				96CEE55B179BA849001342E3 /* intro_1@2x.png in Resources */,
+				96325B6717A501B100EFE7BE /* header_bg@2x.png in Resources */,
+				96325B6A17A501B700EFE7BE /* header_post@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -491,6 +509,8 @@
 				969110451798A38300A72D7B /* sign_up_bg@2x.png in Resources */,
 				969110481798A64E00A72D7B /* sign_up_select.png in Resources */,
 				9691104B179BA2A600A72D7B /* cancel.png in Resources */,
+				96325B6817A501B100EFE7BE /* header_bg@2x.png in Resources */,
+				96325B6B17A501B700EFE7BE /* header_post@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

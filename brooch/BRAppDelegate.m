@@ -15,12 +15,19 @@
 {
     BRUser *user = [BRUser sharedManager];
     
+    // サインインしてなかったら初回登録/ログインフローへ
     if (![user isSignedIn]) {
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"InitStoryboard" bundle:[NSBundle mainBundle]];
         UIViewController *initialViewController = [storyboard instantiateInitialViewController];
 
         self.window.rootViewController = initialViewController;
     }
+
+    // ナビゲーションバーの見た目
+    UIImage *image  = [UIImage imageNamed:@"header_bg"];
+    UIImage *shadow = [[UIImage alloc] init];
+    [[UINavigationBar appearance] setBackgroundImage:image forBarMetrics:UIBarMetricsDefault];
+    [[UINavigationBar appearance] setShadowImage:shadow];
 
     return YES;
 }
