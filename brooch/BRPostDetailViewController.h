@@ -10,4 +10,10 @@
 
 @interface BRPostDetailViewController : UIViewController
 
+@property (nonatomic, strong) NSDictionary *post;
+@property (strong, nonatomic) IBOutlet UITextView *textView;
+@property (strong, nonatomic) IBOutlet UILabel *authorView;
+
+- (void)updateViewWith:(NSDictionary *)post;
+
 @end

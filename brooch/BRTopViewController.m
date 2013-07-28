@@ -7,6 +7,7 @@
 //
 
 #import "BRTopViewController.h"
+#import "BRPostDetailViewController.h"
 #import "BRUser.h"
 
 @interface BRTopViewController ()
@@ -52,7 +53,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"listViewCell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
@@ -61,6 +62,14 @@
     
     cell.textLabel.text = [[self.posts objectAtIndex:indexPath.row] objectForKey:@"text"];
     return cell;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"showPostDetail"]) {
+        NSIndexPath *path = [self.tableView indexPathForSelectedRow];
+        [segue.destinationViewController setPost:[self.posts objectAtIndex:path.row]];
+    }
 }
 
 @end

@@ -26,7 +26,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+
+    self.textView.text   = [self.post valueForKeyPath:@"text"];
+    self.authorView.text = [self.post valueForKeyPath:@"author.name"];
 }
 
 - (void)didReceiveMemoryWarning
