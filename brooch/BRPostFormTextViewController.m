@@ -50,4 +50,8 @@
     self.parentTextField.text = textView.text;
 }
 
+- (IBAction)cancelForm:(id)sender{
+    [self dismissViewControllerAnimated:NO completion:nil];
+}
+
 @end

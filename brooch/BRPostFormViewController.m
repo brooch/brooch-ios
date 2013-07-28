@@ -65,9 +65,14 @@
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([@"editText" isEqualToString:segue.identifier]) {
+    if ([@"showPostTextForm" isEqualToString:segue.identifier]) {
         [[segue destinationViewController] setParentTextField:self.textField];
     }
+}
+
+- (IBAction)cancelForm:(id)sender
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (IBAction)createPost:(id)sender
@@ -77,12 +82,13 @@
               author:self.authorField.text
                 tags:@[@"foo"]
              success:^(NSHTTPURLResponse *response, NSDictionary *result) {
-                 NSArray *controllers = self.navigationController.viewControllers;
-                 BRTopViewController *parent = [controllers objectAtIndex:[controllers count] - 2];
+                 UINavigationController *navi = (UINavigationController *)self.presentingViewController;
+                 NSArray *controllers = navi.viewControllers;
+                 BRTopViewController *parent = (BRTopViewController *)[controllers objectAtIndex:0];
                  [parent.posts insertObject:result atIndex:0];
                  [parent.tableView reloadData];
 
-                 [self.navigationController popViewControllerAnimated:YES];
+                 [self dismissViewControllerAnimated:NO completion:nil];
              } failure:^(NSHTTPURLResponse *response, NSDictionary *result) {
                  NSLog(@"%@", result);
              } error:nil];
