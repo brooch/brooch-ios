@@ -14,4 +14,9 @@
 @property (strong, nonatomic) NSMutableArray *posts;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *navBarRightButton;
 
+- (BOOL)hasNextPost;
+- (BOOL)hasPrevPost;
+- (NSDictionary *)nextPost;
+- (NSDictionary *)prevPost;
+
 @end

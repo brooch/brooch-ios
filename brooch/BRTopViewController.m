@@ -12,6 +12,8 @@
 
 @interface BRTopViewController ()
 
+@property (nonatomic) NSInteger currentPostPostion;
+
 @end
 
 @implementation BRTopViewController
@@ -64,17 +66,40 @@
     return cell;
 }
 
-- (void)showPostForm
-{
-    
-}
-
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([[segue identifier] isEqualToString:@"showPostDetail"]) {
         NSIndexPath *path = [self.tableView indexPathForSelectedRow];
-        [segue.destinationViewController setPost:[self.posts objectAtIndex:path.row]];
+        self.currentPostPostion = path.row;
+        [segue.destinationViewController setCurrentPost:[self.posts objectAtIndex:path.row]];
     }
+}
+
+// TODO: ダサいのでiteratorパタンにする
+- (BOOL)hasNextPost
+{
+    return self.currentPostPostion != [self.posts count] - 1;
+}
+
+- (BOOL)hasPrevPost
+{
+    return self.currentPostPostion > 0;
+}
+
+- (NSDictionary *)nextPost
+{
+    NSDictionary *post = self.posts[self.currentPostPostion + 1];
+    self.currentPostPostion += 1;
+    return post;
+
+}
+
+- (NSDictionary *)prevPost
+{
+    NSDictionary *post = self.posts[self.currentPostPostion - 1];
+    self.currentPostPostion -= 1;
+    return post;
+    
 }
 
 @end
