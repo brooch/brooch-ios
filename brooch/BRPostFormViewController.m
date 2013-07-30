@@ -10,6 +10,7 @@
 #import "BRTopViewController.h"
 #import "BRPostFormTextViewController.h"
 #import "BRUser.h"
+#import "BRPostModel.h"
 
 @interface BRPostFormViewController ()
 
@@ -85,7 +86,8 @@
                  UINavigationController *navi = (UINavigationController *)self.presentingViewController;
                  NSArray *controllers = navi.viewControllers;
                  BRTopViewController *parent = (BRTopViewController *)[controllers objectAtIndex:0];
-                 [parent.posts insertObject:result atIndex:0];
+
+                 [parent.posts insertObject:[[BRPostModel alloc] initWithDictionary:result] atIndex:0];
                  [parent.tableView reloadData];
 
                  [self dismissViewControllerAnimated:NO completion:nil];
