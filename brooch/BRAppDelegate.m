@@ -7,13 +7,13 @@
 //
 
 #import "BRAppDelegate.h"
-#import "BRUser.h"
+#import "BRUserModel.h"
 
 @implementation BRAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    BRUser *user = [BRUser sharedManager];
+    BRUserModel *user = [BRUserModel sharedManager];
     
     // サインインしてなかったら初回登録/ログインフローへ
     if (![user isSignedIn]) {

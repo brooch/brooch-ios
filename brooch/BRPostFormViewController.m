@@ -9,7 +9,7 @@
 #import "BRPostFormViewController.h"
 #import "BRTopViewController.h"
 #import "BRPostFormTextViewController.h"
-#import "BRUser.h"
+#import "BRUserModel.h"
 #import "BRPostModel.h"
 
 @interface BRPostFormViewController ()
@@ -78,7 +78,7 @@
 
 - (IBAction)createPost:(id)sender
 {
-    BRUser *user = [BRUser sharedManager];
+    BRUserModel *user = [BRUserModel sharedManager];
     [user createPost:self.textField.text
               author:self.authorField.text
                 tags:@[@"foo"]

@@ -8,7 +8,7 @@
 
 #import "BRTopViewController.h"
 #import "BRPostDetailViewController.h"
-#import "BRUser.h"
+#import "BRUserModel.h"
 #import "BRPostModel.h"
 
 @interface BRTopViewController ()
@@ -23,7 +23,7 @@
 {
     [super viewDidLoad];
 
-    BRUser *user = [BRUser sharedManager];
+    BRUserModel *user = [BRUserModel sharedManager];
     [user posts:@{@"offset": @0, @"limit": @10}
         success:^(NSHTTPURLResponse *response, NSArray *result) {
             NSMutableArray *posts = [@[] mutableCopy];

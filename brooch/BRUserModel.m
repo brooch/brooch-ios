@@ -1,29 +1,29 @@
 //
-//  BRUser.m
+//  BRUserModel.m
 //  brooch
 //
 //  Created by 栗林 健太郎 on 7/12/13.
 //  Copyright (c) 2013 栗林 健太郎. All rights reserved.
 //
 
-#import "BRUser.h"
+#import "BRUserModel.h"
 
-@interface BRUser ()
+@interface BRUserModel ()
 
 @property (nonatomic, strong) BRAPIClient *apiClient;
 
 @end
 
-@implementation BRUser
+@implementation BRUserModel
 
-static NSString *userDefaultsKey = @"mobi.brooch.BRUser";
-static BRUser *_sharedInstance = nil;
+static NSString *userDefaultsKey = @"mobi.brooch.BRUserModel";
+static BRUserModel *_sharedInstance = nil;
 
-+ (BRUser *)sharedManager
++ (BRUserModel *)sharedManager
 {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _sharedInstance = [[BRUser alloc] init];
+        _sharedInstance = [[BRUserModel alloc] init];
         _sharedInstance.apiClient = [[BRAPIClient alloc] init];
         [_sharedInstance loadUserData];
     });

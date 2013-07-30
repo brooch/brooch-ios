@@ -8,7 +8,7 @@
 
 #import "BRSigninViewController.h"
 #import "BRAPIClient.h"
-#import "BRUser.h"
+#import "BRUserModel.h"
 
 @interface BRSignInViewController ()
 
@@ -74,7 +74,7 @@
     BRAPIClient *client = [[BRAPIClient alloc] init];
     [client signIn:params
            success:^(NSHTTPURLResponse *response, NSDictionary *result) {
-               BRUser *user = [BRUser sharedManager];
+               BRUserModel *user = [BRUserModel sharedManager];
                [user saveUserData:result];
                
                UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:[NSBundle mainBundle]];

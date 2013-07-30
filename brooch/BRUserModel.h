@@ -1,5 +1,5 @@
 //
-//  BRUser.h
+//  BRUserModel.h
 //  brooch
 //
 //  Created by 栗林 健太郎 on 7/12/13.
@@ -9,14 +9,14 @@
 #import <Foundation/Foundation.h>
 #import "BRAPIClient.h"
 
-@interface BRUser : NSObject
+@interface BRUserModel : NSObject
 
 @property (nonatomic, strong) NSString *userId;
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *email;
 @property (nonatomic, strong) NSString *apiToken;
 
-+ (BRUser *)sharedManager;
++ (BRUserModel *)sharedManager;
 - (BOOL) isSignedIn;
 - (void) saveUserData:(NSDictionary *)params;
 

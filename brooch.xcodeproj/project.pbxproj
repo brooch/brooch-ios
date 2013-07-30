@@ -49,8 +49,8 @@
 		968615081790381400400ABD /* BRTutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 968615071790381400400ABD /* BRTutorialViewController.m */; };
 		968615091790381400400ABD /* BRTutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 968615071790381400400ABD /* BRTutorialViewController.m */; };
 		9686150A1790387500400ABD /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9648467A178DA4680072737E /* MainStoryboard.storyboard */; };
-		9686151917903F7900400ABD /* BRUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9686151817903F7900400ABD /* BRUser.m */; };
-		9686151A17903F7900400ABD /* BRUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9686151817903F7900400ABD /* BRUser.m */; };
+		9686151917903F7900400ABD /* BRUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9686151817903F7900400ABD /* BRUserModel.m */; };
+		9686151A17903F7900400ABD /* BRUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9686151817903F7900400ABD /* BRUserModel.m */; };
 		9686153B1790711300400ABD /* intro_2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 968615361790711300400ABD /* intro_2@2x.png */; };
 		9686153C1790711300400ABD /* intro_2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 968615361790711300400ABD /* intro_2@2x.png */; };
 		9686153D1790711300400ABD /* intro_3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 968615371790711300400ABD /* intro_3@2x.png */; };
@@ -132,8 +132,8 @@
 		968614FC1790375200400ABD /* InitStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = InitStoryboard.storyboard; path = en.lproj/InitStoryboard.storyboard; sourceTree = "<group>"; };
 		968615061790381400400ABD /* BRTutorialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRTutorialViewController.h; sourceTree = "<group>"; };
 		968615071790381400400ABD /* BRTutorialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRTutorialViewController.m; sourceTree = "<group>"; };
-		9686151717903F7900400ABD /* BRUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRUser.h; sourceTree = "<group>"; };
-		9686151817903F7900400ABD /* BRUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRUser.m; sourceTree = "<group>"; };
+		9686151717903F7900400ABD /* BRUserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRUserModel.h; sourceTree = "<group>"; };
+		9686151817903F7900400ABD /* BRUserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRUserModel.m; sourceTree = "<group>"; };
 		9686152617906D8C00400ABD /* en */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = en; path = "en.lproj/UImage+H568.h"; sourceTree = "<group>"; };
 		9686152817906D8C00400ABD /* en */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = en; path = "en.lproj/UImage+H568.m"; sourceTree = "<group>"; };
 		968615361790711300400ABD /* intro_2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "intro_2@2x.png"; sourceTree = "<group>"; };
@@ -355,8 +355,8 @@
 		968614F81790331000400ABD /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				9686151717903F7900400ABD /* BRUser.h */,
-				9686151817903F7900400ABD /* BRUser.m */,
+				9686151717903F7900400ABD /* BRUserModel.h */,
+				9686151817903F7900400ABD /* BRUserModel.m */,
 				96C8295017A7D6E3009A5073 /* BRPostModel.h */,
 				96C8295117A7D6E3009A5073 /* BRPostModel.m */,
 			);
@@ -585,7 +585,7 @@
 				96484673178DA4680072737E /* BRAppDelegate.m in Sources */,
 				9648467F178DA4680072737E /* BRTopViewController.m in Sources */,
 				968615081790381400400ABD /* BRTutorialViewController.m in Sources */,
-				9686151917903F7900400ABD /* BRUser.m in Sources */,
+				9686151917903F7900400ABD /* BRUserModel.m in Sources */,
 				96861543179081D500400ABD /* BRSignUpViewController.m in Sources */,
 				96861547179081EA00400ABD /* BRSignInViewController.m in Sources */,
 				9626857317926BDA005D1F26 /* BRAPIClient.m in Sources */,
@@ -602,7 +602,7 @@
 			files = (
 				96484694178DA4680072737E /* broochTests.m in Sources */,
 				968615091790381400400ABD /* BRTutorialViewController.m in Sources */,
-				9686151A17903F7900400ABD /* BRUser.m in Sources */,
+				9686151A17903F7900400ABD /* BRUserModel.m in Sources */,
 				96861544179081D500400ABD /* BRSignUpViewController.m in Sources */,
 				96861548179081EA00400ABD /* BRSignInViewController.m in Sources */,
 				9626857417926BDA005D1F26 /* BRAPIClient.m in Sources */,
