@@ -9,6 +9,7 @@
 #import "BRPostFormViewController.h"
 #import "BRTopViewController.h"
 #import "BRPostFormTextViewController.h"
+#import "BRPostFormGivenAtViewController.h"
 #import "BRUserModel.h"
 #import "BRPostModel.h"
 
@@ -71,6 +72,10 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([@"showPostTextForm" isEqualToString:segue.identifier]) {
         [[segue destinationViewController] setParentTextField:self.textField];
+    }
+
+    if ([@"showPostGivenAtForm" isEqualToString:segue.identifier]) {
+        [[segue destinationViewController] setParentGivenAtField:self.givenAtField];
     }
 }
 

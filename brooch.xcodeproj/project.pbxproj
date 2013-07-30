@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		961F906317A819C100A13C8D /* BRPostFormGivenAtViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 961F906217A819C100A13C8D /* BRPostFormGivenAtViewController.m */; };
+		961F906417A819C100A13C8D /* BRPostFormGivenAtViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 961F906217A819C100A13C8D /* BRPostFormGivenAtViewController.m */; };
 		9626857317926BDA005D1F26 /* BRAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 9626857217926BDA005D1F26 /* BRAPIClient.m */; };
 		9626857417926BDA005D1F26 /* BRAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 9626857217926BDA005D1F26 /* BRAPIClient.m */; };
 		96325B5F17A3DFA800EFE7BE /* BRPostDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96325B5E17A3DFA800EFE7BE /* BRPostDetailViewController.m */; };
@@ -93,6 +95,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		961F906117A819C100A13C8D /* BRPostFormGivenAtViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRPostFormGivenAtViewController.h; sourceTree = "<group>"; };
+		961F906217A819C100A13C8D /* BRPostFormGivenAtViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRPostFormGivenAtViewController.m; sourceTree = "<group>"; };
 		9626857117926BDA005D1F26 /* BRAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRAPIClient.h; sourceTree = "<group>"; };
 		9626857217926BDA005D1F26 /* BRAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRAPIClient.m; sourceTree = "<group>"; };
 		96325B5D17A3DFA800EFE7BE /* BRPostDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRPostDetailViewController.h; sourceTree = "<group>"; };
@@ -196,6 +200,8 @@
 				966E8EFC179D436E00957D53 /* BRPostFormViewController.m */,
 				966E8EFF179D4A1200957D53 /* BRPostFormTextViewController.h */,
 				966E8F00179D4A1200957D53 /* BRPostFormTextViewController.m */,
+				961F906117A819C100A13C8D /* BRPostFormGivenAtViewController.h */,
+				961F906217A819C100A13C8D /* BRPostFormGivenAtViewController.m */,
 			);
 			name = Form;
 			sourceTree = "<group>";
@@ -593,6 +599,7 @@
 				966E8F01179D4A1200957D53 /* BRPostFormTextViewController.m in Sources */,
 				96325B5F17A3DFA800EFE7BE /* BRPostDetailViewController.m in Sources */,
 				96C8295217A7D6E3009A5073 /* BRPostModel.m in Sources */,
+				961F906317A819C100A13C8D /* BRPostFormGivenAtViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -610,6 +617,7 @@
 				966E8F02179D4A1200957D53 /* BRPostFormTextViewController.m in Sources */,
 				96325B6017A3DFA800EFE7BE /* BRPostDetailViewController.m in Sources */,
 				96C8295317A7D6E3009A5073 /* BRPostModel.m in Sources */,
+				961F906417A819C100A13C8D /* BRPostFormGivenAtViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
