@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+@class BRPostModel;
+
 @interface BRTopViewController : UITableViewController
 
 @property (strong, nonatomic) IBOutlet UITableView *listView;
@@ -16,7 +18,7 @@
 
 - (BOOL)hasNextPost;
 - (BOOL)hasPrevPost;
-- (NSDictionary *)nextPost;
-- (NSDictionary *)prevPost;
+- (BRPostModel *)nextPost;
+- (BRPostModel *)prevPost;
 
 @end

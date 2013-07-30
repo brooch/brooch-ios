@@ -9,6 +9,7 @@
 #import "BRTopViewController.h"
 #import "BRPostDetailViewController.h"
 #import "BRUser.h"
+#import "BRPostModel.h"
 
 @interface BRTopViewController ()
 
@@ -25,7 +26,13 @@
     BRUser *user = [BRUser sharedManager];
     [user posts:@{@"offset": @0, @"limit": @10}
         success:^(NSHTTPURLResponse *response, NSArray *result) {
-            self.posts = [result mutableCopy];
+            NSMutableArray *posts = [@[] mutableCopy];
+
+            for (NSDictionary *post in result) {
+                [posts addObject:[[BRPostModel alloc] initWithDictionary:post]];
+            }
+
+            self.posts = posts;
             [self.tableView reloadData];
         } failure:^(NSHTTPURLResponse *response, NSDictionary *result) {
             NSLog(@"%@", result);
@@ -62,7 +69,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
-    cell.textLabel.text = [[self.posts objectAtIndex:indexPath.row] objectForKey:@"text"];
+    cell.textLabel.text = [self.posts[indexPath.row] text];
     return cell;
 }
 
@@ -86,17 +93,17 @@
     return self.currentPostPostion > 0;
 }
 
-- (NSDictionary *)nextPost
+- (BRPostModel *)nextPost
 {
-    NSDictionary *post = self.posts[self.currentPostPostion + 1];
+    BRPostModel *post = self.posts[self.currentPostPostion + 1];
     self.currentPostPostion += 1;
     return post;
 
 }
 
-- (NSDictionary *)prevPost
+- (BRPostModel *)prevPost
 {
-    NSDictionary *post = self.posts[self.currentPostPostion - 1];
+    BRPostModel *post = self.posts[self.currentPostPostion - 1];
     self.currentPostPostion -= 1;
     return post;
     

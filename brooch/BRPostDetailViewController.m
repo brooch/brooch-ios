@@ -39,11 +39,11 @@
     {
         [UIView setAnimationDuration:1.5];
         self.textView.alpha  = 0.0;
-        self.textView.text   = [self.currentPost valueForKeyPath:@"text"];
+        self.textView.text   = self.currentPost.text;
         self.textView.alpha  = 1.0;
         
         self.authorView.alpha = 0.0;
-        self.authorView.text  = [self.currentPost valueForKeyPath:@"author.name"];
+        self.authorView.text  = self.currentPost.author[@"name"];
         self.authorView.alpha = 1.0;
 
         self.backgroundView.alpha = 0.0;

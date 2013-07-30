@@ -77,6 +77,8 @@
 		969110481798A64E00A72D7B /* sign_up_select.png in Resources */ = {isa = PBXBuildFile; fileRef = 969110461798A64E00A72D7B /* sign_up_select.png */; };
 		9691104A179BA2A600A72D7B /* cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = 96911049179BA2A500A72D7B /* cancel.png */; };
 		9691104B179BA2A600A72D7B /* cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = 96911049179BA2A500A72D7B /* cancel.png */; };
+		96C8295217A7D6E3009A5073 /* BRPostModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C8295117A7D6E3009A5073 /* BRPostModel.m */; };
+		96C8295317A7D6E3009A5073 /* BRPostModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C8295117A7D6E3009A5073 /* BRPostModel.m */; };
 		96CEE55B179BA849001342E3 /* intro_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96CEE55A179BA849001342E3 /* intro_1@2x.png */; };
 /* End PBXBuildFile section */
 
@@ -149,6 +151,8 @@
 		969110431798A38300A72D7B /* sign_up_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sign_up_bg@2x.png"; sourceTree = "<group>"; };
 		969110461798A64E00A72D7B /* sign_up_select.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sign_up_select.png; sourceTree = "<group>"; };
 		96911049179BA2A500A72D7B /* cancel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cancel.png; sourceTree = "<group>"; };
+		96C8295017A7D6E3009A5073 /* BRPostModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRPostModel.h; sourceTree = "<group>"; };
+		96C8295117A7D6E3009A5073 /* BRPostModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRPostModel.m; sourceTree = "<group>"; };
 		96CEE55A179BA849001342E3 /* intro_1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "intro_1@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -353,6 +357,8 @@
 			children = (
 				9686151717903F7900400ABD /* BRUser.h */,
 				9686151817903F7900400ABD /* BRUser.m */,
+				96C8295017A7D6E3009A5073 /* BRPostModel.h */,
+				96C8295117A7D6E3009A5073 /* BRPostModel.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -586,6 +592,7 @@
 				966E8EFD179D436E00957D53 /* BRPostFormViewController.m in Sources */,
 				966E8F01179D4A1200957D53 /* BRPostFormTextViewController.m in Sources */,
 				96325B5F17A3DFA800EFE7BE /* BRPostDetailViewController.m in Sources */,
+				96C8295217A7D6E3009A5073 /* BRPostModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -602,6 +609,7 @@
 				966E8EFE179D436E00957D53 /* BRPostFormViewController.m in Sources */,
 				966E8F02179D4A1200957D53 /* BRPostFormTextViewController.m in Sources */,
 				96325B6017A3DFA800EFE7BE /* BRPostDetailViewController.m in Sources */,
+				96C8295317A7D6E3009A5073 /* BRPostModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
