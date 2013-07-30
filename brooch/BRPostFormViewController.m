@@ -47,16 +47,19 @@
 - (void)registerForKeyboardNotifications
 {
     [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(keyboardWasShown:)
-                                                 name:UIKeyboardDidShowNotification object:nil];
+                                             selector:@selector(keyboardWillShow:)
+                                                 name:UIKeyboardWillShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(keyboardWillBeHidden:)
                                                  name:UIKeyboardWillHideNotification object:nil];
 }
 
-- (void)keyboardWasShown:(NSNotification*)aNotification
+- (void)keyboardWillShow:(NSNotification*)aNotification
 {
-    CGPoint scrollPoint = CGPointMake(0.0, 200.0);
+    CGRect keyboardRect = [[[aNotification userInfo] objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
+    keyboardRect = [[self.view superview] convertRect:keyboardRect fromView:nil];
+
+    CGPoint scrollPoint = CGPointMake(0.0, keyboardRect.size.height);
     [self.scrollView setContentOffset:scrollPoint animated:YES];
 }
 
