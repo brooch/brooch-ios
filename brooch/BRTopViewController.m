@@ -10,6 +10,7 @@
 #import "BRPostDetailViewController.h"
 #import "BRUserModel.h"
 #import "BRPostModel.h"
+#import "BRPostTableViewCell.h"
 
 @interface BRTopViewController ()
 
@@ -22,6 +23,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
+    [self.tableView registerNib:[UINib nibWithNibName:@"BRPostTableViewCell" bundle:nil]
+         forCellReuseIdentifier:@"postListViewCell"];
 
     BRUserModel *user = [BRUserModel sharedManager];
     [user posts:@{@"offset": @0, @"limit": @10}
@@ -62,15 +66,20 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"listViewCell";
+    static NSString *CellIdentifier = @"postListViewCell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    BRPostTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell = [[BRPostTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
     cell.textLabel.text = [self.posts[indexPath.row] text];
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self performSegueWithIdentifier:@"showPostDetail" sender:self];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender

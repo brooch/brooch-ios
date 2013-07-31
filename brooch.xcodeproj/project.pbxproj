@@ -11,6 +11,10 @@
 		961F906417A819C100A13C8D /* BRPostFormGivenAtViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 961F906217A819C100A13C8D /* BRPostFormGivenAtViewController.m */; };
 		9626857317926BDA005D1F26 /* BRAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 9626857217926BDA005D1F26 /* BRAPIClient.m */; };
 		9626857417926BDA005D1F26 /* BRAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 9626857217926BDA005D1F26 /* BRAPIClient.m */; };
+		962D6D5117A924A600DD2F31 /* BRPostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 962D6D5017A924A600DD2F31 /* BRPostTableViewCell.xib */; };
+		962D6D5217A924A600DD2F31 /* BRPostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 962D6D5017A924A600DD2F31 /* BRPostTableViewCell.xib */; };
+		962D6D5517A924F500DD2F31 /* BRPostTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 962D6D5417A924F500DD2F31 /* BRPostTableViewCell.m */; };
+		962D6D5617A924F500DD2F31 /* BRPostTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 962D6D5417A924F500DD2F31 /* BRPostTableViewCell.m */; };
 		96325B5F17A3DFA800EFE7BE /* BRPostDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96325B5E17A3DFA800EFE7BE /* BRPostDetailViewController.m */; };
 		96325B6017A3DFA800EFE7BE /* BRPostDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96325B5E17A3DFA800EFE7BE /* BRPostDetailViewController.m */; };
 		96325B6717A501B100EFE7BE /* header_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96325B6617A501B100EFE7BE /* header_bg@2x.png */; };
@@ -99,6 +103,9 @@
 		961F906217A819C100A13C8D /* BRPostFormGivenAtViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRPostFormGivenAtViewController.m; sourceTree = "<group>"; };
 		9626857117926BDA005D1F26 /* BRAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRAPIClient.h; sourceTree = "<group>"; };
 		9626857217926BDA005D1F26 /* BRAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRAPIClient.m; sourceTree = "<group>"; };
+		962D6D5017A924A600DD2F31 /* BRPostTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BRPostTableViewCell.xib; sourceTree = "<group>"; };
+		962D6D5317A924F500DD2F31 /* BRPostTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRPostTableViewCell.h; sourceTree = "<group>"; };
+		962D6D5417A924F500DD2F31 /* BRPostTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRPostTableViewCell.m; sourceTree = "<group>"; };
 		96325B5D17A3DFA800EFE7BE /* BRPostDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRPostDetailViewController.h; sourceTree = "<group>"; };
 		96325B5E17A3DFA800EFE7BE /* BRPostDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRPostDetailViewController.m; sourceTree = "<group>"; };
 		96325B6617A501B100EFE7BE /* header_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "header_bg@2x.png"; sourceTree = "<group>"; };
@@ -191,6 +198,16 @@
 				9626857217926BDA005D1F26 /* BRAPIClient.m */,
 			);
 			name = Libraries;
+			sourceTree = "<group>";
+		};
+		962D6D4F17A9248E00DD2F31 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				962D6D5017A924A600DD2F31 /* BRPostTableViewCell.xib */,
+				962D6D5317A924F500DD2F31 /* BRPostTableViewCell.h */,
+				962D6D5417A924F500DD2F31 /* BRPostTableViewCell.m */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		96325B6117A3F11700EFE7BE /* Form */ = {
@@ -297,6 +314,7 @@
 		96484668178DA4680072737E /* brooch */ = {
 			isa = PBXGroup;
 			children = (
+				962D6D4F17A9248E00DD2F31 /* Views */,
 				9626857017926BB3005D1F26 /* Libraries */,
 				9686152417906D4600400ABD /* Categories */,
 				968614F81790331000400ABD /* Models */,
@@ -533,6 +551,7 @@
 				96325B7817A51A8E00EFE7BE /* post_cancel@2x.png in Resources */,
 				96325B7B17A5228600EFE7BE /* post_text_bg@2x.png in Resources */,
 				96325B7E17A522AF00EFE7BE /* post_text_back@2x.png in Resources */,
+				962D6D5117A924A600DD2F31 /* BRPostTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -561,6 +580,7 @@
 				96325B7917A51A8E00EFE7BE /* post_cancel@2x.png in Resources */,
 				96325B7C17A5228600EFE7BE /* post_text_bg@2x.png in Resources */,
 				96325B7F17A522AF00EFE7BE /* post_text_back@2x.png in Resources */,
+				962D6D5217A924A600DD2F31 /* BRPostTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -600,6 +620,7 @@
 				96325B5F17A3DFA800EFE7BE /* BRPostDetailViewController.m in Sources */,
 				96C8295217A7D6E3009A5073 /* BRPostModel.m in Sources */,
 				961F906317A819C100A13C8D /* BRPostFormGivenAtViewController.m in Sources */,
+				962D6D5517A924F500DD2F31 /* BRPostTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -618,6 +639,7 @@
 				96325B6017A3DFA800EFE7BE /* BRPostDetailViewController.m in Sources */,
 				96C8295317A7D6E3009A5073 /* BRPostModel.m in Sources */,
 				961F906417A819C100A13C8D /* BRPostFormGivenAtViewController.m in Sources */,
+				962D6D5617A924F500DD2F31 /* BRPostTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
