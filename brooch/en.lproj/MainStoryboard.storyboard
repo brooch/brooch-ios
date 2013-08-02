@@ -138,89 +138,6 @@
             </objects>
             <point key="canvasLocation" x="710" y="647"/>
         </scene>
-        <!--Post Form Given At View Controller-->
-        <scene sceneID="oyx-na-uTm">
-            <objects>
-                <viewController id="eCc-5x-0RN" customClass="BRPostFormGivenAtViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="k1b-js-xHa">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="post_text_bg@2x.png" translatesAutoresizingMaskIntoConstraints="NO" id="24c-bz-CVI"/>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BXi-gx-LVh">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="29" id="B3M-PR-gea"/>
-                                    <constraint firstAttribute="width" constant="56" id="Mw1-4f-AaR"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" backgroundImage="post_text_back@2x.png">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="cancelForm:" destination="GJz-2p-H9a" eventType="touchUpInside" id="4By-bw-JI6"/>
-                                    <action selector="cancelForm:" destination="ZxN-mE-mj4" eventType="touchUpInside" id="Y3J-ah-f6z"/>
-                                    <action selector="cancelForm:" destination="eCc-5x-0RN" eventType="touchUpInside" id="nrL-jI-2V2"/>
-                                </connections>
-                            </button>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="an5-Qk-Ae6">
-                                <gestureRecognizers/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="216" id="9As-TU-gpL"/>
-                                </constraints>
-                                <date key="date" timeIntervalSinceReferenceDate="396892234.82351899">
-                                    <!--2013-07-30 15:50:34 +0000-->
-                                </date>
-                                <locale key="locale" localeIdentifier="ja"/>
-                                <timeZone key="timeZone" name="America/Los_Angeles">
-                                    <data key="data">
-VFppZgAAAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAC5AAAABAAAABCepkign7sVkKCGKqChmveQ
-y4kaoNIj9HDSYSYQ1v50INiArZDa/tGg28CQENzes6DdqayQ3r6VoN+JjpDgnneg4WlwkOJ+WaDjSVKQ
-5F47oOUpNJDmR1gg5xJREOgnOiDo8jMQ6gccIOrSFRDr5v4g7LH3EO3G4CDukdkQ76/8oPBxuxDxj96g
-8n/BkPNvwKD0X6OQ9U+ioPY/hZD3L4Sg+CiiEPkPZqD6CIQQ+viDIPvoZhD82GUg/chIEP64RyD/qCoQ
-AJgpIAGIDBACeAsgA3EokARhJ6AFUQqQBkEJoAcw7JAHjUOgCRDOkAmtvyAK8LCQC+CvoAzZzRANwJGg
-DrmvEA+priAQmZEQEYmQIBJ5cxATaXIgFFlVEBVJVCAWOTcQFyk2IBgiU5AZCRggGgI1kBryNKAb4heQ
-HNIWoB3B+ZAesfigH6HbkCB2KyAhgb2QIlYNICNq2hAkNe8gJUq8ECYV0SAnKp4QJ/7toCkKgBAp3s+g
-KupiECu+saAs036QLZ6ToC6zYJAvfnWgMJNCkDFnkiAycySQM0d0IDRTBpA1J1YgNjLokDcHOCA4HAUQ
-OOcaIDn75xA6xvwgO9vJEDywGKA9u6sQPo/6oD+bjRBAb9ygQYSpkEJPvqBDZIuQRC+goEVEbZBF89Mg
-Ry2KEEfTtSBJDWwQSbOXIErtThBLnLOgTNZqkE18laBOtkyQT1x3oFCWLpBRPFmgUnYQkFMcO6BUVfKQ
-VPwdoFY11JBW5TogWB7xEFjFHCBZ/tMQWqT+IFvetRBchOAgXb6XEF5kwiBfnnkQYE3eoGGHlZBiLcCg
-Y2d3kGQNoqBlR1mQZe2EoGcnO5BnzWagaQcdkGmtSKBq5v+Qa5ZlIGzQHBBtdkcgbq/+EG9WKSBwj+AQ
-cTYLIHJvwhBzFe0gdE+kEHT/CaB2OMCQdt7roHgYopB4vs2gefiEkHqer6B72GaQfH6RoH24SJB+XnOg
-f5gqkAABAAECAwEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
-AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
-AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
-AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
-</data>
-                                </timeZone>
-                                <connections>
-                                    <action selector="onValueChanged:" destination="eCc-5x-0RN" eventType="valueChanged" id="ZeR-ox-Ijf"/>
-                                </connections>
-                            </datePicker>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="24c-bz-CVI" firstAttribute="top" secondItem="k1b-js-xHa" secondAttribute="top" type="default" id="Ezj-ix-icA"/>
-                            <constraint firstItem="an5-Qk-Ae6" firstAttribute="centerX" secondItem="k1b-js-xHa" secondAttribute="centerX" type="default" id="NXP-93-9W3"/>
-                            <constraint firstItem="24c-bz-CVI" firstAttribute="bottom" secondItem="k1b-js-xHa" secondAttribute="bottom" type="default" id="Psy-QJ-Km8"/>
-                            <constraint firstItem="an5-Qk-Ae6" firstAttribute="top" secondItem="k1b-js-xHa" secondAttribute="top" constant="131" id="Rjv-7g-5Yx"/>
-                            <constraint firstItem="BXi-gx-LVh" firstAttribute="leading" secondItem="k1b-js-xHa" secondAttribute="leading" constant="7" type="user" id="YZN-qa-NJe"/>
-                            <constraint firstItem="24c-bz-CVI" firstAttribute="leading" secondItem="k1b-js-xHa" secondAttribute="leading" type="default" id="abd-1I-iDS"/>
-                            <constraint firstItem="an5-Qk-Ae6" firstAttribute="centerX" secondItem="24c-bz-CVI" secondAttribute="centerX" type="default" id="h9e-O0-Fh4"/>
-                            <constraint firstItem="BXi-gx-LVh" firstAttribute="top" secondItem="k1b-js-xHa" secondAttribute="top" constant="7" type="user" id="mDY-hy-mY2"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="datePicker" destination="an5-Qk-Ae6" id="kpR-MO-ITB"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qlm-2y-Mh1" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1282" y="600"/>
-        </scene>
         <!--Post Form Image View Controller-->
         <scene sceneID="6fE-6I-wO2">
             <objects>
@@ -271,7 +188,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="cancelForm:" destination="eCc-5x-0RN" eventType="touchUpInside" id="Q5u-tf-t9w"/>
                                     <action selector="cancelForm:" destination="dtS-5G-Pl1" eventType="touchUpInside" id="QAe-oh-fSK"/>
                                     <action selector="cancelForm:" destination="GJz-2p-H9a" eventType="touchUpInside" id="gV5-oh-xbj"/>
                                     <action selector="cancelForm:" destination="ZxN-mE-mj4" eventType="touchUpInside" id="lfG-I4-t3x"/>
@@ -294,7 +210,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d8F-f7-4c2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1144" y="1184"/>
+            <point key="canvasLocation" x="1288" y="647"/>
         </scene>
         <!--Post Form View Controller-->
         <scene sceneID="6LP-qF-UfL">
@@ -338,18 +254,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                         <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="15"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <label opaque="NO" clipsSubviews="YES" contentMode="left" text="いつ" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7TB-LP-32h">
-                                        <gestureRecognizers/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="21" type="user" id="qwB-Th-EKZ"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="15"/>
-                                        <color key="textColor" red="0.72156864404678345" green="0.72156864404678345" blue="0.72156864404678345" alpha="1" colorSpace="deviceRGB"/>
-                                        <nil key="highlightedColor"/>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="q4B-gz-BXk" appends="YES" id="QXe-9G-ena"/>
-                                        </connections>
-                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TbY-g2-Gng">
                                         <constraints>
                                             <constraint firstAttribute="width" constant="71" type="user" id="qhh-zY-P4A"/>
@@ -386,18 +290,13 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 </subviews>
                                 <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstItem="XTP-SW-2jB" firstAttribute="top" secondItem="5P8-zc-eJm" secondAttribute="top" constant="283" type="user" id="0pw-pG-EJa"/>
-                                    <constraint firstItem="XTP-SW-2jB" firstAttribute="trailing" secondItem="7TB-LP-32h" secondAttribute="trailing" type="user" id="0w4-sY-5ZQ"/>
                                     <constraint firstItem="HNh-wL-lvS" firstAttribute="top" secondItem="5P8-zc-eJm" secondAttribute="top" constant="44" type="user" id="2v8-3e-ZHV"/>
-                                    <constraint firstItem="HNh-wL-lvS" firstAttribute="trailing" secondItem="fGK-oX-Eps" secondAttribute="trailing" type="default" id="6Vd-zF-Dei"/>
+                                    <constraint firstItem="Oxn-Z3-OTv" firstAttribute="centerX" secondItem="XTP-SW-2jB" secondAttribute="centerX" type="default" id="4zO-rN-Q2l"/>
+                                    <constraint firstItem="fGK-oX-Eps" firstAttribute="leading" secondItem="5P8-zc-eJm" secondAttribute="leading" type="default" id="Ezm-u5-vCd"/>
                                     <constraint firstItem="HNh-wL-lvS" firstAttribute="top" secondItem="EZb-CM-0md" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="I1e-aw-gsO"/>
-                                    <constraint firstItem="XTP-SW-2jB" firstAttribute="leading" secondItem="5P8-zc-eJm" secondAttribute="leading" constant="15" type="user" id="Iyg-ra-R7q"/>
-                                    <constraint firstItem="HNh-wL-lvS" firstAttribute="leading" secondItem="5P8-zc-eJm" secondAttribute="leading" type="user" id="Jz5-6E-Ubq"/>
-                                    <constraint firstItem="7TB-LP-32h" firstAttribute="top" secondItem="5P8-zc-eJm" secondAttribute="top" constant="337" type="user" id="KSj-FQ-sCC"/>
                                     <constraint firstItem="TbY-g2-Gng" firstAttribute="top" secondItem="5P8-zc-eJm" secondAttribute="top" constant="7" type="user" id="Mwl-6t-hlJ"/>
                                     <constraint firstItem="fGK-oX-Eps" firstAttribute="top" secondItem="5P8-zc-eJm" secondAttribute="top" type="user" id="QJ5-QC-sgH"/>
                                     <constraint firstItem="EZb-CM-0md" firstAttribute="top" secondItem="5P8-zc-eJm" secondAttribute="top" constant="7" type="user" id="SCp-P8-BPq"/>
-                                    <constraint firstItem="XTP-SW-2jB" firstAttribute="leading" secondItem="7TB-LP-32h" secondAttribute="leading" type="user" id="Utz-rF-8PR"/>
                                     <constraint firstItem="EZb-CM-0md" firstAttribute="leading" secondItem="5P8-zc-eJm" secondAttribute="leading" constant="7" id="VZ4-XS-kwH"/>
                                     <constraint firstAttribute="trailing" secondItem="HNh-wL-lvS" secondAttribute="trailing" constant="-2" id="VtU-Ha-dt6"/>
                                     <constraint firstItem="Oxn-Z3-OTv" firstAttribute="leading" secondItem="5P8-zc-eJm" secondAttribute="leading" type="default" id="ZIi-Om-L4u"/>
@@ -405,11 +304,13 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                     <constraint firstItem="TbY-g2-Gng" firstAttribute="leading" secondItem="5P8-zc-eJm" secondAttribute="leading" constant="244" type="user" id="Zoe-gG-gS6"/>
                                     <constraint firstItem="fGK-oX-Eps" firstAttribute="centerY" secondItem="5P8-zc-eJm" secondAttribute="centerY" type="user" id="a7O-hY-mlZ"/>
                                     <constraint firstItem="fGK-oX-Eps" firstAttribute="bottom" secondItem="5P8-zc-eJm" secondAttribute="bottom" type="user" id="aMn-dG-6b4"/>
-                                    <constraint firstItem="Oxn-Z3-OTv" firstAttribute="top" secondItem="7TB-LP-32h" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="h07-ef-v9U"/>
+                                    <constraint firstItem="Oxn-Z3-OTv" firstAttribute="top" secondItem="XTP-SW-2jB" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="dJB-Kk-acP"/>
                                     <constraint firstItem="EZb-CM-0md" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="5P8-zc-eJm" secondAttribute="leading" constant="7" type="user" id="iDS-C2-xCj"/>
-                                    <constraint firstItem="fGK-oX-Eps" firstAttribute="leading" secondItem="5P8-zc-eJm" secondAttribute="leading" type="user" id="iT6-23-nqz"/>
                                     <constraint firstItem="HNh-wL-lvS" firstAttribute="top" secondItem="TbY-g2-Gng" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="imJ-Xp-mQu"/>
+                                    <constraint firstItem="HNh-wL-lvS" firstAttribute="leading" secondItem="5P8-zc-eJm" secondAttribute="leading" type="default" id="k7r-Eq-j1J"/>
                                     <constraint firstItem="Oxn-Z3-OTv" firstAttribute="trailing" secondItem="HNh-wL-lvS" secondAttribute="trailing" type="default" id="nGd-Hp-NKC"/>
+                                    <constraint firstItem="Oxn-Z3-OTv" firstAttribute="bottom" secondItem="5P8-zc-eJm" secondAttribute="bottom" type="default" id="s5U-0c-513"/>
+                                    <constraint firstItem="HNh-wL-lvS" firstAttribute="trailing" secondItem="fGK-oX-Eps" secondAttribute="trailing" type="default" id="xVC-WC-Iha"/>
                                 </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="gS7-kG-D8a" appends="YES" id="9DU-jp-vZ2"/>
@@ -435,7 +336,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="authorField" destination="XTP-SW-2jB" id="O7N-Hz-9Vh"/>
-                        <outlet property="givenAtField" destination="7TB-LP-32h" id="8PF-jd-23Q"/>
                         <outlet property="scrollView" destination="5P8-zc-eJm" id="oyP-eA-uVd"/>
                         <outlet property="textField" destination="HNh-wL-lvS" id="YcH-RX-ykY"/>
                     </connections>
@@ -446,11 +346,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <segue destination="ZxN-mE-mj4" kind="modal" identifier="showPostTextForm" modalTransitionStyle="flipHorizontal" animates="NO" id="tzI-na-cKl"/>
                     </connections>
                 </tapGestureRecognizer>
-                <tapGestureRecognizer id="q4B-gz-BXk">
-                    <connections>
-                        <segue destination="eCc-5x-0RN" kind="modal" identifier="showPostGivenAtForm" modalTransitionStyle="flipHorizontal" animates="NO" id="l86-Ym-vWt"/>
-                    </connections>
-                </tapGestureRecognizer>
+                <tapGestureRecognizer id="q4B-gz-BXk"/>
                 <tapGestureRecognizer id="gS7-kG-D8a">
                     <connections>
                         <action selector="closeSoftwareKeybodard:" destination="GJz-2p-H9a" id="kJW-LO-xN0"/>
@@ -559,24 +455,16 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <class className="BRPostDetailViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BRPostDetailViewController.h"/>
             <relationships>
+                <relationship kind="action" name="closePostDetail:"/>
+                <relationship kind="action" name="showNextPost:"/>
+                <relationship kind="action" name="showPrevPost:"/>
                 <relationship kind="outlet" name="authorView" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="backgroundView" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="textView" candidateClass="UITextView"/>
             </relationships>
         </class>
-        <class className="BRPostFormGivenAtViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BRPostFormGivenAtViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="cancelForm:"/>
-                <relationship kind="action" name="onValueChanged:"/>
-                <relationship kind="outlet" name="datePicker" candidateClass="UIDatePicker"/>
-            </relationships>
-        </class>
         <class className="BRPostFormImageViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BRPostFormImageViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="cancelForm:"/>
-            </relationships>
         </class>
         <class className="BRPostFormTextViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BRPostFormTextViewController.h"/>
@@ -588,7 +476,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BRPostFormViewController.h"/>
             <relationships>
                 <relationship kind="outlet" name="authorField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="givenAtField" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
                 <relationship kind="outlet" name="textField" candidateClass="UITextView"/>
             </relationships>

@@ -73,10 +73,6 @@
     if ([@"showPostTextForm" isEqualToString:segue.identifier]) {
         [[segue destinationViewController] setParentTextField:self.textField];
     }
-
-    if ([@"showPostGivenAtForm" isEqualToString:segue.identifier]) {
-        [[segue destinationViewController] setParentGivenAtField:self.givenAtField];
-    }
 }
 
 - (IBAction)cancelForm:(id)sender

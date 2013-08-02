@@ -13,6 +13,5 @@
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (strong, nonatomic) IBOutlet UITextView *textField;
 @property (strong, nonatomic) IBOutlet UITextField *authorField;
-@property (strong, nonatomic) IBOutlet UILabel *givenAtField;
 
 @end
