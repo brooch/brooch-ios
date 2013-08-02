@@ -15,6 +15,8 @@
 		962D6D5217A924A600DD2F31 /* BRPostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 962D6D5017A924A600DD2F31 /* BRPostTableViewCell.xib */; };
 		962D6D5517A924F500DD2F31 /* BRPostTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 962D6D5417A924F500DD2F31 /* BRPostTableViewCell.m */; };
 		962D6D5617A924F500DD2F31 /* BRPostTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 962D6D5417A924F500DD2F31 /* BRPostTableViewCell.m */; };
+		962D6D5917A92C0E00DD2F31 /* BRPostFormImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 962D6D5817A92C0E00DD2F31 /* BRPostFormImageViewController.m */; };
+		962D6D5A17A92C0E00DD2F31 /* BRPostFormImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 962D6D5817A92C0E00DD2F31 /* BRPostFormImageViewController.m */; };
 		96325B5F17A3DFA800EFE7BE /* BRPostDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96325B5E17A3DFA800EFE7BE /* BRPostDetailViewController.m */; };
 		96325B6017A3DFA800EFE7BE /* BRPostDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96325B5E17A3DFA800EFE7BE /* BRPostDetailViewController.m */; };
 		96325B6717A501B100EFE7BE /* header_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96325B6617A501B100EFE7BE /* header_bg@2x.png */; };
@@ -106,6 +108,8 @@
 		962D6D5017A924A600DD2F31 /* BRPostTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BRPostTableViewCell.xib; sourceTree = "<group>"; };
 		962D6D5317A924F500DD2F31 /* BRPostTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRPostTableViewCell.h; sourceTree = "<group>"; };
 		962D6D5417A924F500DD2F31 /* BRPostTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRPostTableViewCell.m; sourceTree = "<group>"; };
+		962D6D5717A92C0D00DD2F31 /* BRPostFormImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRPostFormImageViewController.h; sourceTree = "<group>"; };
+		962D6D5817A92C0E00DD2F31 /* BRPostFormImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRPostFormImageViewController.m; sourceTree = "<group>"; };
 		96325B5D17A3DFA800EFE7BE /* BRPostDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRPostDetailViewController.h; sourceTree = "<group>"; };
 		96325B5E17A3DFA800EFE7BE /* BRPostDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRPostDetailViewController.m; sourceTree = "<group>"; };
 		96325B6617A501B100EFE7BE /* header_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "header_bg@2x.png"; sourceTree = "<group>"; };
@@ -219,6 +223,8 @@
 				966E8F00179D4A1200957D53 /* BRPostFormTextViewController.m */,
 				961F906117A819C100A13C8D /* BRPostFormGivenAtViewController.h */,
 				961F906217A819C100A13C8D /* BRPostFormGivenAtViewController.m */,
+				962D6D5717A92C0D00DD2F31 /* BRPostFormImageViewController.h */,
+				962D6D5817A92C0E00DD2F31 /* BRPostFormImageViewController.m */,
 			);
 			name = Form;
 			sourceTree = "<group>";
@@ -621,6 +627,7 @@
 				96C8295217A7D6E3009A5073 /* BRPostModel.m in Sources */,
 				961F906317A819C100A13C8D /* BRPostFormGivenAtViewController.m in Sources */,
 				962D6D5517A924F500DD2F31 /* BRPostTableViewCell.m in Sources */,
+				962D6D5917A92C0E00DD2F31 /* BRPostFormImageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -640,6 +647,7 @@
 				96C8295317A7D6E3009A5073 /* BRPostModel.m in Sources */,
 				961F906417A819C100A13C8D /* BRPostFormGivenAtViewController.m in Sources */,
 				962D6D5617A924F500DD2F31 /* BRPostTableViewCell.m in Sources */,
+				962D6D5A17A92C0E00DD2F31 /* BRPostFormImageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
