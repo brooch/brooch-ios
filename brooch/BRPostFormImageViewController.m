@@ -7,12 +7,15 @@
 //
 
 #import "BRPostFormImageViewController.h"
+#import "BRPostFormViewController.h"
 
 @interface BRPostFormImageViewController ()
 
 @end
 
 @implementation BRPostFormImageViewController
+
+static int imageCount = 5;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,16 +30,13 @@
 {
     [super viewDidLoad];
 
-    self.images = @[
-        [UIImage imageNamed:@"intro_1"],
-        [UIImage imageNamed:@"intro_2"],
-        [UIImage imageNamed:@"intro_3"],
-        [UIImage imageNamed:@"intro_4"],
-        [UIImage imageNamed:@"intro_1"],
-        [UIImage imageNamed:@"intro_2"],
-        [UIImage imageNamed:@"intro_3"],
-        [UIImage imageNamed:@"intro_4"]
-    ];
+    [self setBackgroundImageFor:self.parentVC.imageId || 0];
+
+    NSMutableArray *images = [@[] mutableCopy];
+    for (int i = 0; i < imageCount; i++) {
+        images[i]  = [UIImage imageNamed:[NSString stringWithFormat:@"image_bg_%d@2x.jpg", i]];
+    }
+    self.images = images;
 }
 
 - (void)didReceiveMemoryWarning
@@ -48,6 +48,11 @@
 - (IBAction)cancelForm:(id)sender
 {
     [self dismissViewControllerAnimated:NO completion:nil];
+}
+
+- (void)setBackgroundImageFor:(int)imageId
+{
+    self.imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"image_bg_%d@2x.jpg", imageId]];
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
@@ -68,6 +73,12 @@
     
     [cell addSubview:imageView];
     return cell;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    self.parentVC.imageId = [NSNumber numberWithInt:indexPath.row];
+    [self setBackgroundImageFor:indexPath.row];
 }
 
 @end

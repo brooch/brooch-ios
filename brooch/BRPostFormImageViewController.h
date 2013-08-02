@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BRPostFormViewController.h"
 
 @interface BRPostFormImageViewController : UIViewController
 
 @property (strong, nonatomic) NSArray *images;
+@property (strong, nonatomic) IBOutlet UIImageView *imageView;
+@property (strong, nonatomic) BRPostFormViewController *parentVC;
 
 @end

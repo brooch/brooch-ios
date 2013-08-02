@@ -9,6 +9,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UImage_H568 (H568)
+@interface UIImage (H568)
 
 @end

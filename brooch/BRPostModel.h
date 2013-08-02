@@ -13,7 +13,10 @@
 @property (nonatomic, strong) NSString     *text;
 @property (nonatomic, strong) NSDictionary *author;
 @property (nonatomic, strong) NSArray      *tags;
+@property (nonatomic, strong) NSNumber     *imageId;
 
 - (BRPostModel *)initWithDictionary:(NSDictionary *)dict;
+- (NSString *)imageFileName;
+- (UIImage *)imageAsUIImage;
 
 @end

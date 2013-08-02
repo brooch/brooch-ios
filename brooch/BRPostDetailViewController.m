@@ -47,7 +47,7 @@
         self.authorView.alpha = 1.0;
 
         self.backgroundView.alpha = 0.0;
-        self.backgroundView.image = [UIImage imageNamed:@"Default"];
+        self.backgroundView.image = self.currentPost.imageAsUIImage;
         self.backgroundView.alpha = 1.0;
     }
 

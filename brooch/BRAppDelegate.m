@@ -7,6 +7,7 @@
 //
 
 #import "BRAppDelegate.h"
+#import "UIImage+H568.h"
 #import "BRUserModel.h"
 
 @implementation BRAppDelegate

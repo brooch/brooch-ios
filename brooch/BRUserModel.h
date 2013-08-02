@@ -21,6 +21,7 @@
 - (void) saveUserData:(NSDictionary *)params;
 
 - (void)createPost:(NSString *)text
+           imageId:(NSNumber *)imageId
             author:(NSString *)author
               tags:(NSArray *)tags
            success:(SuccessHandler)successHandler

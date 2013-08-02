@@ -9,7 +9,7 @@
 #import "BRPostFormViewController.h"
 #import "BRTopViewController.h"
 #import "BRPostFormTextViewController.h"
-#import "BRPostFormGivenAtViewController.h"
+#import "BRPostFormImageViewController.h"
 #import "BRUserModel.h"
 #import "BRPostModel.h"
 
@@ -73,6 +73,10 @@
     if ([@"showPostTextForm" isEqualToString:segue.identifier]) {
         [[segue destinationViewController] setParentTextField:self.textField];
     }
+
+    if ([@"showPostImageForm" isEqualToString:segue.identifier]) {
+        [[segue destinationViewController] setParentVC:self];
+    }
 }
 
 - (IBAction)cancelForm:(id)sender
@@ -84,6 +88,7 @@
 {
     BRUserModel *user = [BRUserModel sharedManager];
     [user createPost:self.textField.text
+             imageId:self.imageId
               author:self.authorField.text
                 tags:@[@"foo"]
              success:^(NSHTTPURLResponse *response, NSDictionary *result) {

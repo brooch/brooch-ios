@@ -88,6 +88,7 @@ static BRUserModel *_sharedInstance = nil;
 }
 
 - (void)createPost:(NSString *)text
+           imageId:(NSNumber *)imageId
             author:(NSString *)author
               tags:(NSArray *)tags
            success:(SuccessHandler)successHandler
@@ -95,8 +96,9 @@ static BRUserModel *_sharedInstance = nil;
              error:(ErrorHandler)errorHandler
 {
     NSDictionary *params = @{
-        @"text":   text,
-        @"author": author,
+        @"text":     text,
+        @"author":   author,
+        @"image_id": [NSString stringWithFormat:@"%@", imageId]
     };
 
     [self requestWithApiToken:@"POST"
