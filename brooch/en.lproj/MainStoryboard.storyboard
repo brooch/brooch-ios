@@ -74,7 +74,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gsM-tv-x7q">
                                 <color key="backgroundColor" red="0.32549019607843138" green="0.40000000000000002" blue="0.42745098039215684" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="259" id="EIW-Ro-L0h"/>
+                                    <constraint firstAttribute="height" constant="256" id="eQt-95-Lsj"/>
                                     <constraint firstAttribute="width" constant="260" id="stc-en-WvS"/>
                                 </constraints>
                                 <color key="textColor" red="0.32549019607843138" green="0.40000000000000002" blue="0.42745098039215684" alpha="1" colorSpace="calibratedRGB"/>
@@ -124,17 +124,17 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="KqI-F3-1y6" secondAttribute="bottom" constant="70" id="2k5-yx-Mp3"/>
                             <constraint firstItem="9ah-Ga-C9K" firstAttribute="trailing" secondItem="vG0-jN-g9c" secondAttribute="trailing" type="default" id="51Q-GN-szh"/>
-                            <constraint firstItem="gsM-tv-x7q" firstAttribute="top" secondItem="vG0-jN-g9c" secondAttribute="top" constant="77" id="9qn-el-KTz"/>
+                            <constraint firstAttribute="bottom" secondItem="KqI-F3-1y6" secondAttribute="bottom" constant="84" id="6qC-MS-y89"/>
                             <constraint firstItem="6KZ-2D-jLT" firstAttribute="top" secondItem="vG0-jN-g9c" secondAttribute="top" type="default" id="GHE-Y9-dVZ"/>
                             <constraint firstItem="6KZ-2D-jLT" firstAttribute="leading" secondItem="vG0-jN-g9c" secondAttribute="leading" type="default" id="GiR-j4-rsg"/>
                             <constraint firstItem="KqI-F3-1y6" firstAttribute="centerX" secondItem="gsM-tv-x7q" secondAttribute="centerX" type="default" id="V41-hV-tlF"/>
                             <constraint firstItem="9ah-Ga-C9K" firstAttribute="bottom" secondItem="6KZ-2D-jLT" secondAttribute="bottom" type="default" id="V6o-dd-oZe"/>
-                            <constraint firstItem="gXl-Tn-Qzc" firstAttribute="centerX" secondItem="gsM-tv-x7q" secondAttribute="centerX" type="default" id="VDB-ZH-SLf"/>
                             <constraint firstItem="gXl-Tn-Qzc" firstAttribute="top" secondItem="vG0-jN-g9c" secondAttribute="top" type="default" id="jIG-ZU-rXC"/>
+                            <constraint firstItem="gsM-tv-x7q" firstAttribute="top" secondItem="vG0-jN-g9c" secondAttribute="top" constant="64" id="mAC-DO-d0d"/>
                             <constraint firstItem="gXl-Tn-Qzc" firstAttribute="leading" secondItem="vG0-jN-g9c" secondAttribute="leading" type="default" id="snV-2M-liI"/>
                             <constraint firstItem="gXl-Tn-Qzc" firstAttribute="trailing" secondItem="vG0-jN-g9c" secondAttribute="trailing" type="default" id="tMI-9c-a0q"/>
+                            <constraint firstItem="KqI-F3-1y6" firstAttribute="centerX" secondItem="gXl-Tn-Qzc" secondAttribute="centerX" type="default" id="uS7-Xw-nwb"/>
                             <constraint firstItem="9ah-Ga-C9K" firstAttribute="top" secondItem="vG0-jN-g9c" secondAttribute="top" type="default" id="vlX-5W-8d2"/>
                         </constraints>
                         <connections>
