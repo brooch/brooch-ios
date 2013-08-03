@@ -96,91 +96,101 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qOW-xG-z5t"/>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="init_footer@2x.png" translatesAutoresizingMaskIntoConstraints="NO" id="tFX-wq-sCq">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Li-VZ-i6O">
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qOW-xG-z5t">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="416" type="user" id="DTK-u6-JGf"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="init_footer@2x.png" translatesAutoresizingMaskIntoConstraints="NO" id="tFX-wq-sCq"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2QG-D3-sv6">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="29" type="user" id="6Wd-th-Ifh"/>
+                                            <constraint firstAttribute="width" constant="68" type="user" id="W6b-54-IgS"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" backgroundImage="sign_in_select.png">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="signIn:" destination="lRi-QA-qjq" eventType="touchUpInside" id="XI4-2W-TGs"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KU8-jz-x6H">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="JV7-Oc-yYC"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" backgroundImage="cancel.png">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cancel:" destination="lRi-QA-qjq" eventType="touchUpInside" id="552-6G-ifn"/>
+                                            <action selector="cancel:" destination="eja-KC-pgV" eventType="touchUpInside" id="RYL-yV-skb"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="メールアドレスかユーザー名" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="xri-c1-wvo">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" type="user" id="stg-bt-ITb"/>
+                                            <constraint firstAttribute="width" constant="225" type="user" id="ukQ-23-UHD"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="lRi-QA-qjq" id="Bdm-yw-daU"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="パスワード" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="EFk-y7-gdO">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" type="user" id="qVN-2h-rZp"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="alphabet" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="lRi-QA-qjq" id="rKc-KJ-I6K"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="hlz-aj-ftG"/>
+                                    <constraint firstItem="EFk-y7-gdO" firstAttribute="leading" secondItem="xri-c1-wvo" secondAttribute="leading" type="default" id="3Es-RS-7B4"/>
+                                    <constraint firstItem="KU8-jz-x6H" firstAttribute="bottom" secondItem="2QG-D3-sv6" secondAttribute="bottom" type="default" id="3oU-as-Vej"/>
+                                    <constraint firstItem="xri-c1-wvo" firstAttribute="top" secondItem="0Li-VZ-i6O" secondAttribute="top" constant="230" id="8Vg-JP-bAw"/>
+                                    <constraint firstItem="EFk-y7-gdO" firstAttribute="centerX" secondItem="tFX-wq-sCq" secondAttribute="centerX" type="default" id="A8J-Fh-Uad"/>
+                                    <constraint firstItem="qOW-xG-z5t" firstAttribute="leading" secondItem="0Li-VZ-i6O" secondAttribute="leading" type="default" id="CIG-vW-3CQ"/>
+                                    <constraint firstItem="qOW-xG-z5t" firstAttribute="top" secondItem="0Li-VZ-i6O" secondAttribute="top" type="user" id="DCI-Tl-76C"/>
+                                    <constraint firstItem="EFk-y7-gdO" firstAttribute="baseline" secondItem="xri-c1-wvo" secondAttribute="baseline" type="default" id="EJE-Kc-LvE"/>
+                                    <constraint firstItem="tFX-wq-sCq" firstAttribute="trailing" secondItem="0Li-VZ-i6O" secondAttribute="trailing" type="default" id="K89-Dg-0pj"/>
+                                    <constraint firstAttribute="bottom" secondItem="2QG-D3-sv6" secondAttribute="bottom" constant="7" type="user" id="KBN-f3-Wkd"/>
+                                    <constraint firstAttribute="bottom" secondItem="qOW-xG-z5t" secondAttribute="bottom" constant="44" type="user" id="O5C-vc-0dl"/>
+                                    <constraint firstItem="2QG-D3-sv6" firstAttribute="leading" secondItem="0Li-VZ-i6O" secondAttribute="leading" constant="7" type="user" id="SPl-ue-Bag"/>
+                                    <constraint firstItem="KU8-jz-x6H" firstAttribute="top" secondItem="qOW-xG-z5t" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="U1o-OS-O5z"/>
+                                    <constraint firstItem="EFk-y7-gdO" firstAttribute="trailing" secondItem="xri-c1-wvo" secondAttribute="trailing" type="default" id="edv-EQ-iCT"/>
+                                    <constraint firstItem="KU8-jz-x6H" firstAttribute="leading" secondItem="0Li-VZ-i6O" secondAttribute="leading" constant="235" id="iLW-on-Y8Y"/>
+                                    <constraint firstItem="qOW-xG-z5t" firstAttribute="trailing" secondItem="0Li-VZ-i6O" secondAttribute="trailing" type="default" id="iMf-qv-oke"/>
+                                    <constraint firstItem="tFX-wq-sCq" firstAttribute="bottom" secondItem="0Li-VZ-i6O" secondAttribute="bottom" type="default" id="kgC-Yv-F02"/>
+                                    <constraint firstItem="EFk-y7-gdO" firstAttribute="top" secondItem="xri-c1-wvo" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="qAn-W1-RPK"/>
+                                    <constraint firstItem="xri-c1-wvo" firstAttribute="centerX" secondItem="0Li-VZ-i6O" secondAttribute="centerX" type="default" id="sRI-o2-jbQ"/>
+                                    <constraint firstItem="tFX-wq-sCq" firstAttribute="leading" secondItem="0Li-VZ-i6O" secondAttribute="leading" type="default" id="stJ-ZY-nBa"/>
+                                    <constraint firstItem="KU8-jz-x6H" firstAttribute="centerY" secondItem="tFX-wq-sCq" secondAttribute="centerY" type="default" id="uiL-51-2gT"/>
                                 </constraints>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2QG-D3-sv6">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="68" id="W6b-54-IgS"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" backgroundImage="sign_in_select.png">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="signIn:" destination="lRi-QA-qjq" eventType="touchUpInside" id="XI4-2W-TGs"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="メールアドレスかユーザー名" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="xri-c1-wvo">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" type="user" id="stg-bt-ITb"/>
-                                    <constraint firstAttribute="width" constant="225" type="user" id="ukQ-23-UHD"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
-                                <connections>
-                                    <outlet property="delegate" destination="lRi-QA-qjq" id="NGx-u1-xyx"/>
-                                </connections>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="パスワード" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="EFk-y7-gdO">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" type="user" id="qVN-2h-rZp"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="alphabet" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
-                                <connections>
-                                    <outlet property="delegate" destination="lRi-QA-qjq" id="zh9-bn-BEk"/>
-                                </connections>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KU8-jz-x6H">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="JV7-Oc-yYC"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" backgroundImage="cancel.png">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="cancel:" destination="lRi-QA-qjq" eventType="touchUpInside" id="552-6G-ifn"/>
-                                    <action selector="cancel:" destination="eja-KC-pgV" eventType="touchUpInside" id="RYL-yV-skb"/>
-                                </connections>
-                            </button>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="EFk-y7-gdO" firstAttribute="leading" secondItem="9GV-mD-mHa" secondAttribute="leading" constant="48" type="user" id="1c6-uw-mK3"/>
-                            <constraint firstAttribute="bottom" secondItem="2QG-D3-sv6" secondAttribute="bottom" constant="7" type="user" id="8im-N9-BlH"/>
-                            <constraint firstItem="xri-c1-wvo" firstAttribute="centerX" secondItem="qOW-xG-z5t" secondAttribute="centerX" type="user" id="Cu0-vx-ADC"/>
-                            <constraint firstItem="2QG-D3-sv6" firstAttribute="top" secondItem="qOW-xG-z5t" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="D3v-0m-x5X"/>
-                            <constraint firstItem="qOW-xG-z5t" firstAttribute="leading" secondItem="9GV-mD-mHa" secondAttribute="leading" type="user" id="DRU-uS-eVu"/>
-                            <constraint firstItem="KU8-jz-x6H" firstAttribute="leading" secondItem="9GV-mD-mHa" secondAttribute="leading" constant="7" type="user" id="G3t-0U-t1W"/>
-                            <constraint firstItem="EFk-y7-gdO" firstAttribute="top" secondItem="xri-c1-wvo" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="H8p-sC-fNE"/>
-                            <constraint firstItem="tFX-wq-sCq" firstAttribute="trailing" secondItem="9GV-mD-mHa" secondAttribute="trailing" type="default" id="HAq-26-3ye"/>
-                            <constraint firstItem="qOW-xG-z5t" firstAttribute="trailing" secondItem="9GV-mD-mHa" secondAttribute="trailing" type="user" id="MtL-UI-vAl"/>
-                            <constraint firstItem="qOW-xG-z5t" firstAttribute="top" secondItem="9GV-mD-mHa" secondAttribute="top" type="default" id="N38-vo-UBY"/>
-                            <constraint firstItem="EFk-y7-gdO" firstAttribute="leading" secondItem="xri-c1-wvo" secondAttribute="leading" type="user" id="O9Z-CP-Crb"/>
-                            <constraint firstItem="tFX-wq-sCq" firstAttribute="leading" secondItem="9GV-mD-mHa" secondAttribute="leading" type="default" id="UUO-L9-IO3"/>
-                            <constraint firstItem="KU8-jz-x6H" firstAttribute="top" secondItem="qOW-xG-z5t" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Xba-27-O46"/>
-                            <constraint firstItem="KU8-jz-x6H" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="9GV-mD-mHa" secondAttribute="leading" constant="7" type="user" id="Z7Y-mJ-3pt"/>
-                            <constraint firstAttribute="trailing" secondItem="2QG-D3-sv6" secondAttribute="trailing" constant="7" type="user" id="bff-B0-Yxa"/>
-                            <constraint firstAttribute="bottom" secondItem="EFk-y7-gdO" secondAttribute="bottom" constant="160" id="fEZ-Ln-8K2"/>
-                            <constraint firstItem="tFX-wq-sCq" firstAttribute="bottom" secondItem="9GV-mD-mHa" secondAttribute="bottom" type="default" id="fEh-TR-GHa"/>
-                            <constraint firstAttribute="bottom" secondItem="KU8-jz-x6H" secondAttribute="bottom" constant="7" type="user" id="lIr-gF-K9J"/>
-                            <constraint firstItem="tFX-wq-sCq" firstAttribute="centerY" secondItem="KU8-jz-x6H" secondAttribute="centerY" type="default" id="oGF-cp-j9O"/>
-                            <constraint firstItem="xri-c1-wvo" firstAttribute="leading" secondItem="9GV-mD-mHa" secondAttribute="leading" constant="48" type="user" id="pbr-VZ-roV"/>
-                            <constraint firstItem="EFk-y7-gdO" firstAttribute="trailing" secondItem="xri-c1-wvo" secondAttribute="trailing" type="default" id="vKv-fI-kEO"/>
+                            <constraint firstItem="0Li-VZ-i6O" firstAttribute="top" secondItem="9GV-mD-mHa" secondAttribute="top" type="user" id="E4T-aV-mik"/>
+                            <constraint firstItem="0Li-VZ-i6O" firstAttribute="bottom" secondItem="9GV-mD-mHa" secondAttribute="bottom" type="user" id="GMK-Hp-fcJ"/>
+                            <constraint firstItem="0Li-VZ-i6O" firstAttribute="trailing" secondItem="9GV-mD-mHa" secondAttribute="trailing" type="user" id="UpQ-2K-AiK"/>
+                            <constraint firstItem="0Li-VZ-i6O" firstAttribute="leading" secondItem="9GV-mD-mHa" secondAttribute="leading" type="user" id="kG9-oi-Hgy"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="K0g-av-dmw" appends="YES" id="guB-14-dyZ"/>
@@ -191,6 +201,7 @@
                         <outlet property="emailField" destination="xri-c1-wvo" id="PfR-Ps-wwH"/>
                         <outlet property="imageView" destination="qOW-xG-z5t" id="YgK-dZ-jP6"/>
                         <outlet property="passwordField" destination="EFk-y7-gdO" id="vgu-Aa-VrY"/>
+                        <outlet property="scrollView" destination="0Li-VZ-i6O" id="Tt0-ZJ-xF0"/>
                         <outlet property="signInButton" destination="2QG-D3-sv6" id="YwE-bx-lwF"/>
                     </connections>
                 </viewController>
@@ -338,38 +349,6 @@
         <image name="sign_up_nomal.png" width="214" height="58"/>
         <image name="sign_up_select.png" width="214" height="58"/>
     </resources>
-    <classes>
-        <class className="BRSignInViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BRSignInViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="emailField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="passwordField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="signInButton" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="BRSignUpViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BRSignUpViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="emailField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="nameField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="passwordField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="signUpButton" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="BRTutorialViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BRTutorialViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="buttonsContainer" candidateClass="UIView"/>
-                <relationship kind="outlet" name="pageControll" candidateClass="UIPageControl"/>
-                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
