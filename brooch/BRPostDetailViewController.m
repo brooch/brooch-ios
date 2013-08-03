@@ -30,8 +30,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
     [self updateViewByCurrentPost];
+}
+
+- (void)viewDidLayoutSubviews
+{
+    self.textView.text = self.currentPost.text;
+    self.authorView.text = self.currentPost.author[@"name"];
+    self.backgroundView.image = self.currentPost.imageAsUIImage;
 }
 
 - (void)updateViewByCurrentPost

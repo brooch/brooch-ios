@@ -117,7 +117,7 @@ static BRUserModel *_sharedInstance = nil;
         @"image_id": [NSString stringWithFormat:@"%@", post.imageId]
     };
     
-    [self requestWithApiToken:@"POST"
+    [self requestWithApiToken:@"PUT"
                          path:[NSString stringWithFormat:@"/users/%@/posts/%@", self.userId, post.postId]
                        params:params
                       success:successHandler

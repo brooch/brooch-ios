@@ -52,6 +52,7 @@ static NSString *base_url = @"https://brooch-kentaro.sqale.jp/v1";
     dispatch_queue_t queue = dispatch_queue_create("mobi.brooch.BRAPIClient", NULL);
     dispatch_async(queue, ^{
         NSMutableArray *pairs = [NSMutableArray array];
+
         if (params) {
             for (NSString *key in [params keyEnumerator]) {
                 [pairs addObject:[NSString stringWithFormat:@"%@=%@", [self encodeURLComponent:key], [self encodeURLComponent:[params valueForKey:key]]]];
@@ -64,14 +65,15 @@ static NSString *base_url = @"https://brooch-kentaro.sqale.jp/v1";
         NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
         [request setHTTPMethod:method];
 
-        if ([method isEqualToString:@"POST"]) {
+        if ([method isEqualToString:@"POST"] || [method isEqualToString:@"PUT"]) {
+            [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
             [request setURL:[self buildURL:path query:nil]];
             [request setHTTPBody:queryData];
         }
         else {
             [request setURL:[self buildURL:path query:query]];
         }
-    
+
         NSHTTPURLResponse *response;
         NSError *requestError;
     
