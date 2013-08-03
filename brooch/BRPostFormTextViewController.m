@@ -26,7 +26,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+	self.textField.text = self.post.text;
 }
 
 - (void)viewDidLayoutSubviews
@@ -44,19 +44,13 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void)viewWillAppear:(BOOL)animated
-{
-    self.textField.text = self.parentTextField.text;
-    [self.textField becomeFirstResponder];
-}
-
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     [self.textField resignFirstResponder];
 }
 
 - (void)textViewDidEndEditing:(UITextView *)textView {
-    self.parentTextField.text = textView.text;
+    self.post.text = textView.text;
 }
 
 - (IBAction)cancelForm:(id)sender{

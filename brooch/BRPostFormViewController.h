@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BRPostModel.h"
 
 @interface BRPostFormViewController : UIViewController
 
+@property (strong, nonatomic) BRPostModel *post;
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (strong, nonatomic) IBOutlet UITextView *textField;
 @property (strong, nonatomic) IBOutlet UITextField *authorField;

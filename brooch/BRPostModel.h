@@ -10,6 +10,7 @@
 
 @interface BRPostModel : NSObject
 
+@property (nonatomic, strong) NSString     *postId;
 @property (nonatomic, strong) NSString     *text;
 @property (nonatomic, strong) NSDictionary *author;
 @property (nonatomic, strong) NSArray      *tags;

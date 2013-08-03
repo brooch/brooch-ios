@@ -13,6 +13,7 @@
 - (BRPostModel *)initWithDictionary:(NSDictionary *)dict
 {
     if (self = [super init]) {
+        self.postId  = dict[@"id"];
         self.text    = dict[@"text"];
         self.author  = dict[@"author"];
         self.tags    = dict[@"tags"];

@@ -30,7 +30,7 @@ static int imageCount = 6;
 {
     [super viewDidLoad];
 
-    [self setBackgroundImageFor:(self.parentVC.imageId || 0)];
+    [self setBackgroundImageFor:(self.post.imageId || 0)];
 
     NSMutableArray *images = [@[] mutableCopy];
     NSMutableArray *thumbs = [@[] mutableCopy];
@@ -88,7 +88,7 @@ static int imageCount = 6;
     UICollectionViewCell *cell = [self.imagePicker cellForItemAtIndexPath:indexPath];
     [self setCollectionViewCellSelected:cell];
 
-    self.parentVC.imageId = [NSNumber numberWithInt:indexPath.row];
+    self.post.imageId = [NSNumber numberWithInt:indexPath.row];
     [self setBackgroundImageFor:indexPath.row];
 }
 

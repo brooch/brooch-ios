@@ -28,6 +28,12 @@
     return self;
 }
 
+- (void)viewDidLoad
+{
+    self.textField.text   = self.post.text;
+    self.authorField.text = self.post.author[@"name"];
+}
+
 - (void)viewDidLayoutSubviews
 {
     [super viewDidLayoutSubviews];
@@ -72,11 +78,11 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([@"showPostTextForm" isEqualToString:segue.identifier]) {
-        [[segue destinationViewController] setParentTextField:self.textField];
+        [[segue destinationViewController] setPost:self.post];
     }
 
     if ([@"showPostImageForm" isEqualToString:segue.identifier]) {
-        [[segue destinationViewController] setParentVC:self];
+        [[segue destinationViewController] setPost:self.post];
     }
 }
 

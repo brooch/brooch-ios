@@ -8,6 +8,7 @@
 
 #import "BRPostDetailViewController.h"
 #import "BRTopViewController.h"
+#import "BRPostFormViewController.h"
 
 @interface BRPostDetailViewController ()
 
@@ -93,6 +94,13 @@
         [self updateViewByCurrentPost];
     }
 
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"showPostForm"]) {
+        [segue.destinationViewController setPost:self.currentPost];
+    }
 }
 
 @end

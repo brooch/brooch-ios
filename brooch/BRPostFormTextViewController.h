@@ -10,7 +10,7 @@
 
 @interface BRPostFormTextViewController : UIViewController
 
-@property (strong, nonatomic) UITextView *parentTextField;
+@property (strong, nonatomic) UITextView *post;
 @property (strong, nonatomic) IBOutlet UITextView *textField;
 
 @end
