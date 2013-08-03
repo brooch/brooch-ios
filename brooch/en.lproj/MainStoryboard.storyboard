@@ -75,7 +75,7 @@
                                 <color key="backgroundColor" red="0.32549019607843138" green="0.40000000000000002" blue="0.42745098039215684" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="260" id="Brl-7h-hfy"/>
-                                    <constraint firstAttribute="height" constant="234" id="xOh-Ma-zdR"/>
+                                    <constraint firstAttribute="height" constant="268" id="jeT-6Q-zJp"/>
                                 </constraints>
                                 <color key="textColor" red="0.32549019607843138" green="0.40000000000000002" blue="0.42745098039215684" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="14"/>
@@ -126,15 +126,15 @@
                         <constraints>
                             <constraint firstItem="9ah-Ga-C9K" firstAttribute="bottom" secondItem="6KZ-2D-jLT" secondAttribute="bottom" type="default" id="6ua-dH-DEJ"/>
                             <constraint firstItem="gXl-Tn-Qzc" firstAttribute="leading" secondItem="vG0-jN-g9c" secondAttribute="leading" type="default" id="AWM-L5-iO1"/>
-                            <constraint firstItem="gsM-tv-x7q" firstAttribute="top" secondItem="vG0-jN-g9c" secondAttribute="top" constant="103" id="JXl-lb-2Ei"/>
                             <constraint firstItem="9ah-Ga-C9K" firstAttribute="trailing" secondItem="vG0-jN-g9c" secondAttribute="trailing" type="default" id="Taa-6R-gqo"/>
                             <constraint firstItem="6KZ-2D-jLT" firstAttribute="top" secondItem="vG0-jN-g9c" secondAttribute="top" type="default" id="Z1Q-4D-0yx"/>
-                            <constraint firstAttribute="bottom" secondItem="KqI-F3-1y6" secondAttribute="bottom" constant="82" id="Z5b-3c-POf"/>
                             <constraint firstItem="gXl-Tn-Qzc" firstAttribute="trailing" secondItem="vG0-jN-g9c" secondAttribute="trailing" type="default" id="aLO-C5-ubw"/>
                             <constraint firstItem="KqI-F3-1y6" firstAttribute="centerX" secondItem="gsM-tv-x7q" secondAttribute="centerX" type="default" id="f02-63-p1U"/>
                             <constraint firstItem="KqI-F3-1y6" firstAttribute="centerX" secondItem="gXl-Tn-Qzc" secondAttribute="centerX" type="default" id="hKj-Lu-Zgt"/>
                             <constraint firstItem="9ah-Ga-C9K" firstAttribute="top" secondItem="vG0-jN-g9c" secondAttribute="top" type="default" id="mh1-MD-BPz"/>
+                            <constraint firstAttribute="bottom" secondItem="KqI-F3-1y6" secondAttribute="bottom" constant="69" id="mke-rh-BZK"/>
                             <constraint firstItem="6KZ-2D-jLT" firstAttribute="leading" secondItem="vG0-jN-g9c" secondAttribute="leading" type="default" id="rUj-k0-unR"/>
+                            <constraint firstItem="gsM-tv-x7q" firstAttribute="top" secondItem="vG0-jN-g9c" secondAttribute="top" constant="69" id="sGs-SN-Xjh"/>
                             <constraint firstItem="gXl-Tn-Qzc" firstAttribute="top" secondItem="vG0-jN-g9c" secondAttribute="top" type="default" id="uGA-TI-ePh"/>
                         </constraints>
                         <connections>
@@ -491,9 +491,7 @@
         <class className="BRPostDetailViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BRPostDetailViewController.h"/>
             <relationships>
-                <relationship kind="action" name="closePostDetail:"/>
                 <relationship kind="action" name="showNextPost:"/>
-                <relationship kind="action" name="showPrevPost:"/>
                 <relationship kind="outlet" name="authorView" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="backgroundView" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="textView" candidateClass="UITextView"/>
@@ -502,6 +500,7 @@
         <class className="BRPostFormImageViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BRPostFormImageViewController.h"/>
             <relationships>
+                <relationship kind="action" name="cancelForm:"/>
                 <relationship kind="outlet" name="imagePicker" candidateClass="UICollectionView"/>
                 <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
             </relationships>
@@ -509,12 +508,16 @@
         <class className="BRPostFormTextViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BRPostFormTextViewController.h"/>
             <relationships>
+                <relationship kind="action" name="cancelForm:"/>
                 <relationship kind="outlet" name="textField" candidateClass="UITextView"/>
             </relationships>
         </class>
         <class className="BRPostFormViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BRPostFormViewController.h"/>
             <relationships>
+                <relationship kind="action" name="cancelForm:"/>
+                <relationship kind="action" name="closeSoftwareKeybodard:"/>
+                <relationship kind="action" name="createPost:"/>
                 <relationship kind="outlet" name="authorField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
                 <relationship kind="outlet" name="textField" candidateClass="UITextView"/>
@@ -544,6 +547,9 @@
         </class>
         <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
+        </class>
+        <class className="UICollectionViewLayout" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewLayout.h"/>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
