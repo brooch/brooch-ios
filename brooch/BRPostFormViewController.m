@@ -82,7 +82,7 @@
 
 - (IBAction)cancelForm:(id)sender
 {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self dismissViewControllerAnimated:NO completion:nil];
 }
 
 - (IBAction)createPost:(id)sender
