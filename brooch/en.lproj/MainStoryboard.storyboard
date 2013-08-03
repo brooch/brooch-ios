@@ -165,7 +165,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="710" y="647"/>
+            <point key="canvasLocation" x="838" y="610"/>
         </scene>
         <!--Post Form Image View Controller-->
         <scene sceneID="6fE-6I-wO2">
@@ -247,7 +247,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d8F-f7-4c2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1288" y="647"/>
+            <point key="canvasLocation" x="1416" y="486"/>
         </scene>
         <!--Post Form View Controller-->
         <scene sceneID="6LP-qF-UfL">
@@ -391,7 +391,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="844" y="-131"/>
+            <point key="canvasLocation" x="838" y="-162"/>
         </scene>
         <!--Post Form Text View Controller-->
         <scene sceneID="Dsb-Rt-hIW">
@@ -453,7 +453,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GW0-ds-eFk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1282" y="20"/>
+            <point key="canvasLocation" x="1416" y="-178"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="uoT-vx-9Vp">
@@ -559,6 +559,6 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="xYw-21-TOF"/>
+        <segue reference="Wz6-Xm-FbC"/>
     </inferredMetricsTieBreakers>
 </document>
