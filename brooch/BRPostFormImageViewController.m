@@ -30,7 +30,8 @@ static int imageCount = 5;
 {
     [super viewDidLoad];
 
-    [self setBackgroundImageFor:self.parentVC.imageId || 0];
+    NSLog(@"%@", self.parentVC.imageId);
+    [self setBackgroundImageFor:(self.parentVC.imageId || 0)];
 
     NSMutableArray *images = [@[] mutableCopy];
     for (int i = 0; i < imageCount; i++) {
@@ -52,6 +53,7 @@ static int imageCount = 5;
 
 - (void)setBackgroundImageFor:(int)imageId
 {
+    NSLog(@"%@", [NSString stringWithFormat:@"image_bg_%d@2x.jpg", imageId]);
     self.imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"image_bg_%d@2x.jpg", imageId]];
 }
 
@@ -70,12 +72,11 @@ static int imageCount = 5;
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"imageCollection" forIndexPath:indexPath];
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(2.5, 2.5, 50, 50)];
     imageView.image = self.images[indexPath.row];
-//    imageView.center = cell.center;
     
     [cell addSubview:imageView];
     [cell bringSubviewToFront:imageView];
     cell.backgroundColor = [UIColor whiteColor];
-    
+
     return cell;
 }
 
