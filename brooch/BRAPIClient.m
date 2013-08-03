@@ -13,7 +13,7 @@
 #ifdef DEBUG
 static NSString *base_url = @"http://localhost:3000/v1";
 #else
-static NSString *base_url = @"https://api.brooch.mobi/v1";
+static NSString *base_url = @"https://brooch-kentaro.sqale.jp/v1";
 #endif
 
 - (void)signUp:(NSDictionary *)params
@@ -95,7 +95,7 @@ static NSString *base_url = @"https://api.brooch.mobi/v1";
             });
         }
         else {
-            NSError *jsonError   = nil;
+            NSError *jsonError = nil;
             id result = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&jsonError];
 
             dispatch_async(dispatch_get_main_queue(), ^{

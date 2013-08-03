@@ -56,7 +56,7 @@ static NSString *showPostSegueIdentifier = @"showPostDetail";
     UIImage *image         = [UIImage imageNamed:@"home_tag_bg@2x.png"];
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0.0, 0.0, image.size.width, image.size.height)];
     UIView  *view          = [[UIView alloc] init];
-    UILabel *label         = [[UILabel alloc] initWithFrame:CGRectMake(10.0, 0.0, 310.0, 40.0)];
+    UILabel *label         = [[UILabel alloc] initWithFrame:CGRectMake(16.0, 0.0, 310.0, 40.0)];
 
     view.backgroundColor = [UIColor colorWithPatternImage:image];
 
