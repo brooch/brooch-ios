@@ -15,7 +15,7 @@
     if (self = [super init]) {
         self.postId  = dict[@"id"];
         self.text    = dict[@"text"];
-        self.author  = dict[@"author"];
+        self.author  = [dict[@"author"] mutableCopy];
         self.tags    = dict[@"tags"];
         self.imageId = [NSNumber numberWithInt:[dict[@"image_id"] intValue]];
     }

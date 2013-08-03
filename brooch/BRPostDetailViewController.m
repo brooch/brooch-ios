@@ -30,10 +30,10 @@
     [self updateViewByCurrentPost];
 }
 
-- (void)viewDidLayoutSubviews
+- (void)viewWillAppear:(BOOL)animated
 {
-    self.textView.text = self.currentPost.text;
-    self.authorView.text = self.currentPost.author[@"name"];
+    self.textView.text        = self.currentPost.text;
+    self.authorView.text      = self.currentPost.author[@"name"];
     self.backgroundView.image = self.currentPost.imageAsUIImage;
 }
 
