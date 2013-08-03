@@ -15,7 +15,7 @@
 
 @implementation BRPostFormImageViewController
 
-static int imageCount = 5;
+static int imageCount = 6;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -30,14 +30,18 @@ static int imageCount = 5;
 {
     [super viewDidLoad];
 
-    NSLog(@"%@", self.parentVC.imageId);
     [self setBackgroundImageFor:(self.parentVC.imageId || 0)];
 
     NSMutableArray *images = [@[] mutableCopy];
+    NSMutableArray *thumbs = [@[] mutableCopy];
+
     for (int i = 0; i < imageCount; i++) {
         images[i]  = [UIImage imageNamed:[NSString stringWithFormat:@"image_bg_%d@2x.jpg", i]];
+        thumbs[i]  = [UIImage imageNamed:[NSString stringWithFormat:@"image_bg_thumb_%d@2x.png", i]];
     }
+
     self.images = images;
+    self.thumbs = thumbs;
 }
 
 - (void)didReceiveMemoryWarning
@@ -53,7 +57,6 @@ static int imageCount = 5;
 
 - (void)setBackgroundImageFor:(int)imageId
 {
-    NSLog(@"%@", [NSString stringWithFormat:@"image_bg_%d@2x.jpg", imageId]);
     self.imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"image_bg_%d@2x.jpg", imageId]];
 }
 
@@ -71,7 +74,7 @@ static int imageCount = 5;
 {
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"imageCollection" forIndexPath:indexPath];
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(2.5, 2.5, 50, 50)];
-    imageView.image = self.images[indexPath.row];
+    imageView.image = self.thumbs[indexPath.row];
     
     [cell addSubview:imageView];
     [cell bringSubviewToFront:imageView];

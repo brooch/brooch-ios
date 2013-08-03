@@ -13,6 +13,7 @@
 
 @property (strong, nonatomic) IBOutlet UICollectionView *imagePicker;
 @property (strong, nonatomic) NSArray *images;
+@property (strong, nonatomic) NSArray *thumbs;
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;
 @property (strong, nonatomic) BRPostFormViewController *parentVC;
 
