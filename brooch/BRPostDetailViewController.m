@@ -11,9 +11,6 @@
 #import "BRPostFormViewController.h"
 
 @interface BRPostDetailViewController ()
-
-@property (nonatomic, strong) BRTopViewController *parent;
-
 @end
 
 @implementation BRPostDetailViewController
@@ -68,26 +65,14 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (BRTopViewController *) parent
-{
-    if (!_parent) {
-        UINavigationController *navi = (UINavigationController *)self.presentingViewController;
-        NSArray *controllers = navi.viewControllers;
-        BRTopViewController *parent = (BRTopViewController *)[controllers objectAtIndex:0];
-        _parent = parent;
-    }
-    
-    return _parent;
-}
-
 - (IBAction)closePostDetail:(id)sender {
     [self dismissViewControllerAnimated:NO completion:nil];
 }
 
 - (IBAction)showNextPost:(id)sender
 {
-    if ([[self parent] hasNextPost]) {
-        self.currentPost = [[self parent] nextPost];
+    if ([[self topVC] hasNextPost]) {
+        self.currentPost = [[self topVC] nextPost];
         [self updateViewByCurrentPost];
     }
 }
@@ -95,8 +80,8 @@
 // なぜかきかない…
 - (IBAction)showPrevPost:(id)sender
 {
-    if ([[self parent] hasPrevPost]) {
-        self.currentPost = [[self parent] prevPost];
+    if ([[self topVC] hasPrevPost]) {
+        self.currentPost = [[self topVC] prevPost];
         [self updateViewByCurrentPost];
     }
 
@@ -106,6 +91,7 @@
 {
     if ([[segue identifier] isEqualToString:@"showPostForm"]) {
         [segue.destinationViewController setPost:self.currentPost];
+        [segue.destinationViewController setTopVC:self.topVC];
     }
 }
 

@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "BRPostModel.h"
+#import "BRTopViewController.h"
 
 @interface BRPostDetailViewController : UIViewController
 
+@property (strong, nonatomic) BRTopViewController *topVC;
 @property (strong, nonatomic) IBOutlet UIImageView *backgroundView;
 @property (strong, nonatomic) IBOutlet UITextView *textView;
 @property (strong, nonatomic) IBOutlet UILabel *authorView;

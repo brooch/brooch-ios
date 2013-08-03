@@ -45,6 +45,7 @@
 
 - (IBAction)closeSoftwareKeybodard:(id)sender
 {
+    self.post.author[@"name"] = self.authorField.text;
     [self.view endEditing: YES];
 }
 
@@ -104,12 +105,8 @@
     BRUserModel *user = [BRUserModel sharedManager];
     [user createPost:self.post
              success:^(NSHTTPURLResponse *response, NSDictionary *result) {
-                 UINavigationController *navi = (UINavigationController *)self.presentingViewController;
-                 NSArray *controllers = navi.viewControllers;
-                 BRTopViewController *parent = (BRTopViewController *)[controllers objectAtIndex:0];
-
-                 [parent.posts insertObject:[[BRPostModel alloc] initWithDictionary:result] atIndex:0];
-                 [parent.tableView reloadData];
+                 [self.topVC.posts insertObject:[[BRPostModel alloc] initWithDictionary:result] atIndex:0];
+                 [self.topVC.tableView reloadData];
 
                  [self dismissViewControllerAnimated:NO completion:nil];
              } failure:^(NSHTTPURLResponse *response, NSDictionary *result) {
@@ -122,6 +119,7 @@
     BRUserModel *user = [BRUserModel sharedManager];
     [user updatePost:self.post
              success:^(NSHTTPURLResponse *response, NSDictionary *result) {
+                 [self.topVC.tableView reloadData];
                  [self dismissViewControllerAnimated:NO completion:nil];
              } failure:^(NSHTTPURLResponse *response, NSDictionary *result) {
                  NSLog(@"%@", result);

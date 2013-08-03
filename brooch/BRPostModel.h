@@ -10,11 +10,11 @@
 
 @interface BRPostModel : NSObject
 
-@property (nonatomic, strong) NSString     *postId;
-@property (nonatomic, strong) NSString     *text;
-@property (nonatomic, strong) NSDictionary *author;
-@property (nonatomic, strong) NSArray      *tags;
-@property (nonatomic, strong) NSNumber     *imageId;
+@property (nonatomic, strong) NSString            *postId;
+@property (nonatomic, strong) NSString            *text;
+@property (nonatomic, strong) NSMutableDictionary *author;
+@property (nonatomic, strong) NSArray             *tags;
+@property (nonatomic, strong) NSNumber            *imageId;
 
 - (BRPostModel *)initWithDictionary:(NSDictionary *)dict;
 - (NSString *)imageFileName;

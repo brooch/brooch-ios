@@ -11,6 +11,7 @@
 #import "BRUserModel.h"
 #import "BRPostModel.h"
 #import "BRPostTableViewCell.h"
+#import "BRPostFormViewController.h"
 
 @interface BRTopViewController ()
 
@@ -113,7 +114,17 @@ static NSString *showPostSegueIdentifier = @"showPostDetail";
     if ([[segue identifier] isEqualToString:showPostSegueIdentifier]) {
         NSIndexPath *path = [self.tableView indexPathForSelectedRow];
         self.currentPostPostion = path.row;
-        [segue.destinationViewController setCurrentPost:[self.posts objectAtIndex:path.row]];
+        BRPostModel *post = self.posts[path.row];
+
+        [segue.destinationViewController setCurrentPost:post];
+        [segue.destinationViewController setTopVC:self];
+    }
+
+    if ([[segue identifier] isEqualToString:@"showPostForm"]) {
+        [segue.destinationViewController setTopVC:self];
+
+        BRPostModel *post = [[BRPostModel alloc] initWithDictionary:@{@"author": [@{@"name":@""} mutableCopy]}];
+        [segue.destinationViewController setPost:post];
     }
 }
 
