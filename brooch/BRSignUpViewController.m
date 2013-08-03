@@ -32,6 +32,8 @@
 
     UIImage *image = [UIImage imageNamed:@"sign_up_bg"];
     self.imageView.image = image;
+
+    [self registerForKeyboardNotifications];
 }
 
 - (void)didReceiveMemoryWarning
@@ -63,6 +65,30 @@
     }
 
     return NO;
+}
+
+- (void)registerForKeyboardNotifications
+{
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillShow:)
+                                                 name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillBeHidden:)
+                                                 name:UIKeyboardWillHideNotification object:nil];
+}
+
+- (void)keyboardWillShow:(NSNotification*)aNotification
+{
+    CGRect keyboardRect = [[[aNotification userInfo] objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
+    keyboardRect = [[self.view superview] convertRect:keyboardRect fromView:nil];
+    
+    CGPoint scrollPoint = CGPointMake(0.0, keyboardRect.size.height / 2);
+    [self.scrollView setContentOffset:scrollPoint animated:YES];
+}
+
+- (void)keyboardWillBeHidden:(NSNotification*)aNotification
+{
+    [self.scrollView setContentOffset:CGPointZero animated:YES];
 }
 
 - (IBAction)signUp:(id)sender
