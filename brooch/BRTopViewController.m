@@ -52,9 +52,34 @@ static NSString *showPostSegueIdentifier = @"showPostDetail";
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)firstViewReturnActionForSegue:(UIStoryboardSegue *)segue
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    UIImage *image         = [UIImage imageNamed:@"home_tag_bg@2x.png"];
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0.0, 0.0, image.size.width, image.size.height)];
+    UIView  *view          = [[UIView alloc] init];
+    UILabel *label         = [[UILabel alloc] initWithFrame:CGRectMake(10.0, 0.0, 310.0, 40.0)];
+
+    view.backgroundColor = [UIColor colorWithPatternImage:image];
+
+    label.textColor = [UIColor blackColor];
+    label.font = [UIFont fontWithName:@"HiraKakuProN-W3" size:14.0];
+    label.textColor = [UIColor grayColor];
+    label.text = @"All Brooches ∵";
+    label.backgroundColor = [UIColor clearColor];
+
+    // なんか縦にそろわないのでむりやりframeいじってる…
+    CGRect frame = label.frame;
+    label.frame = CGRectMake(frame.origin.x, frame.origin.y + 3, frame.size.width, frame.size.height);
+    
+    [view addSubview:imageView];
+    [view addSubview:label];
+    [view bringSubviewToFront:label];
+
+    return view;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    NSLog(@"First view return action invoked.");
+    return 40.0;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
