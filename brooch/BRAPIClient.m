@@ -13,7 +13,7 @@
 #ifdef DEBUG
 static NSString *base_url = @"http://localhost:3000/v1";
 #else
-static NSString *base_url = @"https://api.brooch.mobi/v1";
+static NSString *base_url = @"https://brooch-kentaro.sqale.jp/v1";
 #endif
 
 - (void)signUp:(NSDictionary *)params
