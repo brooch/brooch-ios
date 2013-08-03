@@ -63,7 +63,7 @@ static NSString *showPostSegueIdentifier = @"showPostDetail";
     label.textColor = [UIColor blackColor];
     label.font = [UIFont fontWithName:@"HiraKakuProN-W3" size:14.0];
     label.textColor = [UIColor grayColor];
-    label.text = @"All Brooches ∵";
+    label.text = @"all brooches ∵";
     label.backgroundColor = [UIColor clearColor];
 
     // なんか縦にそろわないのでむりやりframeいじってる…
