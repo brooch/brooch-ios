@@ -29,6 +29,15 @@
 	// Do any additional setup after loading the view.
 }
 
+- (void)viewDidLayoutSubviews
+{
+    [super viewDidLayoutSubviews];
+
+    if ([self.textField.text isEqualToString:@"どんな言葉"]) {
+        self.textField.text = @"";
+    }
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
