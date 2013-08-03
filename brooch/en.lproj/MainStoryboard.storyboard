@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="fkQ-mk-Oly">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="fkQ-mk-Oly">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -85,8 +85,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6KZ-2D-jLT">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="8JJ-rK-f4w"/>
+                                    <constraint firstAttribute="width" constant="70" id="mV0-5Q-IAi"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="閉じる">
+                                <state key="normal" backgroundImage="post_detail_back@2x.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -101,13 +105,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="6KZ-2D-jLT" firstAttribute="leading" secondItem="vG0-jN-g9c" secondAttribute="leading" type="default" id="5sc-zj-8EA"/>
                             <constraint firstItem="gXl-Tn-Qzc" firstAttribute="leading" secondItem="vG0-jN-g9c" secondAttribute="leading" type="default" id="AWM-L5-iO1"/>
                             <constraint firstItem="gsM-tv-x7q" firstAttribute="centerX" secondItem="gXl-Tn-Qzc" secondAttribute="centerX" type="default" id="BHF-Eq-1ti"/>
-                            <constraint firstItem="6KZ-2D-jLT" firstAttribute="top" secondItem="vG0-jN-g9c" secondAttribute="top" constant="12" id="NSQ-KC-CSm"/>
-                            <constraint firstAttribute="trailing" secondItem="6KZ-2D-jLT" secondAttribute="trailing" constant="11" id="Pof-LN-ghP"/>
                             <constraint firstItem="KqI-F3-1y6" firstAttribute="centerX" secondItem="gsM-tv-x7q" secondAttribute="centerX" type="default" id="REq-Ws-09f"/>
                             <constraint firstItem="gXl-Tn-Qzc" firstAttribute="trailing" secondItem="vG0-jN-g9c" secondAttribute="trailing" type="default" id="aLO-C5-ubw"/>
                             <constraint firstAttribute="bottom" secondItem="KqI-F3-1y6" secondAttribute="bottom" constant="123" id="dTp-PH-wCB"/>
+                            <constraint firstItem="6KZ-2D-jLT" firstAttribute="top" secondItem="vG0-jN-g9c" secondAttribute="top" constant="15" id="l2f-vL-9cv"/>
                             <constraint firstItem="gXl-Tn-Qzc" firstAttribute="top" secondItem="vG0-jN-g9c" secondAttribute="top" type="default" id="uGA-TI-ePh"/>
                             <constraint firstItem="gsM-tv-x7q" firstAttribute="top" secondItem="vG0-jN-g9c" secondAttribute="top" constant="116" id="xQ3-qN-BbD"/>
                         </constraints>
@@ -454,11 +458,74 @@
         <image name="header_post@2x.png" width="54" height="40"/>
         <image name="post_bg@2x.png" width="640" height="920"/>
         <image name="post_cancel@2x.png" width="160" height="58"/>
+        <image name="post_detail_back@2x.png" width="90" height="80"/>
         <image name="post_form_image_back@2x.png" width="90" height="80"/>
         <image name="post_select@2x.png" width="142" height="58"/>
         <image name="post_text_back@2x.png" width="112" height="58"/>
         <image name="post_text_bg@2x.png" width="640" height="920"/>
     </resources>
+    <classes>
+        <class className="BRPostDetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BRPostDetailViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="closePostDetail:"/>
+                <relationship kind="action" name="showNextPost:"/>
+                <relationship kind="action" name="showPrevPost:"/>
+                <relationship kind="outlet" name="authorView" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="backgroundView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="textView" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+        <class className="BRPostFormImageViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BRPostFormImageViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="imagePicker" candidateClass="UICollectionView"/>
+                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+        <class className="BRPostFormTextViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BRPostFormTextViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="textField" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+        <class className="BRPostFormViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BRPostFormViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="cancelForm:"/>
+                <relationship kind="action" name="closeSoftwareKeybodard:"/>
+                <relationship kind="action" name="createPost:"/>
+                <relationship kind="outlet" name="authorField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="textField" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+        <class className="BRPostTableViewCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BRPostTableViewCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="textLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="BRTopViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BRTopViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="listView" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="navBarRightButton" candidateClass="UIBarButtonItem"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="UICollectionReusableView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionReusableView.h"/>
+        </class>
+        <class className="UICollectionViewCell" superclassName="UICollectionReusableView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewCell.h"/>
+        </class>
+        <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
