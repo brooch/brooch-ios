@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="fkQ-mk-Oly">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="fkQ-mk-Oly">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -71,24 +71,22 @@
                                     <constraint firstAttribute="height" constant="466" id="CwW-ry-xOd"/>
                                 </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gsM-tv-x7q">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gsM-tv-x7q" customClass="BRPostDetailTextView">
+                                <color key="backgroundColor" red="0.32549019607843138" green="0.40000000000000002" blue="0.42745098039215684" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="4Te-I8-b4R"/>
-                                    <constraint firstAttribute="width" constant="240" id="kMA-35-UfR"/>
+                                    <constraint firstAttribute="width" constant="260" id="Brl-7h-hfy"/>
+                                    <constraint firstAttribute="height" constant="234" id="xOh-Ma-zdR"/>
                                 </constraints>
+                                <color key="textColor" red="0.32549019607843138" green="0.40000000000000002" blue="0.42745098039215684" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KqI-F3-1y6">
-                                <attributedString key="attributedText">
-                                    <fragment content="Label">
-                                        <attributes>
-                                            <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <font key="NSFont" size="17" name="Helvetica"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KqI-F3-1y6">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="WJu-aL-TFu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="14"/>
+                                <color key="textColor" red="0.56470590829849243" green="0.65098041296005249" blue="0.68235296010971069" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6KZ-2D-jLT">
@@ -114,13 +112,14 @@
                         <constraints>
                             <constraint firstItem="6KZ-2D-jLT" firstAttribute="leading" secondItem="vG0-jN-g9c" secondAttribute="leading" type="default" id="5sc-zj-8EA"/>
                             <constraint firstItem="gXl-Tn-Qzc" firstAttribute="leading" secondItem="vG0-jN-g9c" secondAttribute="leading" type="default" id="AWM-L5-iO1"/>
-                            <constraint firstItem="gsM-tv-x7q" firstAttribute="centerX" secondItem="gXl-Tn-Qzc" secondAttribute="centerX" type="default" id="BHF-Eq-1ti"/>
-                            <constraint firstItem="KqI-F3-1y6" firstAttribute="centerX" secondItem="gsM-tv-x7q" secondAttribute="centerX" type="default" id="REq-Ws-09f"/>
+                            <constraint firstItem="gsM-tv-x7q" firstAttribute="trailing" secondItem="KqI-F3-1y6" secondAttribute="trailing" type="default" id="CkB-7F-orA"/>
+                            <constraint firstItem="gXl-Tn-Qzc" firstAttribute="centerX" secondItem="KqI-F3-1y6" secondAttribute="centerX" type="default" id="Dcr-YQ-5Rl"/>
+                            <constraint firstAttribute="bottom" secondItem="KqI-F3-1y6" secondAttribute="bottom" constant="85" id="EC3-Jl-PYt"/>
+                            <constraint firstItem="KqI-F3-1y6" firstAttribute="leading" secondItem="gsM-tv-x7q" secondAttribute="leading" type="default" id="QyR-MC-GC8"/>
                             <constraint firstItem="gXl-Tn-Qzc" firstAttribute="trailing" secondItem="vG0-jN-g9c" secondAttribute="trailing" type="default" id="aLO-C5-ubw"/>
-                            <constraint firstAttribute="bottom" secondItem="KqI-F3-1y6" secondAttribute="bottom" constant="123" id="dTp-PH-wCB"/>
                             <constraint firstItem="6KZ-2D-jLT" firstAttribute="top" secondItem="vG0-jN-g9c" secondAttribute="top" constant="15" id="l2f-vL-9cv"/>
                             <constraint firstItem="gXl-Tn-Qzc" firstAttribute="top" secondItem="vG0-jN-g9c" secondAttribute="top" type="default" id="uGA-TI-ePh"/>
-                            <constraint firstItem="gsM-tv-x7q" firstAttribute="top" secondItem="vG0-jN-g9c" secondAttribute="top" constant="116" id="xQ3-qN-BbD"/>
+                            <constraint firstItem="gsM-tv-x7q" firstAttribute="top" secondItem="vG0-jN-g9c" secondAttribute="top" constant="102" id="ue7-ua-rNN"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="sew-1C-EVW" appends="YES" id="8SO-18-nHi"/>
@@ -472,6 +471,9 @@
         <image name="post_text_bg@2x.png" width="640" height="920"/>
     </resources>
     <classes>
+        <class className="BRPostDetailTextView" superclassName="UITextView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BRPostDetailTextView.h"/>
+        </class>
         <class className="BRPostDetailViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BRPostDetailViewController.h"/>
             <relationships>
@@ -499,9 +501,6 @@
         <class className="BRPostFormViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BRPostFormViewController.h"/>
             <relationships>
-                <relationship kind="action" name="cancelForm:"/>
-                <relationship kind="action" name="closeSoftwareKeybodard:"/>
-                <relationship kind="action" name="createPost:"/>
                 <relationship kind="outlet" name="authorField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
                 <relationship kind="outlet" name="textField" candidateClass="UITextView"/>
