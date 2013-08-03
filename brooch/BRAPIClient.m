@@ -95,7 +95,7 @@ static NSString *base_url = @"https://brooch-kentaro.sqale.jp/v1";
             });
         }
         else {
-            NSError *jsonError   = nil;
+            NSError *jsonError = nil;
             id result = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&jsonError];
 
             dispatch_async(dispatch_get_main_queue(), ^{
