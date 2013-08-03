@@ -25,7 +25,7 @@ static BRUserModel *_sharedInstance = nil;
     dispatch_once(&onceToken, ^{
         _sharedInstance = [[BRUserModel alloc] init];
         _sharedInstance.apiClient = [[BRAPIClient alloc] init];
-        [_sharedInstance loadUserData];
+        //[_sharedInstance loadUserData];
     });
 
     return _sharedInstance;
