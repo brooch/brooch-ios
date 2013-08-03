@@ -68,17 +68,39 @@ static int imageCount = 5;
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"imageCollection" forIndexPath:indexPath];
-    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 60, 60)];
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(2.5, 2.5, 50, 50)];
     imageView.image = self.images[indexPath.row];
+//    imageView.center = cell.center;
     
     [cell addSubview:imageView];
+    [cell bringSubviewToFront:imageView];
+    cell.backgroundColor = [UIColor whiteColor];
+    
     return cell;
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    UICollectionViewCell *cell = [self.imagePicker cellForItemAtIndexPath:indexPath];
+    [self setCollectionViewCellSelected:cell];
+
     self.parentVC.imageId = [NSNumber numberWithInt:indexPath.row];
     [self setBackgroundImageFor:indexPath.row];
+}
+
+- (void)setCollectionViewCellSelected:(UICollectionViewCell *)selected
+{
+    for (int i = 0; i < imageCount; i++) {
+        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:i inSection:0];
+        UICollectionViewCell *cell = [self.imagePicker cellForItemAtIndexPath:indexPath];
+
+        if (cell == selected) {
+            cell.backgroundColor = [UIColor yellowColor];
+        }
+        else {
+            cell.backgroundColor = [UIColor whiteColor];
+        }
+    }
 }
 
 @end
