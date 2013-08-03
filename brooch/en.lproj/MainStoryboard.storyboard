@@ -230,7 +230,6 @@
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5P8-zc-eJm">
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="post_bg@2x.png" translatesAutoresizingMaskIntoConstraints="NO" id="fGK-oX-Eps"/>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oxn-Z3-OTv">
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <gestureRecognizers/>
@@ -241,6 +240,7 @@
                                             <outletCollection property="gestureRecognizers" destination="DHd-sP-L4S" appends="YES" id="Q8y-on-lWz"/>
                                         </connections>
                                     </view>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="post_bg@2x.png" translatesAutoresizingMaskIntoConstraints="NO" id="fGK-oX-Eps"/>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" text="どんな言葉" translatesAutoresizingMaskIntoConstraints="NO" id="HNh-wL-lvS">
                                         <gestureRecognizers/>
                                         <constraints>
@@ -349,15 +349,14 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5oS-Mg-g2I" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="r5w-pd-OmW">
-                    <connections>
-                        <segue destination="ZxN-mE-mj4" kind="modal" identifier="showPostTextForm" modalTransitionStyle="flipHorizontal" animates="NO" id="tzI-na-cKl"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer id="q4B-gz-BXk"/>
                 <tapGestureRecognizer id="gS7-kG-D8a">
                     <connections>
                         <action selector="closeSoftwareKeybodard:" destination="GJz-2p-H9a" id="kJW-LO-xN0"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="r5w-pd-OmW">
+                    <connections>
+                        <segue destination="ZxN-mE-mj4" kind="modal" identifier="showPostTextForm" modalTransitionStyle="flipHorizontal" animates="NO" id="tzI-na-cKl"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="DHd-sP-L4S">
@@ -475,7 +474,6 @@
         <class className="BRPostFormImageViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BRPostFormImageViewController.h"/>
             <relationships>
-                <relationship kind="action" name="cancelForm:"/>
                 <relationship kind="outlet" name="imagePicker" candidateClass="UICollectionView"/>
                 <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
             </relationships>
@@ -489,9 +487,6 @@
         <class className="BRPostFormViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BRPostFormViewController.h"/>
             <relationships>
-                <relationship kind="action" name="cancelForm:"/>
-                <relationship kind="action" name="closeSoftwareKeybodard:"/>
-                <relationship kind="action" name="createPost:"/>
                 <relationship kind="outlet" name="authorField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
                 <relationship kind="outlet" name="textField" candidateClass="UITextView"/>
@@ -506,7 +501,6 @@
         <class className="BRTopViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BRTopViewController.h"/>
             <relationships>
-                <relationship kind="action" name="firstViewReturnActionForSegue:" candidateClass="UIStoryboardSegue"/>
                 <relationship kind="outlet" name="listView" candidateClass="UITableView"/>
                 <relationship kind="outlet" name="navBarRightButton" candidateClass="UIBarButtonItem"/>
             </relationships>
@@ -522,12 +516,6 @@
         </class>
         <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
-        </class>
-        <class className="UICollectionViewLayout" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewLayout.h"/>
-        </class>
-        <class className="UIStoryboardSegue" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UIStoryboardSegue.h"/>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

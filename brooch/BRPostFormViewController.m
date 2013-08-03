@@ -60,7 +60,8 @@
     CGRect keyboardRect = [[[aNotification userInfo] objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
     keyboardRect = [[self.view superview] convertRect:keyboardRect fromView:nil];
 
-    CGPoint scrollPoint = CGPointMake(0.0, keyboardRect.size.height);
+    // 「だれ?」の下にあわさるように
+    CGPoint scrollPoint = CGPointMake(0.0, keyboardRect.size.height - 46);
     [self.scrollView setContentOffset:scrollPoint animated:YES];
 }
 
