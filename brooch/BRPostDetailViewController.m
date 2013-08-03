@@ -29,6 +29,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
     [self updateViewByCurrentPost];
 }
 
@@ -37,7 +38,7 @@
     [UIView beginAnimations:nil context:nil];
 
     {
-        [UIView setAnimationDuration:1.5];
+        [UIView setAnimationDuration:1.2];
         self.textView.alpha  = 0.0;
         self.textView.text   = self.currentPost.text;
         self.textView.alpha  = 1.0;
