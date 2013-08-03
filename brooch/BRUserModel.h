@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "BRAPIClient.h"
+#import "BRPostModel.h"
 
 @interface BRUserModel : NSObject
 
@@ -20,10 +21,12 @@
 - (BOOL) isSignedIn;
 - (void) saveUserData:(NSDictionary *)params;
 
-- (void)createPost:(NSString *)text
-           imageId:(NSNumber *)imageId
-            author:(NSString *)author
-              tags:(NSArray *)tags
+- (void)createPost:(BRPostModel *)post
+           success:(SuccessHandler)successHandler
+           failure:(FailureHandler)failureHandler
+             error:(ErrorHandler)errorHandler;
+
+- (void)updatePost:(BRPostModel *)post
            success:(SuccessHandler)successHandler
            failure:(FailureHandler)failureHandler
              error:(ErrorHandler)errorHandler;

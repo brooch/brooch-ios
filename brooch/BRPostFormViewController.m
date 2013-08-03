@@ -28,16 +28,13 @@
     return self;
 }
 
-- (void)viewDidLoad
-{
-    self.textField.text   = self.post.text;
-    self.authorField.text = self.post.author[@"name"];
-}
-
 - (void)viewDidLayoutSubviews
 {
     [super viewDidLayoutSubviews];
+
     [self registerForKeyboardNotifications];
+    self.textField.text   = self.post.text;
+    self.authorField.text = self.post.author[@"name"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -76,7 +73,8 @@
     [self.scrollView setContentOffset:CGPointZero animated:YES];
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
     if ([@"showPostTextForm" isEqualToString:segue.identifier]) {
         [[segue destinationViewController] setPost:self.post];
     }
@@ -91,13 +89,20 @@
     [self dismissViewControllerAnimated:NO completion:nil];
 }
 
-- (IBAction)createPost:(id)sender
+- (IBAction)submitPost:(id)sender
+{
+    if (self.post.postId) {
+        [self updatePost];
+    }
+    else {
+        [self createPost];
+    }
+}
+
+- (void)createPost
 {
     BRUserModel *user = [BRUserModel sharedManager];
-    [user createPost:self.textField.text
-             imageId:self.imageId
-              author:self.authorField.text
-                tags:@[@"foo"]
+    [user createPost:self.post
              success:^(NSHTTPURLResponse *response, NSDictionary *result) {
                  UINavigationController *navi = (UINavigationController *)self.presentingViewController;
                  NSArray *controllers = navi.viewControllers;
@@ -106,6 +111,17 @@
                  [parent.posts insertObject:[[BRPostModel alloc] initWithDictionary:result] atIndex:0];
                  [parent.tableView reloadData];
 
+                 [self dismissViewControllerAnimated:NO completion:nil];
+             } failure:^(NSHTTPURLResponse *response, NSDictionary *result) {
+                 NSLog(@"%@", result);
+             } error:nil];
+}
+
+- (void)updatePost
+{
+    BRUserModel *user = [BRUserModel sharedManager];
+    [user updatePost:self.post
+             success:^(NSHTTPURLResponse *response, NSDictionary *result) {
                  [self dismissViewControllerAnimated:NO completion:nil];
              } failure:^(NSHTTPURLResponse *response, NSDictionary *result) {
                  NSLog(@"%@", result);

@@ -224,7 +224,6 @@
                                 <connections>
                                     <action selector="cancelForm:" destination="dtS-5G-Pl1" eventType="touchUpInside" id="QAe-oh-fSK"/>
                                     <action selector="cancelForm:" destination="GJz-2p-H9a" eventType="touchUpInside" id="gV5-oh-xbj"/>
-                                    <action selector="cancelForm:" destination="ZxN-mE-mj4" eventType="touchUpInside" id="lfG-I4-t3x"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -247,7 +246,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d8F-f7-4c2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1416" y="486"/>
+            <point key="canvasLocation" x="1401" y="439"/>
         </scene>
         <!--Post Form View Controller-->
         <scene sceneID="6LP-qF-UfL">
@@ -304,7 +303,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="createPost:" destination="GJz-2p-H9a" eventType="touchUpInside" id="umx-4s-dLT"/>
+                                            <action selector="submitPost:" destination="GJz-2p-H9a" eventType="touchUpInside" id="12Q-cX-Zhj"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EZb-CM-0md">
@@ -334,16 +333,16 @@
                                     <constraint firstItem="HNh-wL-lvS" firstAttribute="leading" secondItem="5P8-zc-eJm" secondAttribute="leading" type="default" id="9z9-gr-Bjv"/>
                                     <constraint firstItem="TbY-g2-Gng" firstAttribute="leading" secondItem="5P8-zc-eJm" secondAttribute="leading" constant="244" id="BvX-td-weC"/>
                                     <constraint firstItem="fGK-oX-Eps" firstAttribute="top" secondItem="5P8-zc-eJm" secondAttribute="top" type="default" id="Ccu-nX-nO4"/>
-                                    <constraint firstItem="HNh-wL-lvS" firstAttribute="top" secondItem="TbY-g2-Gng" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Icz-fT-XBT"/>
                                     <constraint firstItem="Oxn-Z3-OTv" firstAttribute="top" secondItem="XTP-SW-2jB" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Nu8-Z3-BOm"/>
                                     <constraint firstItem="Oxn-Z3-OTv" firstAttribute="bottom" secondItem="5P8-zc-eJm" secondAttribute="bottom" type="default" id="O6q-j7-ffA"/>
                                     <constraint firstItem="fGK-oX-Eps" firstAttribute="bottom" secondItem="5P8-zc-eJm" secondAttribute="bottom" type="default" id="QQQ-yd-o5B"/>
                                     <constraint firstItem="fGK-oX-Eps" firstAttribute="leading" secondItem="5P8-zc-eJm" secondAttribute="leading" type="default" id="U4q-AS-cQX"/>
-                                    <constraint firstItem="fGK-oX-Eps" firstAttribute="centerY" secondItem="5P8-zc-eJm" secondAttribute="centerY" type="default" id="VfG-JH-m5u"/>
+                                    <constraint firstAttribute="bottom" secondItem="HNh-wL-lvS" secondAttribute="bottom" constant="188" id="ZO5-x3-IeP"/>
+                                    <constraint firstItem="HNh-wL-lvS" firstAttribute="top" secondItem="TbY-g2-Gng" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="b7U-g1-YNW"/>
                                     <constraint firstItem="EZb-CM-0md" firstAttribute="top" secondItem="5P8-zc-eJm" secondAttribute="top" constant="7" id="eEZ-92-FbZ"/>
+                                    <constraint firstItem="TbY-g2-Gng" firstAttribute="top" secondItem="EZb-CM-0md" secondAttribute="top" type="default" id="gur-Mz-9Qe"/>
                                     <constraint firstItem="Oxn-Z3-OTv" firstAttribute="leading" secondItem="5P8-zc-eJm" secondAttribute="leading" type="default" id="nt5-hU-ceL"/>
                                     <constraint firstItem="fGK-oX-Eps" firstAttribute="trailing" secondItem="Oxn-Z3-OTv" secondAttribute="trailing" type="default" id="qJ9-LV-DDY"/>
-                                    <constraint firstItem="EZb-CM-0md" firstAttribute="top" secondItem="TbY-g2-Gng" secondAttribute="top" type="default" id="rzQ-3a-6yO"/>
                                     <constraint firstItem="EZb-CM-0md" firstAttribute="leading" secondItem="5P8-zc-eJm" secondAttribute="leading" constant="7" id="u5R-qS-CxI"/>
                                 </constraints>
                                 <connections>
@@ -423,12 +422,12 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ttJ-3V-Xtj">
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="277" id="G4r-TU-baS"/>
+                                    <constraint firstAttribute="height" constant="184" id="F6u-3d-zig"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <connections>
-                                    <outlet property="delegate" destination="ZxN-mE-mj4" id="evb-g9-qPA"/>
+                                    <outlet property="delegate" destination="ZxN-mE-mj4" id="enF-TF-bsT"/>
                                 </connections>
                             </textView>
                         </subviews>
@@ -518,7 +517,7 @@
             <relationships>
                 <relationship kind="action" name="cancelForm:"/>
                 <relationship kind="action" name="closeSoftwareKeybodard:"/>
-                <relationship kind="action" name="createPost:"/>
+                <relationship kind="action" name="submitPost:"/>
                 <relationship kind="outlet" name="authorField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
                 <relationship kind="outlet" name="textField" candidateClass="UITextView"/>
@@ -548,9 +547,6 @@
         </class>
         <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
-        </class>
-        <class className="UICollectionViewLayout" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewLayout.h"/>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

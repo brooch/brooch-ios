@@ -30,8 +30,6 @@ static int imageCount = 6;
 {
     [super viewDidLoad];
 
-    [self setBackgroundImageFor:(self.post.imageId || 0)];
-
     NSMutableArray *images = [@[] mutableCopy];
     NSMutableArray *thumbs = [@[] mutableCopy];
 
@@ -42,6 +40,12 @@ static int imageCount = 6;
 
     self.images = images;
     self.thumbs = thumbs;
+}
+
+- (void)viewDidLayoutSubviews
+{
+    [super viewDidLayoutSubviews];
+    [self setBackgroundImageFor:(self.post.imageId || 0)];
 }
 
 - (void)didReceiveMemoryWarning

@@ -26,7 +26,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	self.textField.text = self.post.text;
 }
 
 - (void)viewDidLayoutSubviews
@@ -36,6 +35,9 @@
     if ([self.textField.text isEqualToString:@"どんな言葉"]) {
         self.textField.text = @"";
     }
+
+    self.textField.text = self.post.text;
+    [self.textField becomeFirstResponder];
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,13 +46,15 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)viewWillDisappear:(BOOL)animated {
+- (void)viewWillDisappear:(BOOL)animated
+{
     [super viewWillDisappear:animated];
     [self.textField resignFirstResponder];
 }
 
-- (void)textViewDidEndEditing:(UITextView *)textView {
-    self.post.text = textView.text;
+- (void)textViewDidEndEditing:(UITextView *)textView
+{
+    self.post.text = self.textField.text;
 }
 
 - (IBAction)cancelForm:(id)sender{

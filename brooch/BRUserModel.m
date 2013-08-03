@@ -25,7 +25,7 @@ static BRUserModel *_sharedInstance = nil;
     dispatch_once(&onceToken, ^{
         _sharedInstance = [[BRUserModel alloc] init];
         _sharedInstance.apiClient = [[BRAPIClient alloc] init];
-        //[_sharedInstance loadUserData];
+        [_sharedInstance loadUserData];
     });
 
     return _sharedInstance;
@@ -87,22 +87,38 @@ static BRUserModel *_sharedInstance = nil;
                       error:errorHandler];
 }
 
-- (void)createPost:(NSString *)text
-           imageId:(NSNumber *)imageId
-            author:(NSString *)author
-              tags:(NSArray *)tags
+- (void)createPost:(BRPostModel *)post
            success:(SuccessHandler)successHandler
            failure:(FailureHandler)failureHandler
              error:(ErrorHandler)errorHandler
 {
     NSDictionary *params = @{
-        @"text":     text,
-        @"author":   author,
-        @"image_id": [NSString stringWithFormat:@"%@", imageId]
+        @"text":     post.text,
+        @"author":   post.author[@"name"],
+        @"image_id": [NSString stringWithFormat:@"%@", post.imageId]
     };
 
     [self requestWithApiToken:@"POST"
                          path:[NSString stringWithFormat:@"/users/%@/posts", self.userId]
+                       params:params
+                      success:successHandler
+                      failure:failureHandler
+                        error:errorHandler];
+}
+
+- (void)updatePost:(BRPostModel *)post
+           success:(SuccessHandler)successHandler
+           failure:(FailureHandler)failureHandler
+             error:(ErrorHandler)errorHandler
+{
+    NSDictionary *params = @{
+        @"text":     post.text,
+        @"author":   post.author[@"name"],
+        @"image_id": [NSString stringWithFormat:@"%@", post.imageId]
+    };
+    
+    [self requestWithApiToken:@"POST"
+                         path:[NSString stringWithFormat:@"/users/%@/posts/%@", self.userId, post.postId]
                        params:params
                       success:successHandler
                       failure:failureHandler
