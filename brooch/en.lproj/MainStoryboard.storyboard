@@ -78,7 +78,7 @@
                                     <constraint firstAttribute="height" constant="220" id="yQk-TL-Z9v"/>
                                 </constraints>
                                 <color key="textColor" red="0.32549019607843138" green="0.40000000000000002" blue="0.42745098039215684" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="13"/>
+                                <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="right" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KqI-F3-1y6">
@@ -493,6 +493,9 @@
         <class className="BRPostDetailViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BRPostDetailViewController.h"/>
             <relationships>
+                <relationship kind="action" name="closePostDetail:"/>
+                <relationship kind="action" name="showNextPost:"/>
+                <relationship kind="action" name="showPrevPost:"/>
                 <relationship kind="outlet" name="authorView" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="backgroundView" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="textView" candidateClass="UITextView"/>
@@ -514,6 +517,9 @@
         <class className="BRPostFormViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BRPostFormViewController.h"/>
             <relationships>
+                <relationship kind="action" name="cancelForm:"/>
+                <relationship kind="action" name="closeSoftwareKeybodard:"/>
+                <relationship kind="action" name="submitPost:"/>
                 <relationship kind="outlet" name="authorField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
                 <relationship kind="outlet" name="textField" candidateClass="UITextView"/>

@@ -32,9 +32,33 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    self.textView.text        = self.currentPost.text;
     self.authorView.text      = self.currentPost.author[@"name"];
     self.backgroundView.image = self.currentPost.imageAsUIImage;
+    [self setTextViewText];
+}
+
+- (void)setTextViewText
+{
+    CGFloat customLineHeight    = 26.0;
+    CGFloat customLetterSpacing = 2.8;
+
+    UIFont *font = [UIFont systemFontOfSize:13];
+    NSMutableParagraphStyle *paragrahStyle = [[NSMutableParagraphStyle alloc] init];
+
+    paragrahStyle.minimumLineHeight = customLineHeight;
+    paragrahStyle.maximumLineHeight = customLineHeight;
+    
+    NSMutableAttributedString *attributedText = [[NSMutableAttributedString alloc] initWithString:self.currentPost.text];
+
+    [attributedText addAttribute:NSKernAttributeName
+                           value:[NSNumber numberWithFloat:customLetterSpacing]
+                           range:NSMakeRange(0, attributedText.length)];
+    [attributedText addAttribute:NSParagraphStyleAttributeName
+                           value:paragrahStyle
+                           range:NSMakeRange(0, attributedText.length)];
+
+    self.textView.font = font;
+    self.textView.attributedText = attributedText;
 }
 
 - (void)updateViewByCurrentPost
