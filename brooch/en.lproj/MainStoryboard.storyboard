@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="fkQ-mk-Oly">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="fkQ-mk-Oly">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -74,17 +74,17 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gsM-tv-x7q">
                                 <color key="backgroundColor" red="0.32549019607843138" green="0.40000000000000002" blue="0.42745098039215684" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="256" id="eQt-95-Lsj"/>
-                                    <constraint firstAttribute="width" constant="260" id="stc-en-WvS"/>
+                                    <constraint firstAttribute="width" constant="246" id="pXv-tj-C3F"/>
+                                    <constraint firstAttribute="height" constant="220" id="yQk-TL-Z9v"/>
                                 </constraints>
                                 <color key="textColor" red="0.32549019607843138" green="0.40000000000000002" blue="0.42745098039215684" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="13"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="right" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KqI-F3-1y6">
                                 <color key="backgroundColor" red="0.51372549019607838" green="0.5725490196078431" blue="0.60392156862745094" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="218" id="OLw-D1-1MQ"/>
+                                    <constraint firstAttribute="height" constant="22" id="vGY-Pg-Guc"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="13"/>
                                 <color key="textColor" red="0.51372549019607838" green="0.5725490196078431" blue="0.60392156862745094" alpha="1" colorSpace="calibratedRGB"/>
@@ -128,17 +128,18 @@
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="9ah-Ga-C9K" firstAttribute="trailing" secondItem="vG0-jN-g9c" secondAttribute="trailing" type="default" id="51Q-GN-szh"/>
-                            <constraint firstAttribute="bottom" secondItem="KqI-F3-1y6" secondAttribute="bottom" constant="84" id="6qC-MS-y89"/>
+                            <constraint firstItem="gsM-tv-x7q" firstAttribute="leading" secondItem="KqI-F3-1y6" secondAttribute="leading" type="default" id="54Y-DA-dXn"/>
+                            <constraint firstItem="gsM-tv-x7q" firstAttribute="top" secondItem="vG0-jN-g9c" secondAttribute="top" constant="88" id="9a7-AU-J1k"/>
                             <constraint firstItem="6KZ-2D-jLT" firstAttribute="top" secondItem="vG0-jN-g9c" secondAttribute="top" type="default" id="GHE-Y9-dVZ"/>
                             <constraint firstItem="6KZ-2D-jLT" firstAttribute="leading" secondItem="vG0-jN-g9c" secondAttribute="leading" type="default" id="GiR-j4-rsg"/>
-                            <constraint firstItem="KqI-F3-1y6" firstAttribute="centerX" secondItem="gsM-tv-x7q" secondAttribute="centerX" type="default" id="V41-hV-tlF"/>
                             <constraint firstItem="9ah-Ga-C9K" firstAttribute="bottom" secondItem="6KZ-2D-jLT" secondAttribute="bottom" type="default" id="V6o-dd-oZe"/>
                             <constraint firstItem="gXl-Tn-Qzc" firstAttribute="top" secondItem="vG0-jN-g9c" secondAttribute="top" type="default" id="jIG-ZU-rXC"/>
-                            <constraint firstItem="gsM-tv-x7q" firstAttribute="top" secondItem="vG0-jN-g9c" secondAttribute="top" constant="64" id="mAC-DO-d0d"/>
+                            <constraint firstAttribute="bottom" secondItem="KqI-F3-1y6" secondAttribute="bottom" constant="106" id="n9f-Og-ZGm"/>
                             <constraint firstItem="gXl-Tn-Qzc" firstAttribute="leading" secondItem="vG0-jN-g9c" secondAttribute="leading" type="default" id="snV-2M-liI"/>
                             <constraint firstItem="gXl-Tn-Qzc" firstAttribute="trailing" secondItem="vG0-jN-g9c" secondAttribute="trailing" type="default" id="tMI-9c-a0q"/>
-                            <constraint firstItem="KqI-F3-1y6" firstAttribute="centerX" secondItem="gXl-Tn-Qzc" secondAttribute="centerX" type="default" id="uS7-Xw-nwb"/>
                             <constraint firstItem="9ah-Ga-C9K" firstAttribute="top" secondItem="vG0-jN-g9c" secondAttribute="top" type="default" id="vlX-5W-8d2"/>
+                            <constraint firstItem="KqI-F3-1y6" firstAttribute="trailing" secondItem="gsM-tv-x7q" secondAttribute="trailing" type="default" id="yq7-xE-Jyx"/>
+                            <constraint firstItem="KqI-F3-1y6" firstAttribute="centerX" secondItem="gXl-Tn-Qzc" secondAttribute="centerX" type="default" id="zj3-Ku-LQf"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="sew-1C-EVW" appends="YES" id="8SO-18-nHi"/>
@@ -488,12 +489,71 @@
         <image name="post_text_back@2x.png" width="112" height="58"/>
         <image name="post_text_bg@2x.png" width="640" height="920"/>
     </resources>
+    <classes>
+        <class className="BRPostDetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BRPostDetailViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="closePostDetail:"/>
+                <relationship kind="action" name="showNextPost:"/>
+                <relationship kind="action" name="showPrevPost:"/>
+                <relationship kind="outlet" name="authorView" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="backgroundView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="textView" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+        <class className="BRPostFormImageViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BRPostFormImageViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="imagePicker" candidateClass="UICollectionView"/>
+                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+        <class className="BRPostFormTextViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BRPostFormTextViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="textField" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+        <class className="BRPostFormViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BRPostFormViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="authorField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="textField" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+        <class className="BRPostTableViewCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BRPostTableViewCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="textLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="BRTopViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BRTopViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="listView" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="navBarRightButton" candidateClass="UIBarButtonItem"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="UICollectionReusableView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionReusableView.h"/>
+        </class>
+        <class className="UICollectionViewCell" superclassName="UICollectionReusableView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewCell.h"/>
+        </class>
+        <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="xYw-21-TOF"/>
+        <segue reference="Wz6-Xm-FbC"/>
     </inferredMetricsTieBreakers>
 </document>
