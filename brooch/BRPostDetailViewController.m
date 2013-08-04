@@ -32,19 +32,19 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    self.authorView.text      = self.currentPost.author[@"name"];
     self.backgroundView.image = self.currentPost.imageAsUIImage;
     [self setTextViewText];
+    [self setAuthorViewText];
 }
 
 - (void)setTextViewText
 {
-    CGFloat customLineHeight    = 26.0;
+    CGFloat customLineHeight    = 29.0;
     CGFloat customLetterSpacing = 2.8;
 
-    UIFont *font = [UIFont systemFontOfSize:13];
-    NSMutableParagraphStyle *paragrahStyle = [[NSMutableParagraphStyle alloc] init];
+    UIFont *font = [UIFont fontWithName:@"HiraKakuProN-W3" size:13];
 
+    NSMutableParagraphStyle *paragrahStyle = [[NSMutableParagraphStyle alloc] init];
     paragrahStyle.minimumLineHeight = customLineHeight;
     paragrahStyle.maximumLineHeight = customLineHeight;
     
@@ -59,6 +59,28 @@
 
     self.textView.font = font;
     self.textView.attributedText = attributedText;
+}
+
+- (void)setAuthorViewText
+{
+    CGFloat customLetterSpacing = 2.8;
+    
+    UIFont *font = [UIFont fontWithName:@"HiraKakuProN-W3" size:13];
+    
+    NSMutableParagraphStyle *paragrahStyle = [[NSMutableParagraphStyle alloc] init];
+    paragrahStyle.alignment = NSTextAlignmentRight;
+    
+    NSMutableAttributedString *attributedText = [[NSMutableAttributedString alloc] initWithString:self.currentPost.author[@"name"]];
+    
+    [attributedText addAttribute:NSKernAttributeName
+                           value:[NSNumber numberWithFloat:customLetterSpacing]
+                           range:NSMakeRange(0, attributedText.length)];
+    [attributedText addAttribute:NSParagraphStyleAttributeName
+                           value:paragrahStyle
+                           range:NSMakeRange(0, attributedText.length)];
+    
+    self.authorView.font = font;
+    self.authorView.attributedText = attributedText;
 }
 
 - (void)updateViewByCurrentPost
