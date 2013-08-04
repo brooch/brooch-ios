@@ -30,8 +30,7 @@
     self.tutorialImages = @[
         [UIImage imageNamed:@"intro_1"],
         [UIImage imageNamed:@"intro_2"],
-        [UIImage imageNamed:@"intro_3"],
-        [UIImage imageNamed:@"intro_4"]
+        [UIImage imageNamed:@"intro_3"]
     ];
     
     self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width * self.tutorialImages.count, self.scrollView.frame.size.height);
@@ -56,6 +55,8 @@
 
     self.pageControll.currentPage = 0;
     self.pageControll.numberOfPages = self.tutorialImages.count;
+
+    [self.view layoutSubviews];
 }
 
 - (void)didReceiveMemoryWarning
