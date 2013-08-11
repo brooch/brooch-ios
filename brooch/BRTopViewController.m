@@ -95,12 +95,17 @@ static NSString *showPostSegueIdentifier = @"showPostDetail";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {  
+    BRPostModel *post = self.posts[indexPath.row];
     BRPostTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+
     if (cell == nil) {
         cell = [[BRPostTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
-    
-    cell.textLabel.text = [self.posts[indexPath.row] text];
+
+    cell.delegate = self;
+    cell.post = post;
+    cell.textLabel.text = post.text;
+
     return cell;
 }
 
@@ -126,6 +131,18 @@ static NSString *showPostSegueIdentifier = @"showPostDetail";
         BRPostModel *post = [[BRPostModel alloc] initWithDictionary:@{@"author": [@{@"name":@""} mutableCopy]}];
         [segue.destinationViewController setPost:post];
     }
+}
+
+-(void)didPushDeletePostButton:(id)sender
+                        post:(BRPostModel *)post
+{
+    BRUserModel *user = [BRUserModel sharedManager];
+    [user deletePost:post
+             success:^(NSHTTPURLResponse *response, NSDictionary *result){
+                 NSLog(@"deleted");
+             } failure:^(NSHTTPURLResponse *response, NSDictionary *result){
+                 NSLog(@"%@", result);
+             } error:nil];
 }
 
 // TODO: ダサいのでiteratorパタンにする
@@ -154,9 +171,5 @@ static NSString *showPostSegueIdentifier = @"showPostDetail";
     return post;
     
 }
-
-
-
-
 
 @end

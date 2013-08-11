@@ -151,6 +151,19 @@ static BRUserModel *_sharedInstance = nil;
                         error:errorHandler];
 }
 
+- (void)deletePost:(BRPostModel *)post
+           success:(SuccessHandler)successHandler
+           failure:(FailureHandler)failureHandler
+             error:(ErrorHandler)errorHandler
+{
+    [self requestWithApiToken:@"DELETE"
+                         path:[NSString stringWithFormat:@"/users/%@/posts/%@", self.userId, post.postId]
+                       params:@{}
+                      success:successHandler
+                      failure:failureHandler
+                        error:errorHandler];
+}
+
 - (void)posts:(NSDictionary *)args
       success:(SuccessHandler)successHandler
       failure:(FailureHandler)failureHandler

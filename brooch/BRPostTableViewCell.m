@@ -26,4 +26,10 @@
     // Configure the view for the selected state
 }
 
+- (IBAction)deletePost:(id)sender
+{
+    [self.delegate didPushDeletePostButton:self
+                                      post:self.post];
+}
+
 @end

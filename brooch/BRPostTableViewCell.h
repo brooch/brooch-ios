@@ -7,9 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BRPostModel.h"
+
+@protocol BRPostTableViewCellDelegate <NSObject>
+
+- (void)didPushDeletePostButton:(id)sender post:(BRPostModel *)post;
+
+@end
 
 @interface BRPostTableViewCell : UITableViewCell
 
+@property (weak, nonatomic) id <BRPostTableViewCellDelegate> delegate;
+@property (strong, nonatomic) BRPostModel *post;
+@property (strong, nonatomic) IBOutlet UIView *slideView;
 @property (strong, nonatomic) IBOutlet UILabel *textLabel;
 
 @end
