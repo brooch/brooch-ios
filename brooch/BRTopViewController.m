@@ -133,6 +133,24 @@ static NSString *showPostSegueIdentifier = @"showPostDetail";
     }
 }
 
+- (IBAction)didSwipeToLeft:(UISwipeGestureRecognizer *)swipeRecognizer
+{
+    CGPoint loc = [swipeRecognizer locationInView:self.tableView];
+    NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:loc];
+    BRPostTableViewCell* cell = (BRPostTableViewCell *)[self.tableView cellForRowAtIndexPath:indexPath];
+
+    [cell hideBackgroundView];
+}
+
+- (IBAction)didSwipeToRight:(UISwipeGestureRecognizer *)swipeRecognizer
+{
+    CGPoint loc = [swipeRecognizer locationInView:self.tableView];
+    NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:loc];
+    BRPostTableViewCell* cell = (BRPostTableViewCell *)[self.tableView cellForRowAtIndexPath:indexPath];
+    
+    [cell showBackgroundView];
+}
+
 -(void)didPushDeletePostButton:(id)sender
                         post:(BRPostModel *)post
 {

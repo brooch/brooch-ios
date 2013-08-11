@@ -22,4 +22,7 @@
 @property (strong, nonatomic) IBOutlet UIView *slideView;
 @property (strong, nonatomic) IBOutlet UILabel *textLabel;
 
+- (void)showBackgroundView;
+- (void)hideBackgroundView;
+
 @end

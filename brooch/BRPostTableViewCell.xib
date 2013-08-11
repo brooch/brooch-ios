@@ -42,64 +42,6 @@
 						<reference key="NSNextResponder" ref="308898573"/>
 						<int key="NSvFlags">1280</int>
 						<array class="NSMutableArray" key="NSSubviews">
-							<object class="IBUIView" id="67151083">
-								<reference key="NSNextResponder" ref="980771273"/>
-								<int key="NSvFlags">1316</int>
-								<array class="NSMutableArray" key="NSSubviews">
-									<object class="IBUILabel" id="918325950">
-										<reference key="NSNextResponder" ref="67151083"/>
-										<int key="NSvFlags">1316</int>
-										<string key="NSFrame">{{20, 20}, {269, 21}}</string>
-										<reference key="NSSuperview" ref="67151083"/>
-										<reference key="NSNextKeyView" ref="224288331"/>
-										<string key="NSReuseIdentifierKey">_NS:9</string>
-										<object class="NSColor" key="IBUIBackgroundColor">
-											<int key="NSColorSpace">1</int>
-											<bytes key="NSRGB">MC4zMjU0OTAxOTYxIDAuNCAwLjQyNzQ1MDk4MDQgMAA</bytes>
-										</object>
-										<bool key="IBUIOpaque">NO</bool>
-										<bool key="IBUIClipsSubviews">YES</bool>
-										<int key="IBUIContentMode">7</int>
-										<bool key="IBUIUserInteractionEnabled">NO</bool>
-										<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-										<string key="IBUIText">Label</string>
-										<object class="NSColor" key="IBUITextColor">
-											<int key="NSColorSpace">1</int>
-											<bytes key="NSRGB">MC4zMjU0OTAxOTYxIDAuNCAwLjQyNzQ1MDk4MDQAA</bytes>
-										</object>
-										<object class="NSColor" key="IBUIHighlightedColor" id="1054122426">
-											<int key="NSColorSpace">3</int>
-											<bytes key="NSWhite">MQA</bytes>
-										</object>
-										<int key="IBUIBaselineAdjustment">0</int>
-										<int key="IBUILineBreakMode">2</int>
-										<object class="IBUIFontDescription" key="IBUIFontDescription">
-											<string key="name">HiraKakuProN-W3</string>
-											<string key="family">Hiragino Kaku Gothic ProN</string>
-											<int key="traits">0</int>
-											<double key="pointSize">14</double>
-										</object>
-										<object class="NSFont" key="IBUIFont">
-											<string key="NSName">HiraKakuProN-W3</string>
-											<double key="NSSize">14</double>
-											<int key="NSfFlags">16</int>
-										</object>
-										<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
-									</object>
-								</array>
-								<string key="NSFrameSize">{321, 55}</string>
-								<reference key="NSSuperview" ref="980771273"/>
-								<reference key="NSNextKeyView" ref="918325950"/>
-								<string key="NSReuseIdentifierKey">_NS:9</string>
-								<object class="NSColor" key="IBUIBackgroundColor">
-									<int key="NSColorSpace">3</int>
-									<bytes key="NSWhite">MQA</bytes>
-									<object class="NSColorSpace" key="NSCustomColorSpace" id="926486039">
-										<int key="NSID">2</int>
-									</object>
-								</object>
-								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-							</object>
 							<object class="IBUIView" id="224288331">
 								<reference key="NSNextResponder" ref="980771273"/>
 								<int key="NSvFlags">1316</int>
@@ -109,6 +51,7 @@
 										<int key="NSvFlags">1316</int>
 										<string key="NSFrame">{{8, 13}, {28, 30}}</string>
 										<reference key="NSSuperview" ref="224288331"/>
+										<reference key="NSWindow"/>
 										<string key="NSReuseIdentifierKey">_NS:9</string>
 										<bool key="IBUIOpaque">NO</bool>
 										<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -116,7 +59,10 @@
 										<int key="IBUIContentVerticalAlignment">0</int>
 										<int key="IBUIButtonType">1</int>
 										<string key="IBUINormalTitle">×</string>
-										<reference key="IBUIHighlightedTitleColor" ref="1054122426"/>
+										<object class="NSColor" key="IBUIHighlightedTitleColor" id="1054122426">
+											<int key="NSColorSpace">3</int>
+											<bytes key="NSWhite">MQA</bytes>
+										</object>
 										<object class="NSColor" key="IBUINormalTitleColor">
 											<int key="NSColorSpace">1</int>
 											<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
@@ -138,7 +84,65 @@
 								</array>
 								<string key="NSFrameSize">{320, 55}</string>
 								<reference key="NSSuperview" ref="980771273"/>
+								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="235834879"/>
+								<string key="NSReuseIdentifierKey">_NS:9</string>
+								<object class="NSColor" key="IBUIBackgroundColor">
+									<int key="NSColorSpace">3</int>
+									<bytes key="NSWhite">MQA</bytes>
+									<object class="NSColorSpace" key="NSCustomColorSpace" id="926486039">
+										<int key="NSID">2</int>
+									</object>
+								</object>
+								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+							</object>
+							<object class="IBUIView" id="67151083">
+								<reference key="NSNextResponder" ref="980771273"/>
+								<int key="NSvFlags">1316</int>
+								<array class="NSMutableArray" key="NSSubviews">
+									<object class="IBUILabel" id="918325950">
+										<reference key="NSNextResponder" ref="67151083"/>
+										<int key="NSvFlags">1316</int>
+										<string key="NSFrame">{{20, 20}, {269, 21}}</string>
+										<reference key="NSSuperview" ref="67151083"/>
+										<reference key="NSWindow"/>
+										<reference key="NSNextKeyView" ref="224288331"/>
+										<string key="NSReuseIdentifierKey">_NS:9</string>
+										<object class="NSColor" key="IBUIBackgroundColor">
+											<int key="NSColorSpace">1</int>
+											<bytes key="NSRGB">MC4zMjU0OTAxOTYxIDAuNCAwLjQyNzQ1MDk4MDQgMAA</bytes>
+										</object>
+										<bool key="IBUIOpaque">NO</bool>
+										<bool key="IBUIClipsSubviews">YES</bool>
+										<int key="IBUIContentMode">7</int>
+										<bool key="IBUIUserInteractionEnabled">NO</bool>
+										<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+										<string key="IBUIText">Label</string>
+										<object class="NSColor" key="IBUITextColor">
+											<int key="NSColorSpace">1</int>
+											<bytes key="NSRGB">MC4zMjU0OTAxOTYxIDAuNCAwLjQyNzQ1MDk4MDQAA</bytes>
+										</object>
+										<reference key="IBUIHighlightedColor" ref="1054122426"/>
+										<int key="IBUIBaselineAdjustment">0</int>
+										<int key="IBUILineBreakMode">2</int>
+										<object class="IBUIFontDescription" key="IBUIFontDescription">
+											<string key="name">HiraKakuProN-W3</string>
+											<string key="family">Hiragino Kaku Gothic ProN</string>
+											<int key="traits">0</int>
+											<double key="pointSize">14</double>
+										</object>
+										<object class="NSFont" key="IBUIFont">
+											<string key="NSName">HiraKakuProN-W3</string>
+											<double key="NSSize">14</double>
+											<int key="NSfFlags">16</int>
+										</object>
+										<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
+									</object>
+								</array>
+								<string key="NSFrameSize">{321, 55}</string>
+								<reference key="NSSuperview" ref="980771273"/>
+								<reference key="NSWindow"/>
+								<reference key="NSNextKeyView" ref="918325950"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<object class="NSColor" key="IBUIBackgroundColor">
 									<int key="NSColorSpace">3</int>
@@ -151,6 +155,7 @@
 						<object class="NSPSMatrix" key="NSFrameMatrix"/>
 						<string key="NSFrameSize">{300, 54}</string>
 						<reference key="NSSuperview" ref="308898573"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="67151083"/>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">3</int>
@@ -166,6 +171,7 @@
 				<object class="NSPSMatrix" key="NSFrameMatrix"/>
 				<string key="NSFrameSize">{320, 55}</string>
 				<reference key="NSSuperview"/>
+				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="980771273"/>
 				<int key="IBUIContentMode">4</int>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -710,7 +716,51 @@
 			<nil key="sourceID"/>
 			<int key="maxID">143</int>
 		</object>
-		<object class="IBClassDescriber" key="IBDocument.Classes"/>
+		<object class="IBClassDescriber" key="IBDocument.Classes">
+			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
+				<object class="IBPartialClassDescription">
+					<string key="className">BRPostTableViewCell</string>
+					<string key="superclassName">UITableViewCell</string>
+					<object class="NSMutableDictionary" key="actions">
+						<string key="NS.key.0">deletePost:</string>
+						<string key="NS.object.0">id</string>
+					</object>
+					<object class="NSMutableDictionary" key="actionInfosByName">
+						<string key="NS.key.0">deletePost:</string>
+						<object class="IBActionInfo" key="NS.object.0">
+							<string key="name">deletePost:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+					</object>
+					<dictionary class="NSMutableDictionary" key="outlets">
+						<string key="slideView">UIView</string>
+						<string key="textLabel">UILabel</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<object class="IBToOneOutletInfo" key="slideView">
+							<string key="name">slideView</string>
+							<string key="candidateClassName">UIView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="textLabel">
+							<string key="name">textLabel</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
+					</dictionary>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/BRPostTableViewCell.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSLayoutConstraint</string>
+					<string key="superclassName">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/NSLayoutConstraint.h</string>
+					</object>
+				</object>
+			</array>
+		</object>
 		<int key="IBDocument.localizationMode">0</int>
 		<string key="IBDocument.TargetRuntimeIdentifier">IBCocoaTouchFramework</string>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
