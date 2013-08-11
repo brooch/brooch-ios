@@ -25,7 +25,7 @@ static BRUserModel *_sharedInstance = nil;
     dispatch_once(&onceToken, ^{
         _sharedInstance = [[BRUserModel alloc] init];
         _sharedInstance.apiClient = [[BRAPIClient alloc] init];
-        //[_sharedInstance loadUserData];
+        [_sharedInstance loadUserData];
     });
 
     return _sharedInstance;
@@ -146,6 +146,19 @@ static BRUserModel *_sharedInstance = nil;
     [self requestWithApiToken:@"PUT"
                          path:[NSString stringWithFormat:@"/users/%@/posts/%@", self.userId, post.postId]
                        params:params
+                      success:successHandler
+                      failure:failureHandler
+                        error:errorHandler];
+}
+
+- (void)deletePost:(BRPostModel *)post
+           success:(SuccessHandler)successHandler
+           failure:(FailureHandler)failureHandler
+             error:(ErrorHandler)errorHandler
+{
+    [self requestWithApiToken:@"DELETE"
+                         path:[NSString stringWithFormat:@"/users/%@/posts/%@", self.userId, post.postId]
+                       params:@{}
                       success:successHandler
                       failure:failureHandler
                         error:errorHandler];
