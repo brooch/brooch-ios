@@ -28,8 +28,24 @@
 
 - (IBAction)deletePost:(id)sender
 {
-    [self.delegate didPushDeletePostButton:self
-                                      post:self.post];
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"投稿の削除"
+                                                        message:@"本当に削除しますか？"
+                                                       delegate:self
+                                              cancelButtonTitle:@"いいえ"
+                                              otherButtonTitles:@"はい", nil];
+    [alertView show];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    switch (buttonIndex) {
+        case 0:
+            break;
+        case 1:
+            [self.delegate didPushDeletePostButton:self
+                                              post:self.post];
+            break;
+    }
 }
 
 @end

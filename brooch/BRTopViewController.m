@@ -139,7 +139,8 @@ static NSString *showPostSegueIdentifier = @"showPostDetail";
     BRUserModel *user = [BRUserModel sharedManager];
     [user deletePost:post
              success:^(NSHTTPURLResponse *response, NSDictionary *result){
-                 NSLog(@"deleted");
+                 [self.posts removeObject:post];
+                 [self.tableView reloadData];
              } failure:^(NSHTTPURLResponse *response, NSDictionary *result){
                  NSLog(@"%@", result);
              } error:nil];
