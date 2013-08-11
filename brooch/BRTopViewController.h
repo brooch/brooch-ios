@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BRPostTableViewCell.h"
 
 @class BRPostModel;
 
 @interface BRTopViewController : UITableViewController
+<BRPostTableViewCellDelegate>
 
 @property (strong, nonatomic) IBOutlet UITableView *listView;
 @property (strong, nonatomic) NSMutableArray *posts;

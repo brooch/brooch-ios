@@ -42,6 +42,11 @@
            failure:(FailureHandler)failureHandler
              error:(ErrorHandler)errorHandler;
 
+- (void)deletePost:(BRPostModel *)post
+           success:(SuccessHandler)successHandler
+           failure:(FailureHandler)failureHandler
+             error:(ErrorHandler)errorHandler;
+
 - (void)posts:(NSDictionary *)args
       success:(SuccessHandler)successHandler
       failure:(FailureHandler)failureHandler

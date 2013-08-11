@@ -12,6 +12,7 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <prototypes>
                             <tableViewCell contentMode="center" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="44" id="ziX-J5-vaL" customClass="BRPostTableViewCell">
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
@@ -29,6 +30,8 @@
                         <connections>
                             <outlet property="dataSource" destination="2" id="72r-BI-QMS"/>
                             <outlet property="delegate" destination="2" id="Y9h-PD-qJU"/>
+                            <outletCollection property="gestureRecognizers" destination="7uZ-Vp-YFC" appends="YES" id="3Ml-a6-b2o"/>
+                            <outletCollection property="gestureRecognizers" destination="f8w-zU-xEC" appends="YES" id="Veb-Sg-Htq"/>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="VGp-pX-Exf">
@@ -55,6 +58,16 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="7uZ-Vp-YFC">
+                    <connections>
+                        <action selector="didSwipeToRight:" destination="2" id="dut-q5-kRM"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="f8w-zU-xEC">
+                    <connections>
+                        <action selector="didSwipeToLeft:" destination="2" id="P02-jk-5ld"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="294" y="20"/>
         </scene>
@@ -504,6 +517,7 @@
         <class className="BRPostFormImageViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BRPostFormImageViewController.h"/>
             <relationships>
+                <relationship kind="action" name="cancelForm:"/>
                 <relationship kind="outlet" name="imagePicker" candidateClass="UICollectionView"/>
                 <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
             </relationships>
@@ -528,12 +542,16 @@
         <class className="BRPostTableViewCell" superclassName="UITableViewCell">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BRPostTableViewCell.h"/>
             <relationships>
+                <relationship kind="action" name="deletePost:"/>
+                <relationship kind="outlet" name="slideView" candidateClass="UIView"/>
                 <relationship kind="outlet" name="textLabel" candidateClass="UILabel"/>
             </relationships>
         </class>
         <class className="BRTopViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BRTopViewController.h"/>
             <relationships>
+                <relationship kind="action" name="didSwipeToLeft:" candidateClass="UISwipeGestureRecognizer"/>
+                <relationship kind="action" name="didSwipeToRight:"/>
                 <relationship kind="outlet" name="listView" candidateClass="UITableView"/>
                 <relationship kind="outlet" name="navBarRightButton" candidateClass="UIBarButtonItem"/>
             </relationships>
@@ -550,6 +568,9 @@
         <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
         </class>
+        <class className="UICollectionViewLayout" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewLayout.h"/>
+        </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
@@ -557,6 +578,6 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Wz6-Xm-FbC"/>
+        <segue reference="xYw-21-TOF"/>
     </inferredMetricsTieBreakers>
 </document>
