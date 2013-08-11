@@ -7,7 +7,6 @@
 //
 
 #import "BRSignupViewController.h"
-#import "BRAPIClient.h"
 #import "BRUserModel.h"
 
 @interface BRSignUpViewController ()
@@ -99,8 +98,8 @@
         @"password": self.passwordField.text
     };
 
-    BRAPIClient *client = [[BRAPIClient alloc] init];
-    [client signUp:params
+    BRUserModel *user = [BRUserModel sharedManager];
+    [user signUp:params
             success:^(NSHTTPURLResponse *response, NSDictionary *result) {
                 BRUserModel *user = [BRUserModel sharedManager];
                 [user saveUserData:result];

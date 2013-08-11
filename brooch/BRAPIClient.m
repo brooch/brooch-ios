@@ -10,33 +10,11 @@
 
 @implementation BRAPIClient
 
+#ifdef DEBUG
+static NSString *base_url = @"http://localhost:3000/v1";
+#else
 static NSString *base_url = @"https://brooch-kentaro.sqale.jp/v1";
-
-- (void)signUp:(NSDictionary *)params
-        success:(SuccessHandler)successHandler
-        failure:(FailureHandler)failureHandler
-          error:(ErrorHandler)errorHandler
-{
-    [self request:@"POST"
-             path:@"/users"
-           params:params
-          success:successHandler
-          failure:failureHandler
-            error:errorHandler];
-}
-
-- (void)signIn:(NSDictionary *)params
-       success:(SuccessHandler)successHandler
-       failure:(FailureHandler)failureHandler
-         error:(ErrorHandler)errorHandler
-{
-    [self request:@"POST"
-             path:@"/signin"
-           params:params
-          success:successHandler
-          failure:failureHandler
-            error:errorHandler];
-}
+#endif
 
 - (void)request:(NSString *)method
            path:(NSString *)path

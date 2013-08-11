@@ -25,7 +25,7 @@ static BRUserModel *_sharedInstance = nil;
     dispatch_once(&onceToken, ^{
         _sharedInstance = [[BRUserModel alloc] init];
         _sharedInstance.apiClient = [[BRAPIClient alloc] init];
-        [_sharedInstance loadUserData];
+        //[_sharedInstance loadUserData];
     });
 
     return _sharedInstance;
@@ -67,6 +67,32 @@ static BRUserModel *_sharedInstance = nil;
 - (BOOL)isSignedIn
 {
     return !!self.apiToken;
+}
+
+- (void)signUp:(NSDictionary *)params
+       success:(SuccessHandler)successHandler
+       failure:(FailureHandler)failureHandler
+         error:(ErrorHandler)errorHandler
+{
+    [self.apiClient request:@"POST"
+             path:@"/users"
+           params:params
+          success:successHandler
+          failure:failureHandler
+            error:errorHandler];
+}
+
+- (void)signIn:(NSDictionary *)params
+       success:(SuccessHandler)successHandler
+       failure:(FailureHandler)failureHandler
+         error:(ErrorHandler)errorHandler
+{
+    [self.apiClient request:@"POST"
+             path:@"/signin"
+           params:params
+          success:successHandler
+          failure:failureHandler
+            error:errorHandler];
 }
 
 - (void)requestWithApiToken:(NSString *)method
