@@ -118,6 +118,10 @@
 		96B7934917ABD3F000844DA5 /* image_bg_4@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 96B7933F17ABD3F000844DA5 /* image_bg_4@2x.jpg */; };
 		96C8295217A7D6E3009A5073 /* BRPostModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C8295117A7D6E3009A5073 /* BRPostModel.m */; };
 		96C8295317A7D6E3009A5073 /* BRPostModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C8295117A7D6E3009A5073 /* BRPostModel.m */; };
+		9D0610EE17B8E4100036B393 /* SetStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D0610ED17B8E4100036B393 /* SetStoryboard.storyboard */; };
+		9D0610EF17B8E4100036B393 /* SetStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D0610ED17B8E4100036B393 /* SetStoryboard.storyboard */; };
+		9D0610F317B910BA0036B393 /* BRSetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D0610F217B910BA0036B393 /* BRSetViewController.m */; };
+		9D0610F417B910BA0036B393 /* BRSetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D0610F217B910BA0036B393 /* BRSetViewController.m */; };
 		9D1F17C617AD4AFB0019B450 /* sign_up_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D1F17C517AD4AFB0019B450 /* sign_up_bg@2x.png */; };
 		9D1F17C717AD4AFB0019B450 /* sign_up_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D1F17C517AD4AFB0019B450 /* sign_up_bg@2x.png */; };
 		9D1F17C917AD4B0D0019B450 /* sign_in_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D1F17C817AD4B0D0019B450 /* sign_in_bg@2x.png */; };
@@ -221,6 +225,9 @@
 		96B7933F17ABD3F000844DA5 /* image_bg_4@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "image_bg_4@2x.jpg"; sourceTree = "<group>"; };
 		96C8295017A7D6E3009A5073 /* BRPostModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRPostModel.h; sourceTree = "<group>"; };
 		96C8295117A7D6E3009A5073 /* BRPostModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRPostModel.m; sourceTree = "<group>"; };
+		9D0610ED17B8E4100036B393 /* SetStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SetStoryboard.storyboard; sourceTree = "<group>"; };
+		9D0610F117B910BA0036B393 /* BRSetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRSetViewController.h; sourceTree = "<group>"; };
+		9D0610F217B910BA0036B393 /* BRSetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRSetViewController.m; sourceTree = "<group>"; };
 		9D1F17C517AD4AFB0019B450 /* sign_up_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sign_up_bg@2x.png"; sourceTree = "<group>"; };
 		9D1F17C817AD4B0D0019B450 /* sign_in_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sign_in_bg@2x.png"; sourceTree = "<group>"; };
 		9D1F17CB17AD4C790019B450 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
@@ -440,6 +447,7 @@
 		968614F7179032FE00400ABD /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				9D0610F017B90E060036B393 /* Set */,
 				9686154917908C7F00400ABD /* Init */,
 				9686154A17908C9700400ABD /* Main */,
 			);
@@ -492,6 +500,7 @@
 			children = (
 				9648467A178DA4680072737E /* MainStoryboard.storyboard */,
 				968614FC1790375200400ABD /* InitStoryboard.storyboard */,
+				9D0610ED17B8E4100036B393 /* SetStoryboard.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -557,6 +566,15 @@
 				96B464CF17ACD68400B3D7A9 /* image_bg_thumb_5@2x.png */,
 			);
 			name = detail;
+			sourceTree = "<group>";
+		};
+		9D0610F017B90E060036B393 /* Set */ = {
+			isa = PBXGroup;
+			children = (
+				9D0610F117B910BA0036B393 /* BRSetViewController.h */,
+				9D0610F217B910BA0036B393 /* BRSetViewController.m */,
+			);
+			name = Set;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -673,6 +691,7 @@
 				96B464FF17ADD7CF00B3D7A9 /* intro_3@2x.png in Resources */,
 				961CB1DC17AE038F004881B9 /* icon.png in Resources */,
 				961CB1DE17AE0395004881B9 /* icon@2x.png in Resources */,
+				9D0610EE17B8E4100036B393 /* SetStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -719,6 +738,7 @@
 				96B464FC17ADD7CF00B3D7A9 /* intro_1@2x.png in Resources */,
 				96B464FE17ADD7CF00B3D7A9 /* intro_2@2x.png in Resources */,
 				96B4650017ADD7CF00B3D7A9 /* intro_3@2x.png in Resources */,
+				9D0610EF17B8E4100036B393 /* SetStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -761,6 +781,7 @@
 				962D6D5917A92C0E00DD2F31 /* BRPostFormImageViewController.m in Sources */,
 				966CDE9A17B8CCC8008026E3 /* BRConfigViewController.m in Sources */,
 				966CDE9E17B8CD87008026E3 /* BRConfigWebViewController.m in Sources */,
+				9D0610F317B910BA0036B393 /* BRSetViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -782,6 +803,7 @@
 				962D6D5A17A92C0E00DD2F31 /* BRPostFormImageViewController.m in Sources */,
 				966CDE9B17B8CCC8008026E3 /* BRConfigViewController.m in Sources */,
 				966CDE9F17B8CD87008026E3 /* BRConfigWebViewController.m in Sources */,
+				9D0610F417B910BA0036B393 /* BRSetViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
