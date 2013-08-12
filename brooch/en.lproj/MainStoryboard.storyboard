@@ -35,6 +35,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="VGp-pX-Exf">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="wVC-e1-eXh">
+                            <connections>
+                                <segue destination="DqQ-qa-VxC" kind="push" id="AGi-Se-faL"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="jxd-aO-qGJ">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" id="zlJ-1S-PiH">
                                 <rect key="frame" x="287" y="12" width="28" height="20"/>
@@ -70,6 +75,134 @@
                 </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="294" y="20"/>
+        </scene>
+        <!--Config Web View Controller-->
+        <scene sceneID="tvs-dl-c64">
+            <objects>
+                <viewController id="g8X-IW-iOh" customClass="BRConfigWebViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="38d-hc-gxI">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gK2-Wl-I7v">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gK2-Wl-I7v" firstAttribute="leading" secondItem="38d-hc-gxI" secondAttribute="leading" type="default" id="Qqd-E9-ApT"/>
+                            <constraint firstItem="gK2-Wl-I7v" firstAttribute="trailing" secondItem="38d-hc-gxI" secondAttribute="trailing" type="default" id="Tks-7v-xLo"/>
+                            <constraint firstItem="gK2-Wl-I7v" firstAttribute="top" secondItem="38d-hc-gxI" secondAttribute="top" type="default" id="dmw-jp-Qol"/>
+                            <constraint firstItem="gK2-Wl-I7v" firstAttribute="bottom" secondItem="38d-hc-gxI" secondAttribute="bottom" type="default" id="fLp-Nv-I3B"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="RS7-w2-U63"/>
+                    <connections>
+                        <outlet property="webView" destination="gK2-Wl-I7v" id="cJk-vH-z85"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2ti-os-wAg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-179" y="755"/>
+        </scene>
+        <!--Config View Controller-->
+        <scene sceneID="DcA-Du-3mD">
+            <objects>
+                <tableViewController id="DqQ-qa-VxC" customClass="BRConfigViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="cnj-CS-jHt">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="アカウントの設定" id="fDb-6O-m5r">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Wv7-Xz-YwH" style="IBUITableViewCellStyleDefault" id="HHV-IV-Jub">
+                                        <rect key="frame" x="0.0" y="46" width="320" height="45"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="1" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="アカウント情報を編集する" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wv7-Xz-YwH">
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="t5N-bk-leZ" style="IBUITableViewCellStyleDefault" id="wMa-5H-fMw">
+                                        <rect key="frame" x="0.0" y="91" width="320" height="45"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="0.0" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="ログアウトする" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t5N-bk-leZ">
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="このアプリについて" id="SOc-3o-UAH">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Pvu-jQ-AwU" style="IBUITableViewCellStyleDefault" id="PcZ-n3-Z8Z">
+                                        <rect key="frame" x="0.0" y="182" width="320" height="45"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="1" width="280" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="利用規約" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pvu-jQ-AwU">
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <connections>
+                                            <segue destination="g8X-IW-iOh" kind="push" identifier="showTerms" id="Ih6-fX-p7U"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="mgl-aw-Enx" style="IBUITableViewCellStyleDefault" id="jMT-0i-OWN">
+                                        <rect key="frame" x="0.0" y="227" width="320" height="45"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="0.0" width="280" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="ホームページ" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mgl-aw-Enx">
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <connections>
+                                            <segue destination="g8X-IW-iOh" kind="push" identifier="showHomePage" id="nmx-4o-ds6"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="DqQ-qa-VxC" id="2iB-dc-9Ve"/>
+                            <outlet property="delegate" destination="DqQ-qa-VxC" id="dXD-L3-y9Q"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Ddc-QP-c53"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NrJ-AK-ujm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="294" y="632"/>
         </scene>
         <!--Post Detail View Controller-->
         <scene sceneID="xPj-Er-1EG">
@@ -503,6 +636,15 @@
         <image name="post_text_bg@2x.png" width="640" height="920"/>
     </resources>
     <classes>
+        <class className="BRConfigViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BRConfigViewController.h"/>
+        </class>
+        <class className="BRConfigWebViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BRConfigWebViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
         <class className="BRPostDetailViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BRPostDetailViewController.h"/>
             <relationships>
@@ -525,6 +667,7 @@
         <class className="BRPostFormTextViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BRPostFormTextViewController.h"/>
             <relationships>
+                <relationship kind="action" name="cancelForm:"/>
                 <relationship kind="outlet" name="textField" candidateClass="UITextView"/>
             </relationships>
         </class>
@@ -551,7 +694,7 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BRTopViewController.h"/>
             <relationships>
                 <relationship kind="action" name="didSwipeToLeft:" candidateClass="UISwipeGestureRecognizer"/>
-                <relationship kind="action" name="didSwipeToRight:"/>
+                <relationship kind="action" name="didSwipeToRight:" candidateClass="UISwipeGestureRecognizer"/>
                 <relationship kind="outlet" name="listView" candidateClass="UITableView"/>
                 <relationship kind="outlet" name="navBarRightButton" candidateClass="UIBarButtonItem"/>
             </relationships>
@@ -579,5 +722,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="xYw-21-TOF"/>
+        <segue reference="nmx-4o-ds6"/>
     </inferredMetricsTieBreakers>
 </document>

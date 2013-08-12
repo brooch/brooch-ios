@@ -21,6 +21,7 @@
 @property (strong, nonatomic) BRPostModel *post;
 @property (strong, nonatomic) IBOutlet UIView *slideView;
 @property (strong, nonatomic) IBOutlet UILabel *textLabel;
+@property (nonatomic) BOOL isOpened;
 
 - (void)showBackgroundView;
 - (void)hideBackgroundView;
