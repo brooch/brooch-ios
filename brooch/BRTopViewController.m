@@ -11,6 +11,7 @@
 #import "BRUserModel.h"
 #import "BRPostModel.h"
 #import "BRPostTableViewCell.h"
+#import "BRPostTableLoadMoreViewCell.h"
 #import "BRPostFormViewController.h"
 
 @interface BRTopViewController ()
@@ -21,7 +22,8 @@
 
 @implementation BRTopViewController
 
-static NSString *cellIdentifier = @"postListViewCell";
+static NSString *cellIdentifier          = @"postListViewCell";
+static NSString *loadMoreCellIdentifier  = @"postLoadMoreViewCell";
 static NSString *showPostSegueIdentifier = @"showPostDetail";
 
 - (void)viewDidLoad
@@ -30,6 +32,8 @@ static NSString *showPostSegueIdentifier = @"showPostDetail";
 
     [self.tableView registerNib:[UINib nibWithNibName:@"BRPostTableViewCell" bundle:nil]
          forCellReuseIdentifier:cellIdentifier];
+    [self.tableView registerNib:[UINib nibWithNibName:@"BRPostTableLoadMoreViewCell" bundle:nil]
+         forCellReuseIdentifier:loadMoreCellIdentifier];
 
     BRUserModel *user = [BRUserModel sharedManager];
     [user posts:@{@"offset": @0, @"limit": @10}
@@ -90,23 +94,34 @@ static NSString *showPostSegueIdentifier = @"showPostDetail";
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self.posts count];
+    return [self.posts count] + 1; // 「もっと読む」用に1つプラスする
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {  
-    BRPostModel *post = self.posts[indexPath.row];
-    BRPostTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    if (indexPath.row < [self.posts count]) {
+        BRPostModel *post = self.posts[indexPath.row];
+        BRPostTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
 
-    if (cell == nil) {
-        cell = [[BRPostTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        if (cell == nil) {
+            cell = [[BRPostTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        }
+
+        cell.delegate       = self;
+        cell.post           = post;
+        cell.textLabel.text = post.text;
+
+        return cell;
     }
+    else {
+        BRPostTableLoadMoreViewCell *cell = [tableView dequeueReusableCellWithIdentifier:loadMoreCellIdentifier];
+        
+        if (cell == nil) {
+            cell = [[BRPostTableLoadMoreViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:loadMoreCellIdentifier];
+        }
 
-    cell.delegate       = self;
-    cell.post           = post;
-    cell.textLabel.text = post.text;
-
-    return cell;
+        return cell;
+    }
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
