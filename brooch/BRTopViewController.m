@@ -102,8 +102,8 @@ static NSString *showPostSegueIdentifier = @"showPostDetail";
         cell = [[BRPostTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
 
-    cell.delegate = self;
-    cell.post = post;
+    cell.delegate       = self;
+    cell.post           = post;
     cell.textLabel.text = post.text;
 
     return cell;
@@ -111,6 +111,9 @@ static NSString *showPostSegueIdentifier = @"showPostDetail";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    BRPostTableViewCell *cell = (BRPostTableViewCell *)[self.tableView cellForRowAtIndexPath:indexPath];
+    [cell hideBackgroundView];
+
     [self performSegueWithIdentifier:showPostSegueIdentifier sender:self];
 }
 
