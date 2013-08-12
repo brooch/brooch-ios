@@ -8,12 +8,6 @@
 
 #import "BRPostTableViewCell.h"
 
-@interface BRPostTableViewCell ()
-
-@property (nonatomic) BOOL isOpened;
-
-@end
-
 @implementation BRPostTableViewCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
