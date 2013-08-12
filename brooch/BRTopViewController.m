@@ -35,20 +35,7 @@ static NSString *showPostSegueIdentifier = @"showPostDetail";
     [self.tableView registerNib:[UINib nibWithNibName:@"BRPostTableLoadMoreViewCell" bundle:nil]
          forCellReuseIdentifier:loadMoreCellIdentifier];
 
-    BRUserModel *user = [BRUserModel sharedManager];
-    [user posts:@{@"offset": @0, @"limit": @10}
-        success:^(NSHTTPURLResponse *response, NSArray *result) {
-            NSMutableArray *posts = [@[] mutableCopy];
-
-            for (NSDictionary *post in result) {
-                [posts addObject:[[BRPostModel alloc] initWithDictionary:post]];
-            }
-
-            self.posts = posts;
-            [self.tableView reloadData];
-        } failure:^(NSHTTPURLResponse *response, NSDictionary *result) {
-            NSLog(@"%@", result);
-        } error:nil];
+    [self loadPosts];
 }
 
 - (void)didReceiveMemoryWarning
@@ -99,6 +86,7 @@ static NSString *showPostSegueIdentifier = @"showPostDetail";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {  
+    // 通常のセル
     if (indexPath.row < [self.posts count]) {
         BRPostModel *post = self.posts[indexPath.row];
         BRPostTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
@@ -113,6 +101,7 @@ static NSString *showPostSegueIdentifier = @"showPostDetail";
 
         return cell;
     }
+    // 「もっと読む」用のセル
     else {
         BRPostTableLoadMoreViewCell *cell = [tableView dequeueReusableCellWithIdentifier:loadMoreCellIdentifier];
         
@@ -126,10 +115,55 @@ static NSString *showPostSegueIdentifier = @"showPostDetail";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    BRPostTableViewCell *cell = (BRPostTableViewCell *)[self.tableView cellForRowAtIndexPath:indexPath];
-    [cell hideBackgroundView];
+    // 通常のセル
+    if (indexPath.row < [self.posts count]) {
+        BRPostTableViewCell *cell = (BRPostTableViewCell *)[self.tableView cellForRowAtIndexPath:indexPath];
+        [cell hideBackgroundView];
 
-    [self performSegueWithIdentifier:showPostSegueIdentifier sender:self];
+        [self performSegueWithIdentifier:showPostSegueIdentifier sender:self];
+    }
+    // 「もっと読む」用のセル
+    else {
+        [self loadPosts];
+    }
+}
+
+- (void)loadPosts
+{
+    BRUserModel *user = [BRUserModel sharedManager];
+    [user posts:@{@"offset": [NSNumber numberWithInt:[self.posts count]], @"limit": @10}
+        success:^(NSHTTPURLResponse *response, NSArray *result) {
+            if ([result count] > 0) {
+                // 初回起動時
+                if ([self.posts count] == 0) {
+                    NSMutableArray *posts = [@[] mutableCopy];
+            
+                    for (NSDictionary *post in result) {
+                        [posts addObject:[[BRPostModel alloc] initWithDictionary:post]];
+                    }
+            
+                    self.posts = posts;
+                }
+                // 「もっと読む」押下時
+                else {
+                    for (NSDictionary *post in result) {
+                        [self.posts addObject:[[BRPostModel alloc] initWithDictionary:post]];
+                    }
+                }
+
+                [self.tableView reloadData];
+            }
+            else {
+                UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil
+                                                                    message:@"投稿はもうありません。"
+                                                                   delegate:nil
+                                                          cancelButtonTitle:nil
+                                                          otherButtonTitles:@"OK", nil];
+                [alertView show];
+            }
+        } failure:^(NSHTTPURLResponse *response, NSDictionary *result) {
+            NSLog(@"%@", result);
+        } error:nil];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
