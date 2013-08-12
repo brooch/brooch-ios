@@ -95,17 +95,25 @@ static NSString *showPostSegueIdentifier = @"showPostDetail";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {  
+    BRPostModel *post = self.posts[indexPath.row];
     BRPostTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+
     if (cell == nil) {
         cell = [[BRPostTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
-    
-    cell.textLabel.text = [self.posts[indexPath.row] text];
+
+    cell.delegate       = self;
+    cell.post           = post;
+    cell.textLabel.text = post.text;
+
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    BRPostTableViewCell *cell = (BRPostTableViewCell *)[self.tableView cellForRowAtIndexPath:indexPath];
+    [cell hideBackgroundView];
+
     [self performSegueWithIdentifier:showPostSegueIdentifier sender:self];
 }
 
@@ -126,6 +134,37 @@ static NSString *showPostSegueIdentifier = @"showPostDetail";
         BRPostModel *post = [[BRPostModel alloc] initWithDictionary:@{@"author": [@{@"name":@""} mutableCopy]}];
         [segue.destinationViewController setPost:post];
     }
+}
+
+- (IBAction)didSwipeToLeft:(UISwipeGestureRecognizer *)swipeRecognizer
+{
+    CGPoint loc = [swipeRecognizer locationInView:self.tableView];
+    NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:loc];
+    BRPostTableViewCell* cell = (BRPostTableViewCell *)[self.tableView cellForRowAtIndexPath:indexPath];
+
+    [cell hideBackgroundView];
+}
+
+- (IBAction)didSwipeToRight:(UISwipeGestureRecognizer *)swipeRecognizer
+{
+    CGPoint loc = [swipeRecognizer locationInView:self.tableView];
+    NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:loc];
+    BRPostTableViewCell* cell = (BRPostTableViewCell *)[self.tableView cellForRowAtIndexPath:indexPath];
+    
+    [cell showBackgroundView];
+}
+
+-(void)didPushDeletePostButton:(id)sender
+                        post:(BRPostModel *)post
+{
+    BRUserModel *user = [BRUserModel sharedManager];
+    [user deletePost:post
+             success:^(NSHTTPURLResponse *response, NSDictionary *result){
+                 [self.posts removeObject:post];
+                 [self.tableView reloadData];
+             } failure:^(NSHTTPURLResponse *response, NSDictionary *result){
+                 NSLog(@"%@", result);
+             } error:nil];
 }
 
 // TODO: ダサいのでiteratorパタンにする
@@ -154,9 +193,5 @@ static NSString *showPostSegueIdentifier = @"showPostDetail";
     return post;
     
 }
-
-
-
-
 
 @end

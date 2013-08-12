@@ -18,8 +18,19 @@
 @property (nonatomic, strong) NSString *apiToken;
 
 + (BRUserModel *)sharedManager;
+
 - (BOOL) isSignedIn;
 - (void) saveUserData:(NSDictionary *)params;
+
+- (void)signUp:(NSDictionary *)params
+       success:(SuccessHandler)successHandler
+       failure:(FailureHandler)faulureHandler
+         error:(ErrorHandler)errorHandler;
+
+- (void)signIn:(NSDictionary *)params
+       success:(SuccessHandler)successHandler
+       failure:(FailureHandler)faulureHandler
+         error:(ErrorHandler)errorHandler;
 
 - (void)createPost:(BRPostModel *)post
            success:(SuccessHandler)successHandler
@@ -27,6 +38,11 @@
              error:(ErrorHandler)errorHandler;
 
 - (void)updatePost:(BRPostModel *)post
+           success:(SuccessHandler)successHandler
+           failure:(FailureHandler)failureHandler
+             error:(ErrorHandler)errorHandler;
+
+- (void)deletePost:(BRPostModel *)post
            success:(SuccessHandler)successHandler
            failure:(FailureHandler)failureHandler
              error:(ErrorHandler)errorHandler;
