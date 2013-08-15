@@ -47,6 +47,10 @@
 		966CDE9B17B8CCC8008026E3 /* BRConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 966CDE9917B8CCC8008026E3 /* BRConfigViewController.m */; };
 		966CDE9E17B8CD87008026E3 /* BRConfigWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 966CDE9D17B8CD87008026E3 /* BRConfigWebViewController.m */; };
 		966CDE9F17B8CD87008026E3 /* BRConfigWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 966CDE9D17B8CD87008026E3 /* BRConfigWebViewController.m */; };
+		966CDEA117B8DD4B008026E3 /* BRPostTableLoadMoreViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 966CDEA017B8DD4B008026E3 /* BRPostTableLoadMoreViewCell.xib */; };
+		966CDEA217B8DD4B008026E3 /* BRPostTableLoadMoreViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 966CDEA017B8DD4B008026E3 /* BRPostTableLoadMoreViewCell.xib */; };
+		966CDEA517B8DDBA008026E3 /* BRPostTableLoadMoreViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 966CDEA417B8DDBA008026E3 /* BRPostTableLoadMoreViewCell.m */; };
+		966CDEA617B8DDBA008026E3 /* BRPostTableLoadMoreViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 966CDEA417B8DDBA008026E3 /* BRPostTableLoadMoreViewCell.m */; };
 		966E8EFD179D436E00957D53 /* BRPostFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 966E8EFC179D436E00957D53 /* BRPostFormViewController.m */; };
 		966E8EFE179D436E00957D53 /* BRPostFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 966E8EFC179D436E00957D53 /* BRPostFormViewController.m */; };
 		966E8F01179D4A1200957D53 /* BRPostFormTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 966E8F00179D4A1200957D53 /* BRPostFormTextViewController.m */; };
@@ -177,6 +181,9 @@
 		966CDE9917B8CCC8008026E3 /* BRConfigViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRConfigViewController.m; sourceTree = "<group>"; };
 		966CDE9C17B8CD87008026E3 /* BRConfigWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRConfigWebViewController.h; sourceTree = "<group>"; };
 		966CDE9D17B8CD87008026E3 /* BRConfigWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRConfigWebViewController.m; sourceTree = "<group>"; };
+		966CDEA017B8DD4B008026E3 /* BRPostTableLoadMoreViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BRPostTableLoadMoreViewCell.xib; sourceTree = "<group>"; };
+		966CDEA317B8DDBA008026E3 /* BRPostTableLoadMoreViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRPostTableLoadMoreViewCell.h; sourceTree = "<group>"; };
+		966CDEA417B8DDBA008026E3 /* BRPostTableLoadMoreViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRPostTableLoadMoreViewCell.m; sourceTree = "<group>"; };
 		966E8EFB179D436E00957D53 /* BRPostFormViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRPostFormViewController.h; sourceTree = "<group>"; };
 		966E8EFC179D436E00957D53 /* BRPostFormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRPostFormViewController.m; sourceTree = "<group>"; };
 		966E8EFF179D4A1200957D53 /* BRPostFormTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRPostFormTextViewController.h; sourceTree = "<group>"; };
@@ -265,6 +272,9 @@
 				962D6D5017A924A600DD2F31 /* BRPostTableViewCell.xib */,
 				962D6D5317A924F500DD2F31 /* BRPostTableViewCell.h */,
 				962D6D5417A924F500DD2F31 /* BRPostTableViewCell.m */,
+				966CDEA017B8DD4B008026E3 /* BRPostTableLoadMoreViewCell.xib */,
+				966CDEA317B8DDBA008026E3 /* BRPostTableLoadMoreViewCell.h */,
+				966CDEA417B8DDBA008026E3 /* BRPostTableLoadMoreViewCell.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -673,6 +683,7 @@
 				96B464FF17ADD7CF00B3D7A9 /* intro_3@2x.png in Resources */,
 				961CB1DC17AE038F004881B9 /* icon.png in Resources */,
 				961CB1DE17AE0395004881B9 /* icon@2x.png in Resources */,
+				966CDEA117B8DD4B008026E3 /* BRPostTableLoadMoreViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -719,6 +730,7 @@
 				96B464FC17ADD7CF00B3D7A9 /* intro_1@2x.png in Resources */,
 				96B464FE17ADD7CF00B3D7A9 /* intro_2@2x.png in Resources */,
 				96B4650017ADD7CF00B3D7A9 /* intro_3@2x.png in Resources */,
+				966CDEA217B8DD4B008026E3 /* BRPostTableLoadMoreViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -761,6 +773,7 @@
 				962D6D5917A92C0E00DD2F31 /* BRPostFormImageViewController.m in Sources */,
 				966CDE9A17B8CCC8008026E3 /* BRConfigViewController.m in Sources */,
 				966CDE9E17B8CD87008026E3 /* BRConfigWebViewController.m in Sources */,
+				966CDEA517B8DDBA008026E3 /* BRPostTableLoadMoreViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -782,6 +795,7 @@
 				962D6D5A17A92C0E00DD2F31 /* BRPostFormImageViewController.m in Sources */,
 				966CDE9B17B8CCC8008026E3 /* BRConfigViewController.m in Sources */,
 				966CDE9F17B8CD87008026E3 /* BRConfigWebViewController.m in Sources */,
+				966CDEA617B8DDBA008026E3 /* BRPostTableLoadMoreViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
