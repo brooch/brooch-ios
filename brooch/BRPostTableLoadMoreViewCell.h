@@ -10,4 +10,10 @@
 
 @interface BRPostTableLoadMoreViewCell : UITableViewCell
 
+@property (strong, nonatomic) IBOutlet UIView *view;
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *indicator;
+
+- (void)startLoading;
+- (void)endLoading;
+
 @end

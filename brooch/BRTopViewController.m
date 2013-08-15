@@ -128,44 +128,6 @@ static NSString *showPostSegueIdentifier = @"showPostDetail";
     }
 }
 
-- (void)loadPosts
-{
-    BRUserModel *user = [BRUserModel sharedManager];
-    [user posts:@{@"offset": [NSNumber numberWithInt:[self.posts count]], @"limit": @10}
-        success:^(NSHTTPURLResponse *response, NSArray *result) {
-            if ([result count] > 0) {
-                // 初回起動時
-                if ([self.posts count] == 0) {
-                    NSMutableArray *posts = [@[] mutableCopy];
-            
-                    for (NSDictionary *post in result) {
-                        [posts addObject:[[BRPostModel alloc] initWithDictionary:post]];
-                    }
-            
-                    self.posts = posts;
-                }
-                // 「もっと読む」押下時
-                else {
-                    for (NSDictionary *post in result) {
-                        [self.posts addObject:[[BRPostModel alloc] initWithDictionary:post]];
-                    }
-                }
-
-                [self.tableView reloadData];
-            }
-            else {
-                UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil
-                                                                    message:@"投稿はもうありません。"
-                                                                   delegate:nil
-                                                          cancelButtonTitle:nil
-                                                          otherButtonTitles:@"OK", nil];
-                [alertView show];
-            }
-        } failure:^(NSHTTPURLResponse *response, NSDictionary *result) {
-            NSLog(@"%@", result);
-        } error:nil];
-}
-
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([[segue identifier] isEqualToString:showPostSegueIdentifier]) {
@@ -214,6 +176,50 @@ static NSString *showPostSegueIdentifier = @"showPostDetail";
              } failure:^(NSHTTPURLResponse *response, NSDictionary *result){
                  NSLog(@"%@", result);
              } error:nil];
+}
+
+- (void)loadPosts
+{
+    NSIndexPath *path = [self.tableView indexPathForSelectedRow];
+    BRPostTableLoadMoreViewCell *loadMoreCell = (BRPostTableLoadMoreViewCell *)[self.tableView cellForRowAtIndexPath:path];
+    [loadMoreCell startLoading];
+
+    BRUserModel *user = [BRUserModel sharedManager];
+    [user posts:@{@"offset": [NSNumber numberWithInt:[self.posts count]], @"limit": @20}
+        success:^(NSHTTPURLResponse *response, NSArray *result) {
+            [loadMoreCell endLoading];
+
+            if ([result count] > 0) {
+                // 初回起動時
+                if ([self.posts count] == 0) {
+                    NSMutableArray *posts = [@[] mutableCopy];
+                    
+                    for (NSDictionary *post in result) {
+                        [posts addObject:[[BRPostModel alloc] initWithDictionary:post]];
+                    }
+                    
+                    self.posts = posts;
+                }
+                // 「もっと読む」押下時
+                else {
+                    for (NSDictionary *post in result) {
+                        [self.posts addObject:[[BRPostModel alloc] initWithDictionary:post]];
+                    }
+                }
+                
+                [self.tableView reloadData];
+            }
+            else {
+                UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil
+                                                                    message:@"投稿はもうありません。"
+                                                                   delegate:nil
+                                                          cancelButtonTitle:nil
+                                                          otherButtonTitles:@"OK", nil];
+                [alertView show];
+            }
+        } failure:^(NSHTTPURLResponse *response, NSDictionary *result) {
+            NSLog(@"%@", result);
+        } error:nil];
 }
 
 // TODO: ダサいのでiteratorパタンにする

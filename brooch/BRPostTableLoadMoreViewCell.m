@@ -26,4 +26,27 @@
     // Configure the view for the selected state
 }
 
+- (void)startLoading
+{
+    UIActivityIndicatorView *indicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+
+    // ここハードコーディングしたくないんだけどどうしたらいいの
+    indicator.frame = CGRectMake(95, 13, 30, 30);
+
+    [self.view addSubview:indicator];
+    [self.view bringSubviewToFront:indicator];
+    [indicator startAnimating];
+
+    self.indicator = indicator;
+}
+
+- (void)endLoading
+{
+    if (self.indicator) {
+        [self.indicator stopAnimating];
+        [self.view sendSubviewToBack:self.indicator];
+        self.indicator = nil;
+    }
+}
+
 @end
