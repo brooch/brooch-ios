@@ -95,6 +95,15 @@ static BRUserModel *_sharedInstance = nil;
             error:errorHandler];
 }
 
+/*
+- (void)signOut
+{
+    [self.apiClient request:@"DELETE"
+     //ユーザーセッション的なこと
+     ]
+}
+*/
+
 - (void)requestWithApiToken:(NSString *)method
                        path:(NSString *)path
                      params:(NSDictionary *)params

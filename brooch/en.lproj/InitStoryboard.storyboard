@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="fZs-YS-ju7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="fZs-YS-ju7">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -168,10 +168,10 @@
                                     <constraint firstItem="qOW-xG-z5t" firstAttribute="leading" secondItem="0Li-VZ-i6O" secondAttribute="leading" type="default" id="CIG-vW-3CQ"/>
                                     <constraint firstItem="qOW-xG-z5t" firstAttribute="top" secondItem="0Li-VZ-i6O" secondAttribute="top" type="user" id="DCI-Tl-76C"/>
                                     <constraint firstItem="EFk-y7-gdO" firstAttribute="baseline" secondItem="xri-c1-wvo" secondAttribute="baseline" type="default" id="EJE-Kc-LvE"/>
+                                    <constraint firstItem="tFX-wq-sCq" firstAttribute="centerX" secondItem="0Li-VZ-i6O" secondAttribute="centerX" type="default" id="GIb-h2-2HA"/>
                                     <constraint firstAttribute="bottom" secondItem="2QG-D3-sv6" secondAttribute="bottom" constant="7" type="user" id="KBN-f3-Wkd"/>
                                     <constraint firstItem="xri-c1-wvo" firstAttribute="leading" secondItem="0Li-VZ-i6O" secondAttribute="leading" constant="49" id="KRx-6s-l5u"/>
                                     <constraint firstAttribute="bottom" secondItem="qOW-xG-z5t" secondAttribute="bottom" constant="44" type="user" id="O5C-vc-0dl"/>
-                                    <constraint firstItem="qOW-xG-z5t" firstAttribute="centerX" secondItem="0Li-VZ-i6O" secondAttribute="centerX" type="default" id="PaG-KO-AHh"/>
                                     <constraint firstItem="xri-c1-wvo" firstAttribute="top" secondItem="0Li-VZ-i6O" secondAttribute="top" constant="229" id="Pzz-yW-lY0"/>
                                     <constraint firstItem="2QG-D3-sv6" firstAttribute="leading" secondItem="0Li-VZ-i6O" secondAttribute="leading" constant="7" type="user" id="SPl-ue-Bag"/>
                                     <constraint firstItem="KU8-jz-x6H" firstAttribute="top" secondItem="qOW-xG-z5t" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="U1o-OS-O5z"/>

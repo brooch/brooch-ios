@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+ 
+@interface BRConfigViewController : UITableViewController  <UIAlertViewDelegate>
 
-@interface BRConfigViewController : UITableViewController
+-(void)alertSignOut;
+
+@property (strong, nonatomic) IBOutlet UITableViewCell *signOut;
 
 @end

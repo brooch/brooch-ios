@@ -58,4 +58,37 @@
     [[segue destinationViewController] setUrl:url];
 }
 
+
+/* ここからyuriwo追加 */
+
+- (IBAction)signOut:(id)sender
+{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"サインアウト"
+                                                    message:@"サインアウトしますか？"
+                                                   delegate:self
+                                          cancelButtonTitle:@"いいえ"
+                                          otherButtonTitles:@"はい", nil];
+    [alert show];
+}
+
+
+//ボタン押下時の処理
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    //遷移先ViewControllerクラスのインスタンス生成
+    BRConfigViewController *signout = [self.storyboard instantiateViewControllerWithIdentifier:@"signout"];
+    
+    switch (buttonIndex) {
+        case 0://押したボタンがいいえなら何もしない
+            break;
+            
+        case 1://押したボタンがはいなら画面遷移
+            [self presentModalViewController:signout animated:YES ];
+            break;
+            
+    }
+}
+
+/* ここまでyuriwo追加 */
+
 @end
