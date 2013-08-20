@@ -11,6 +11,7 @@
 #import "BRUserModel.h"
 #import "BRPostModel.h"
 #import "BRPostTableViewCell.h"
+#import "BRPostTableLoadMoreViewCell.h"
 #import "BRPostFormViewController.h"
 
 @interface BRTopViewController ()
@@ -21,7 +22,8 @@
 
 @implementation BRTopViewController
 
-static NSString *cellIdentifier = @"postListViewCell";
+static NSString *cellIdentifier          = @"postListViewCell";
+static NSString *loadMoreCellIdentifier  = @"postLoadMoreViewCell";
 static NSString *showPostSegueIdentifier = @"showPostDetail";
 
 - (void)viewDidLoad
@@ -30,21 +32,10 @@ static NSString *showPostSegueIdentifier = @"showPostDetail";
 
     [self.tableView registerNib:[UINib nibWithNibName:@"BRPostTableViewCell" bundle:nil]
          forCellReuseIdentifier:cellIdentifier];
+    [self.tableView registerNib:[UINib nibWithNibName:@"BRPostTableLoadMoreViewCell" bundle:nil]
+         forCellReuseIdentifier:loadMoreCellIdentifier];
 
-    BRUserModel *user = [BRUserModel sharedManager];
-    [user posts:@{@"offset": @0, @"limit": @10}
-        success:^(NSHTTPURLResponse *response, NSArray *result) {
-            NSMutableArray *posts = [@[] mutableCopy];
-
-            for (NSDictionary *post in result) {
-                [posts addObject:[[BRPostModel alloc] initWithDictionary:post]];
-            }
-
-            self.posts = posts;
-            [self.tableView reloadData];
-        } failure:^(NSHTTPURLResponse *response, NSDictionary *result) {
-            NSLog(@"%@", result);
-        } error:nil];
+    [self loadPosts];
 }
 
 - (void)didReceiveMemoryWarning
@@ -90,31 +81,51 @@ static NSString *showPostSegueIdentifier = @"showPostDetail";
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self.posts count];
+    return [self.posts count] + 1; // 「もっと読む」用に1つプラスする
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {  
-    BRPostModel *post = self.posts[indexPath.row];
-    BRPostTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    // 通常のセル
+    if (indexPath.row < [self.posts count]) {
+        BRPostModel *post = self.posts[indexPath.row];
+        BRPostTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
 
-    if (cell == nil) {
-        cell = [[BRPostTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        if (cell == nil) {
+            cell = [[BRPostTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        }
+
+        cell.delegate       = self;
+        cell.post           = post;
+        cell.textLabel.text = post.text;
+
+        return cell;
     }
+    // 「もっと読む」用のセル
+    else {
+        BRPostTableLoadMoreViewCell *cell = [tableView dequeueReusableCellWithIdentifier:loadMoreCellIdentifier];
+        
+        if (cell == nil) {
+            cell = [[BRPostTableLoadMoreViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:loadMoreCellIdentifier];
+        }
 
-    cell.delegate       = self;
-    cell.post           = post;
-    cell.textLabel.text = post.text;
-
-    return cell;
+        return cell;
+    }
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    BRPostTableViewCell *cell = (BRPostTableViewCell *)[self.tableView cellForRowAtIndexPath:indexPath];
-    [cell hideBackgroundView];
+    // 通常のセル
+    if (indexPath.row < [self.posts count]) {
+        BRPostTableViewCell *cell = (BRPostTableViewCell *)[self.tableView cellForRowAtIndexPath:indexPath];
+        [cell hideBackgroundView];
 
-    [self performSegueWithIdentifier:showPostSegueIdentifier sender:self];
+        [self performSegueWithIdentifier:showPostSegueIdentifier sender:self];
+    }
+    // 「もっと読む」用のセル
+    else {
+        [self loadPosts];
+    }
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -165,6 +176,50 @@ static NSString *showPostSegueIdentifier = @"showPostDetail";
              } failure:^(NSHTTPURLResponse *response, NSDictionary *result){
                  NSLog(@"%@", result);
              } error:nil];
+}
+
+- (void)loadPosts
+{
+    NSIndexPath *path = [self.tableView indexPathForSelectedRow];
+    BRPostTableLoadMoreViewCell *loadMoreCell = (BRPostTableLoadMoreViewCell *)[self.tableView cellForRowAtIndexPath:path];
+    [loadMoreCell startLoading];
+
+    BRUserModel *user = [BRUserModel sharedManager];
+    [user posts:@{@"offset": [NSNumber numberWithInt:[self.posts count]], @"limit": @20}
+        success:^(NSHTTPURLResponse *response, NSArray *result) {
+            [loadMoreCell endLoading];
+
+            if ([result count] > 0) {
+                // 初回起動時
+                if ([self.posts count] == 0) {
+                    NSMutableArray *posts = [@[] mutableCopy];
+                    
+                    for (NSDictionary *post in result) {
+                        [posts addObject:[[BRPostModel alloc] initWithDictionary:post]];
+                    }
+                    
+                    self.posts = posts;
+                }
+                // 「もっと読む」押下時
+                else {
+                    for (NSDictionary *post in result) {
+                        [self.posts addObject:[[BRPostModel alloc] initWithDictionary:post]];
+                    }
+                }
+                
+                [self.tableView reloadData];
+            }
+            else {
+                UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil
+                                                                    message:@"投稿はもうありません。"
+                                                                   delegate:nil
+                                                          cancelButtonTitle:nil
+                                                          otherButtonTitles:@"OK", nil];
+                [alertView show];
+            }
+        } failure:^(NSHTTPURLResponse *response, NSDictionary *result) {
+            NSLog(@"%@", result);
+        } error:nil];
 }
 
 // TODO: ダサいのでiteratorパタンにする
