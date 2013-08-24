@@ -95,6 +95,20 @@ static BRUserModel *_sharedInstance = nil;
             error:errorHandler];
 }
 
+- (void)signOut:(NSDictionary *)params
+       success:(SuccessHandler)successHandler
+       failure:(FailureHandler)failureHandler
+         error:(ErrorHandler)errorHandler
+{
+    [self.apiClient request:@"DELETE"
+                       path:@"/signout"
+                     params:params
+                    success:successHandler
+                    failure:failureHandler
+                      error:errorHandler];
+}
+
+
 - (void)requestWithApiToken:(NSString *)method
                        path:(NSString *)path
                      params:(NSDictionary *)params
