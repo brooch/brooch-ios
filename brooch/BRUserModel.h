@@ -32,6 +32,11 @@
        failure:(FailureHandler)faulureHandler
          error:(ErrorHandler)errorHandler;
 
+- (void)signOut:(NSDictionary *)params
+       success:(SuccessHandler)successHandler
+       failure:(FailureHandler)faulureHandler
+         error:(ErrorHandler)errorHandler;
+
 - (void)createPost:(BRPostModel *)post
            success:(SuccessHandler)successHandler
            failure:(FailureHandler)failureHandler
